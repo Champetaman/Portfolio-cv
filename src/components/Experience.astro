@@ -1,0 +1,28 @@
+---
+import ExperienceItem from "../components/ExperienceItem.astro";
+
+const EXPERIENCE = [
+  {
+    date: "2018",
+    title: "Sophos Solutions S.A.S",
+    description: "Implementation Consultant",
+    link: "https://www.sophossolutions.com/en/",
+  },
+  {
+    date: "2019",
+    title: "Banco de la República",
+    description: "Specialized Engineer",
+    link: "https://www.banrep.gov.co/en",
+  },
+];
+---
+
+<ol class="relative border-s border-gray-200 ml-3">
+  {
+    EXPERIENCE.map((experience) => (
+      <li class="mb-10 ms-4">
+        <ExperienceItem {...experience} />
+      </li>
+    ))
+  }
+</ol>
