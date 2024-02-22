@@ -1,11 +1,12 @@
 ---
 interface Props {
   date: string;
-  title?: string;
-  description: string;
-  link: string;
+  company: string;
+  title: string;
+  descriptions: string[];
+  link?: string;
 }
-const { date, title, description, link } = Astro.props;
+const { date, company, title, descriptions, link } = Astro.props;
 ---
 
 <div
@@ -14,12 +15,20 @@ const { date, title, description, link } = Astro.props;
 </div>
 <time class="mb-1 text-sm font-normal leading-none text-sky-200/80">{date}</time
 >
+<h2 class="text-lg font-semibold text-red-100/90 mt-2">
+  {company}
+</h2>
 <h3 class="text-lg font-semibold text-yellow-200 mt-2">
   {title}
 </h3>
-<p class="mb-4 text-base font-normal text-gray-200 text-pretty">
-  {description}
-</p>
+{
+  descriptions.map((description) => (
+    <ul class="max-w-full space-y-1 text-gray-200 list-disc list-inside dark:text-gray-400 mt-2">
+      <li class="mb-3 text-pretty font-normal">{description}</li>
+    </ul>
+  ))
+}
+
 {
   link && (
     <a

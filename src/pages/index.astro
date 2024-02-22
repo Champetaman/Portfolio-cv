@@ -21,8 +21,8 @@ import { Code } from "astro:components";
   <main class="px-2">
     <SectionContainer class="py-44 pb-32">
       <img
-        class="rounded-full size-12 mb-4"
-        src="/profile_picture.jpg"
+        class="rounded-full size-16 mb-4"
+        src="/profile_image.webp"
         alt="Camilo Oviedo's picture"
       />
       <h1
@@ -37,7 +37,7 @@ import { Code } from "astro:components";
           <Badge>Open to Work</Badge>
         </a>
       </h1>
-      <h2 class="text-xl lg:text-2xl max-w-[700px] text-pretty">
+      <h2 class="text-xl lg:text-2xl max-w-[860px] text-pretty">
         <span>Systems Engineer and Business Administrator</span>
         <span class="text-yellow-200/90">with 6 years of experience</span>
         <span class="text-red-100/90"
@@ -62,16 +62,18 @@ import { Code } from "astro:components";
     </SectionContainer>
 
     <SectionContainer id="experience">
-      
+      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
         <BriefcaseIcon class="size-7" />
         Experience
-
+      </h2>
       <Experience />
     </SectionContainer>
 
     <SectionContainer id="projects">
+      <h2 class="text-3xl font-semibold flex gap-x-3 items-center">
         <CodeIcon class="size-7" />
         Projects
+      </h2>
       <Projects />
     </SectionContainer>
   </main>
