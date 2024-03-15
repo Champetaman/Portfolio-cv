@@ -1,39 +1,14 @@
 ---
 import ExperienceItem from "../components/ExperienceItem.astro";
+import ExperienceData from "../../data/experience.json";
 
-const EXPERIENCE = [
-  {
-    date: "May 2019 - January 2024",
-    company: "Banco de la República - Central Bank of Colombia",
-    title: "Specialized Engineer",
-    descriptions: [
-      "Advise, coordinate and manage software projects which updates deprecated systems aiming to contribute to the welfare of Colombian people through the preservation of the purchasing power of the currency.",
-      "Propose technological trend strategies, innovative processes and procedures for the support, technical maintenance, and backup schemes of the projects in charge.",
-      "Coordinate a team of 15 engineers and multiple stakeholders to keep track and manage software scope, project timeline and budget.",
-      "Develop SAP Business Objects 4.2 SP5 reports to be consumed by software applications through API RESTful services.",
-      "Implement Java, JavaScript and Typescript static code analysis and verification with SonarQube and Fortify tools improving code quality 45% from initial delivery."
-    ],
-    //link: "https://www.banrep.gov.co/en",
-  },
-  {
-    date: "January 2018 - May 2019",
-    company: "Sophos Solutions S.A.S",
-    title: "Implementation Consultant",
-    descriptions: [
-      "Full-Stack Developer in multiple projects (Java: Backend, Angular: Frontend and Oracle/SQL: Database).",
-      "Use Spring framework to develop RESTful services (microservices) to insert and retrieve data from database and expose those services to the client application.",
-      "Lead a team of 4 people as Technical Business Analyst to identify business needs and expectations for software product. Interviewed stakeholders and documented requirements, resulting in a shared understanding of project scope, and ultimately in a successful product launch.",
-      "Member of the engineering team that Developed the digital transformation of the company Porvenir in IBM BPM WebSphere Business Process Manager 8.5.7 Tool. Achieved to reduce the requests average time of attention from 15 days to 3 days."
-    ],
-    //link: "https://www.sophossolutions.com/en/",
-  },
-];
+const EXPERIENCE = ExperienceData;
 ---
 
-<ol class="relative border-s border-gray-200 ml-3">
+<ol class="relative mt-16">
   {
     EXPERIENCE.map((experience) => (
-      <li class="mb-10 ms-4">
+      <li class="">
         <ExperienceItem {...experience} />
       </li>
     ))

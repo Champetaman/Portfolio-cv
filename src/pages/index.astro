@@ -1,80 +1,56 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Badge from "../components/Badge.astro";
-import SocialStack from "../components/SocialStack.astro";
 import SectionContainer from "../components/SectionContainer.astro";
 import Experience from "../components/Experience.astro";
 import Projects from "../components/Projects.astro";
-import LinkedInIcon from "../icons/LinkedIn.astro";
-import GitHubIcon from "../icons/GitHub.astro";
-import MailIcon from "../icons/Mail.astro";
+import Hero from "@/components/Hero.astro";
 import BriefcaseIcon from "../icons/Briefcase.astro";
+import ProfileCheckIcon from "../icons/ProfileCheck.astro";
 import CodeIcon from "../icons/Code.astro";
-import Card from "../components/Card.astro";
-import { Code } from "astro:components";
+import AboutMe from "@/components/AboutMe.astro";
 ---
 
 <Layout
   title="Camilo Oviedo's Resume - Systems Engineer and Business Administrador with 6 years of experience"
   description="Hire Camilo Oviedo at your company to improve your technological team and engineer the future. Proven track record in designing and developing innovative software components used within complex systems, ensuring their functionality, reliability, security and efficiency."
 >
-  <main class="px-2">
-    <SectionContainer class="py-44 pb-32">
-      <img
-        class="rounded-full size-16 mb-4"
-        src="/profile_image.webp"
-        alt="Camilo Oviedo's picture"
-      />
-      <h1
-        class="text-white text-3xl md:text4xl lg:text/5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10"
-      >
-        Hey, I'm Camilo <a
-          href="https://www.linkedin.com/in/oviedocamilo/"
-          target="_blank"
-          rel="noopener"
-          class="flex justify-center items-center"
-        >
-          <Badge>Open to Work</Badge>
-        </a>
-      </h1>
-      <h2 class="text-xl lg:text-2xl max-w-[860px] text-pretty">
-        <span>Systems Engineer and Business Administrator</span>
-        <span class="text-yellow-200/90">with 6 years of experience</span>
-        <span class="text-red-100/90"
-          >in software design & development, project management and strategic
-          growth</span
-        >
-        <span class="opacity-85">
-          in the banking and IT services and consulting industry.</span
-        >
-      </h2>
-      <nav class="flex gap-4 mt-8 flex-wrap">
-        <SocialStack href="https://www.linkedin.com/in/oviedocamilo/">
-          <LinkedInIcon class="size-4 md:size-6" />LinkedIn
-        </SocialStack>
-        <SocialStack href="https://github.com/Champetaman">
-          <GitHubIcon class="size-4 md:size-6" />GitHub
-        </SocialStack>
-        <SocialStack href="mailto:oviedocamilo94@gmail.com">
-          <MailIcon class="size-4 md:size-6" />oviedocamilo94@gmail.com
-        </SocialStack>
-      </nav>
+  <main class="px-4">
+    <SectionContainer class="py-16 pb-36">
+      <Hero>
+        <slot />
+      </Hero>
     </SectionContainer>
 
-    <SectionContainer id="experience">
-      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
-        <BriefcaseIcon class="size-7" />
-        Experience
-      </h2>
-      <Experience />
-    </SectionContainer>
+    <div class="space-y-24">
+      <SectionContainer id="experience">
+        <h2
+          class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
+        >
+          <BriefcaseIcon class="size-8" />
+          Work Experience
+        </h2>
+        <Experience />
+      </SectionContainer>
 
-    <SectionContainer id="projects">
-      <h2 class="text-3xl font-semibold flex gap-x-3 items-center">
-        <CodeIcon class="size-7" />
-        Projects
-      </h2>
-      <Projects />
-    </SectionContainer>
+      <SectionContainer id="projects">
+        <h2
+          class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
+        >
+          <CodeIcon class="size-7" />
+          Projects
+        </h2>
+        <Projects />
+      </SectionContainer>
+
+      <SectionContainer id="about-me">
+        <h2
+          class="flex items-center mb-6 text-3xl font-semibold gap-x-8 text-black/80 dark:text-white"
+        >
+          <ProfileCheckIcon class="size-8" />
+          Sobre mí
+        </h2>
+        <AboutMe />
+      </SectionContainer>
+    </div>
   </main>
 </Layout>
