@@ -1,0 +1,18 @@
+[
+  {
+    "title": "Project 1",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "link": "#",
+    "github": "https://github.com/midudev/porfolio.dev",
+    "image": "/projects/project1.webp",
+    "altImage": "Screenshot of Project 1"
+  },
+  {
+    "title": "Project 2",
+    "description": "Semper feugiat nibh sed pulvinar proin gravida hendrerit lectus a. Ut ornare lectus sit amet est. Dignissim diam quis enim lobortis scelerisque fermentum dui. Consequat id porta nibh venenatis cras sed felis. Lacus sed viverra tellus in. Mattis aliquam faucibus purus in massa tempor. Ut eu sem integer vitae justo eget magna. At in tellus integer feugiat. Risus sed vulputate odio ut enim.",
+    "link": "#",
+    "github": "https://github.com/midudev/porfolio.dev",
+    "image": "/projects/project1.webp",
+    "altImage": "Screenshot of Project 2"
+  }
+]

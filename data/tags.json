@@ -1,0 +1,17 @@
+{
+  "NEXT": {
+    "name": "NextJS",
+    "class": "bg-black text-white",
+    "icon": "NextJSIcon"
+  },
+  "TAILWIND": {
+    "name": "Tailwind CSS",
+    "class": "bg-[#003159] text-white",
+    "icon": "TailwindIcon"
+  },
+  "ANGULAR": {
+    "name": "Tailwind CSS",
+    "class": "bg-[#CC0E49] text-white",
+    "icon": "AngularIcon"
+  }
+}

@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Experience",
+    "label": "experience",
+    "url": "/#experience"
+  },
+  {
+    "title": "Projects",
+    "label": "projects",
+    "url": "/#projects"
+  },
+  {
+    "title": "About Me",
+    "label": "about-me",
+    "url": "/#about-me"
+  },
+  {
+    "title": "Contact",
+    "label": "contact",
+    "url": "mailto:oviedocamilo94@gmail.com"
+  }
+]
