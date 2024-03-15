@@ -6,43 +6,45 @@ import MailIcon from "@/icons/Mail.astro";
 import SocialStack from "@/components/SocialStack.astro";
 ---
 
-<div class="max-w-xl">
-  <h1
-    class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white"
-  >
-    Hey, I'm Camilo
-  </h1>
-  <p
-    class="mt-6 text-xl text-gray-800 dark:[&>strong]:text-yellow-200 [&>strong]:text-yellow-500 [&>strong]:font-semibold dark:text-gray-300"
-  >
-    6 years of experience. <strong
-      >Systems Engineer and Business Administrator</strong
-    > software design & development, project management and strategic growth in the
-    banking and IT services and consulting industry.
-  </p>
-  <nav class="flex flex-wrap gap-4 mt-8">
-    <SocialStack href="mailto:oviedocamilo94@gmail.com">
-      <MailIcon class="size-4" />
-      Contact me
-    </SocialStack>
-    <SocialStack href="https://www.linkedin.com/in/oviedocamilo/">
-      <LinkedInIcon class="size-4" />
-      LinkedIn
-    </SocialStack>
-  </nav>
-  <div class="flex gap-4 mb-4">
-    <img
-      class="rounded-full shadow-lg size-28"
-      src="/profile_image.webp"
-      alt={personalImageAlt}
-    />
-    <a
-      href="https://linkedin.com/in/midudev"
-      target="_blank"
-      rel="noopener"
-      class="flex items-center transition md:justify-center md:hover:scale-105"
+<article class="flex flex-col items-center gap-8 md:flex-row mt-24">
+  <img
+    class="rounded-full shadow-lg size-44"
+    src="/profile_image.webp"
+    alt={personalImageAlt}
+  />
+
+  <div class="flex flex-col">
+    <h1
+      class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white"
     >
-      <Badge>Open to Work</Badge>
-    </a>
+      Hey, I'm Camilo
+    </h1>
+
+    <p
+      class="mt-6 text-xl text-gray-800 dark:[&>strong]:text-yellow-200 [&>strong]:text-yellow-500 [&>strong]:font-semibold dark:text-gray-300"
+    >
+      6 years of experience. <strong
+        >Systems Engineer and Business Administrator</strong
+      > software design & development, project management and strategic growth in
+      the banking and IT services and consulting industry.
+    </p>
+    <nav class="flex flex-wrap gap-4 mt-8">
+      <SocialStack href="mailto:oviedocamilo94@gmail.com">
+        <MailIcon class="size-4" />
+        Contact me
+      </SocialStack>
+      <SocialStack href="https://www.linkedin.com/in/oviedocamilo/">
+        <LinkedInIcon class="size-4" />
+        LinkedIn
+      </SocialStack>
+      <a
+        href="https://www.linkedin.com/in/oviedocamilo/"
+        target="_blank"
+        rel="noopener"
+        class="flex items-center transition md:justify-center md:hover:scale-105"
+      >
+        <Badge>Open to Work</Badge>
+      </a>
+    </nav>
   </div>
-</div>
+</article>
