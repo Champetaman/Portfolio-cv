@@ -1,13 +1,14 @@
 ---
 import Layout from "@/layouts/Layout.astro";
-import SectionContainer from "@/components/SectionContainer.astro";
-import Experience from "@/components/Experience.astro";
-import Projects from "@/components/Projects.astro";
-import Hero from "@/components/Hero.astro";
-import BriefcaseIcon from "@/icons/Briefcase.astro";
-import ProfileCheckIcon from "@/icons/ProfileCheck.astro";
-import CodeIcon from "@/icons/Code.astro";
+
 import AboutMe from "@/components/AboutMe.astro";
+import BriefcaseIcon from "@/icons/Briefcase.astro";
+import CodeIcon from "@/icons/Code.astro";
+import Experience from "@/components/Experience.astro";
+import Hero from "@/components/Hero.astro";
+import ProfileCheckIcon from "@/icons/ProfileCheck.astro";
+import Projects from "@/components/Projects.astro";
+import SectionContainer from "@/components/SectionContainer.astro";
 ---
 
 <Layout
@@ -15,13 +16,12 @@ import AboutMe from "@/components/AboutMe.astro";
   description="Hire Camilo Oviedo at your company to improve your technological team and engineer the future. Proven track record in designing and developing innovative software components used within complex systems, ensuring their functionality, reliability, security and efficiency."
 >
   <main class="px-4">
-    <SectionContainer class="py-16 pb-28">
-      <Hero>
-        <slot />
-      </Hero>
-    </SectionContainer>
-
-    <div class="space-y-24">
+      <SectionContainer class="py-16 pb-24">
+        <Hero>
+          <slot />
+        </Hero>
+      </SectionContainer>
+      <div class="space-y-20">
       <SectionContainer id="experience">
         <h2
           class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
