@@ -1,11 +1,11 @@
 [
   {
-    "title": "Project 1",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    "link": "#",
-    "github": "https://github.com/midudev/porfolio.dev",
-    "image": "/projects/project1.webp",
-    "altImage": "Screenshot of Project 1"
+    "title": "Modernization of the Central Securities Depository",
+    "description": "The CSD modernization aimed to enhance efficiency and security while supporting the Colombian market's operation. Its benefits included improving user experience, reducing operational risks, and optimizing response time, aligned with international standards and best practices.",
+    "link": "https://www.banrep.gov.co/es/sistemas-pago/modernizacion-deposito-central-valores",
+    "github": "",
+    "image": "/projects/DCV.webp",
+    "altImage": "Screenshot of the Central Securities Depository (CSD) Software"
   },
   {
     "title": "Project 2",
