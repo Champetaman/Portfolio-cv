@@ -7,8 +7,8 @@ import robotsTxt from "astro-robots-txt";
 export default defineConfig({
   integrations: [tailwind(), robotsTxt()],
   site: "https://camilooviedo.com/",
-  output: "server",
+  output: "hybrid",
   adapter: vercel({
-    webAnalytics: { enabled: true },
+    webAnalytics: { enabled: false },
   }),
 });
