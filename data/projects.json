@@ -1,18 +1,34 @@
 [
   {
-    "title": "Modernization of the Central Securities Depository",
-    "description": "The CSD modernization aimed to enhance efficiency and security while supporting the Colombian market's operation. Its benefits included improving user experience, reducing operational risks, and optimizing response time, aligned with international standards and best practices.",
+    "title": "Central Securities Depository",
+    "description": "The CSD modernization aims to enhance efficiency and security while supporting the Colombian market's operation. Its benefits included improving user experience, reducing operational risks, and optimizing response time, aligned with international standards and best practices.",
     "link": "https://www.banrep.gov.co/es/sistemas-pago/modernizacion-deposito-central-valores",
     "github": "",
-    "image": "/projects/DCV.webp",
+    "image": "/projects/DCV-Port.webp",
     "altImage": "Screenshot of the Central Securities Depository (CSD) Software"
   },
   {
-    "title": "Project 2",
-    "description": "Semper feugiat nibh sed pulvinar proin gravida hendrerit lectus a. Ut ornare lectus sit amet est. Dignissim diam quis enim lobortis scelerisque fermentum dui. Consequat id porta nibh venenatis cras sed felis. Lacus sed viverra tellus in. Mattis aliquam faucibus purus in massa tempor. Ut eu sem integer vitae justo eget magna. At in tellus integer feugiat. Risus sed vulputate odio ut enim.",
+    "title": "Integrated Operational Manager of Securities",
+    "description": "Aims to serve as the tariffing and reporting system for the Fiduciary and Securities Department at the Central Bank of Colombian. Its primary function is to act as the conduit for operational transformation between the SEN trading system and the CSD. Additionally, it is tasked with calculating fees for the utilization of various FSD services and producing daily reports for stakeholders.",
+    "link": "https://www.banrep.gov.co/",
+    "github": "",
+    "image": "/projects/GOIN.webp",
+    "altImage": "Screenshot of the Integrated Operational Manager of Securities (GOIN)"
+  },
+  {
+    "title": "Porvenir Digital Transformation",
+    "description": "",
     "link": "#",
-    "github": "https://github.com/midudev/porfolio.dev",
-    "image": "/projects/project1.webp",
-    "altImage": "Screenshot of Project 2"
+    "github": "",
+    "image": "/projects/Porvenir.webp",
+    "altImage": "Screenshot of the Pension Fund Porvenir Digital Transformation Software"
+  },
+  {
+    "title": "Precia - Provider of Valuation Prices",
+    "description": "Precia's software platform provides up-to-date valuation prices for a variety of financial instruments, including fixed income securities, equities, derivatives, and structured products. It also offers reference rates for different currencies.  The platform was designed to assist Precia in developing financial strategies and maintaining market alignment.",
+    "link": "https://www.precia.co/",
+    "github": "",
+    "image": "/projects/Precia.webp",
+    "altImage": "Screenshot of Precia Application"
   }
 ]
