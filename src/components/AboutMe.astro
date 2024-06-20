@@ -3,10 +3,15 @@ const personalImageAlt = "Camilo Oviedo";
 ---
 
 <article
-  class="flex flex-col items-center justify-center gap-8 text-gray-700 dark:text-gray-300 md:flex-row"
+  class="flex flex-col items-center justify-center gap-10 text-gray-700 dark:text-gray-300 md:flex-row"
 >
+  <img
+    src="/casual_image.webp"
+    alt={personalImageAlt}
+    class="rounded-full w-60 h-60 md:w-80 md:h-80 aspect-square object-cover"
+  />
   <div
-    class="[&>p]:mb-4 [&>p>strong]:text-yellow-500 dark:[&>p>strong]:text-yellow-100 [&>p>strong]:font-normal [&>p>strong]:font-mono text-pretty order-2 md:order-1"
+    class="[&>p]:mb-4 [&>p>strong]:text-yellow-500 dark:[&>p>strong]:text-yellow-100 [&>p>strong]:font-normal [&>p>strong]:font-mono text-pretty order-last md:order-1"
   >
     <p>
       My name is Camilo, I'm from Bogotá, Colombia. I'm a passionate guy with a
@@ -35,13 +40,4 @@ const personalImageAlt = "Camilo Oviedo";
       <em class="italic"> nexus of technology and finance.</em>
     </p>
   </div>
-
-  <img
-    width="200"
-    height="200"
-    src="/profile_image.webp"
-    alt={personalImageAlt}
-    class="order-1 object-cover w-64 h-full p-1 md:order-2 rotate-3 lg:p-2 lg:w-64 aspect-video rounded-2xl bg-black/20 dark:bg-yellow-500/5 ring-1 ring-black/70 dark:ring-white/20"
-    style="object-position: 50% 50%"
-  />
 </article>
