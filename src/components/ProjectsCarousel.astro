@@ -10,7 +10,7 @@ const totalSlides = Math.ceil(PROJECTS.length / 2); // Calculate the number of s
     <div id="carousel" class="flex transition-transform">
       {Array.from({ length: totalSlides }).map((_, slideIndex) => (
         <div class="flex-shrink-0 w-full flex">
-          {PROJECTS.slice(slideIndex * 2, slideIndex * 2 + 2).map((project, index) => (
+          {PROJECTS.slice(slideIndex * 2, slideIndex * 2 + 2).map((project, _index) => (
             <div class="carousel-item w-1/2 p-4 flex flex-col m-4">
               <div class="bg-white rounded-lg shadow-lg overflow-hidden dark:bg-slate-800 flex flex-col h-full">
                 <img src={project.image} alt={project.description} class="w-full" />
@@ -44,67 +44,66 @@ const totalSlides = Math.ceil(PROJECTS.length / 2); // Calculate the number of s
 </div>
 
 <script>
-  const carousel = document.getElementById("carousel");
-  const prevButton = document.getElementById("prev");
-  const nextButton = document.getElementById("next");
-  const dots = document.querySelectorAll(".dot");
+  document.addEventListener("DOMContentLoaded", () => {
+    const carousel = document.getElementById("carousel");
+    const prevButton = document.getElementById("prev");
+    const nextButton = document.getElementById("next");
+    const dots = document.querySelectorAll(".dot");
 
-  let currentIndex = 0;
-  const itemsPerSlide = 2;  // Number of items per slide
-  const totalSlides = carousel ? Math.ceil(carousel.children.length) : 0;  // Total number of slides
+    let currentIndex = 0;
+    //const itemsPerSlide = 2;  // Number of items per slide
+    const totalSlides = carousel ? Math.ceil(carousel.children.length) : 0;  // Total number of slides
 
-  if (prevButton) {
-    prevButton.addEventListener("click", () => {
-      if (currentIndex > 0) {
-        currentIndex--;
+    if (prevButton) {
+      prevButton.addEventListener("click", () => {
+        if (currentIndex > 0) {
+          currentIndex--;
+          updateCarousel();
+        }
+      });
+    }
+
+    if (nextButton) {
+      nextButton.addEventListener("click", () => {
+        if (currentIndex < totalSlides - 1) {
+          currentIndex++;
+          updateCarousel();
+        }
+      });
+    }
+
+    dots.forEach((dot) => {
+      dot.addEventListener("click", () => {
+        const index = dot.getAttribute("data-index");
+        currentIndex = parseInt(index ?? "0");
         updateCarousel();
-      }
+      });
     });
-  }
 
-  if (nextButton) {
-    nextButton.addEventListener("click", () => {
-      if (currentIndex < totalSlides - 1) {
-        currentIndex++;
-        updateCarousel();
-      }
-    });
-  }
+    function updateCarousel() {
+      if (!carousel) return;
+      const offset = -currentIndex * 100;
+      carousel.style.transform = `translateX(${offset}%)`;
+      dots.forEach((dot, index) => {
+        dot.classList.remove("bg-gray-500");
+        dot.classList.add("bg-slate-800", "dark:bg-white");
+        if (index === currentIndex) {
+          dot.classList.add("bg-gray-500");
+          dot.classList.remove("bg-slate-800", "dark:bg-white");
+        }
+      });
 
-  dots.forEach((dot) => {
-    dot.addEventListener("click", () => {
-      currentIndex = parseInt(dot.getAttribute("data-index"));
-      updateCarousel();
-    });
+      // Hide or show prev and next buttons based on the current index
+      if (prevButton) {
+        prevButton.style.display = currentIndex === 0 ? "none" : "block";
+      }
+
+      if (nextButton) {
+        nextButton.style.display = currentIndex === totalSlides - 1 ? "none" : "block";
+      }
+    }
+
+    // Initial call to set up the carousel and dots
+    updateCarousel();
   });
-
-  function updateCarousel() {
-    if (!carousel) return;
-    const offset = -currentIndex * 100;
-    carousel.style.transform = `translateX(${offset}%)`;
-    dots.forEach((dot, index) => {
-      dot.classList.remove("bg-gray-500");
-      dot.classList.add("bg-slate-800", "dark:bg-white");
-      if (index === currentIndex) {
-        dot.classList.add("bg-gray-500");
-        dot.classList.remove("bg-slate-800", "dark:bg-white");
-      }
-    });
-
-    // Hide or show prev and next buttons based on the current index
-    if (currentIndex === 0) {
-      prevButton.style.display = "none";
-    } else {
-      prevButton.style.display = "block";
-    }
-
-    if (currentIndex === totalSlides - 1) {
-      nextButton.style.display = "none";
-    } else {
-      nextButton.style.display = "block";
-    }
-  }
-
-  // Initial call to set up the carousel and dots
-  updateCarousel();
 </script>
