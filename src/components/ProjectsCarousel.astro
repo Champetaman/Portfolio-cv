@@ -1,0 +1,110 @@
+---
+import ProjectsData from "../../data/projects.json";
+
+const PROJECTS = ProjectsData;
+const totalSlides = Math.ceil(PROJECTS.length / 2); // Calculate the number of slides
+---
+
+<div class="container mx-auto p-4">
+  <div class="relative overflow-hidden">
+    <div id="carousel" class="flex transition-transform">
+      {Array.from({ length: totalSlides }).map((_, slideIndex) => (
+        <div class="flex-shrink-0 w-full flex">
+          {PROJECTS.slice(slideIndex * 2, slideIndex * 2 + 2).map((project, index) => (
+            <div class="carousel-item w-1/2 p-4 flex flex-col m-4">
+              <div class="bg-white rounded-lg shadow-lg overflow-hidden dark:bg-slate-800 flex flex-col h-full">
+                <img src={project.image} alt={project.description} class="w-full" />
+                <div class="p-4 flex-grow">
+                  <h2 class="text-xl font-semibold mb-2 text-gray-700 dark:text-white">{project.title}</h2>
+                  <p class="description">{project.description}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      ))}
+    </div>
+    <button
+      id="prev"
+      class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-lg dark:bg-slate-700"
+    >❮</button>
+    <button
+      id="next"
+      class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-lg dark:bg-slate-700"
+    >❯</button>
+  </div>
+  <div class="flex justify-center mt-4 space-x-2">
+    {Array.from({ length: totalSlides }).map((_, index) => (
+      <div
+        class="dot w-2 h-2 rounded-full bg-slate-800 dark:bg-white"
+        data-index={index}
+      ></div>
+    ))}
+  </div>
+</div>
+
+<script>
+  const carousel = document.getElementById("carousel");
+  const prevButton = document.getElementById("prev");
+  const nextButton = document.getElementById("next");
+  const dots = document.querySelectorAll(".dot");
+
+  let currentIndex = 0;
+  const itemsPerSlide = 2;  // Number of items per slide
+  const totalSlides = carousel ? Math.ceil(carousel.children.length) : 0;  // Total number of slides
+
+  if (prevButton) {
+    prevButton.addEventListener("click", () => {
+      if (currentIndex > 0) {
+        currentIndex--;
+        updateCarousel();
+      }
+    });
+  }
+
+  if (nextButton) {
+    nextButton.addEventListener("click", () => {
+      if (currentIndex < totalSlides - 1) {
+        currentIndex++;
+        updateCarousel();
+      }
+    });
+  }
+
+  dots.forEach((dot) => {
+    dot.addEventListener("click", () => {
+      currentIndex = parseInt(dot.getAttribute("data-index"));
+      updateCarousel();
+    });
+  });
+
+  function updateCarousel() {
+    if (!carousel) return;
+    const offset = -currentIndex * 100;
+    carousel.style.transform = `translateX(${offset}%)`;
+    dots.forEach((dot, index) => {
+      dot.classList.remove("bg-gray-500");
+      dot.classList.add("bg-slate-800", "dark:bg-white");
+      if (index === currentIndex) {
+        dot.classList.add("bg-gray-500");
+        dot.classList.remove("bg-slate-800", "dark:bg-white");
+      }
+    });
+
+    // Hide or show prev and next buttons based on the current index
+    if (currentIndex === 0) {
+      prevButton.style.display = "none";
+    } else {
+      prevButton.style.display = "block";
+    }
+
+    if (currentIndex === totalSlides - 1) {
+      nextButton.style.display = "none";
+    } else {
+      nextButton.style.display = "block";
+    }
+  }
+
+  // Initial call to set up the carousel and dots
+  updateCarousel();
+</script>

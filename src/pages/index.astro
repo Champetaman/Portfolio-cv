@@ -7,8 +7,9 @@ import CodeIcon from "@/icons/Code.astro";
 import Experience from "@/components/Experience.astro";
 import Hero from "@/components/Hero.astro";
 import ProfileCheckIcon from "@/icons/ProfileCheck.astro";
-import Projects from "@/components/Projects.astro";
 import SectionContainer from "@/components/SectionContainer.astro";
+import Technologies from "@/components/Technologies.astro"
+import ProjectsCarousel from "@/components/ProjectsCarousel.astro";
 ---
 
 <Layout
@@ -16,12 +17,12 @@ import SectionContainer from "@/components/SectionContainer.astro";
   description="Hire Camilo Oviedo at your company to improve your technological team and engineer the future. Proven track record in designing and developing innovative software components used within complex systems, ensuring their functionality, reliability, security and efficiency."
 >
   <main class="px-4">
-      <SectionContainer class="py-16 pb-24">
-        <Hero>
-          <slot />
-        </Hero>
-      </SectionContainer>
-      <div class="space-y-20">
+    <SectionContainer class="py-16 pb-24">
+      <Hero>
+        <slot />
+      </Hero>
+    </SectionContainer>
+    <div class="space-y-20">
       <SectionContainer id="experience">
         <h2
           class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
@@ -39,7 +40,17 @@ import SectionContainer from "@/components/SectionContainer.astro";
           <CodeIcon class="size-7" />
           Projects
         </h2>
-        <Projects />
+        <ProjectsCarousel />
+      </SectionContainer>
+
+      <SectionContainer id="Technologies">
+        <h2
+          class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
+        >
+          <CodeIcon class="size-7" />
+          Technologies
+        </h2>
+        <Technologies />
       </SectionContainer>
 
       <SectionContainer id="about-me">
