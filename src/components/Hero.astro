@@ -3,7 +3,11 @@ const personalImageAlt = "Camilo Oviedo";
 import Badge from "@/components/Badge.astro";
 import LinkedInIcon from "@/icons/Social/LinkedIn.astro";
 import MailIcon from "@/icons/Mail.astro";
+import DownloadIcon from "@/icons/Download.astro";
 import SocialStack from "@/components/SocialStack.astro";
+
+const ResumePDF =
+  "https://pub-b87a1e5b7f3244c6a501416d3dcc2ee7.r2.dev/CV_CamiloOviedo_Engineer.pdf";
 ---
 
 <article class="flex flex-col items-center gap-8 md:flex-row mt-24">
@@ -17,21 +21,25 @@ import SocialStack from "@/components/SocialStack.astro";
     <h1
       class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white"
     >
-      Hey, I'm Camilo
+      Hey, I'm Camilo Oviedo
     </h1>
 
     <p
-      class="mt-6 text-xl text-gray-800 dark:[&>strong]:text-yellow-200 [&>strong]:text-yellow-500 [&>strong]:font-semibold dark:text-gray-300"
+      class="mt-6 text-xl text-pretty text-gray-800 dark:[&>strong]:text-yellow-200 [&>strong]:text-yellow-500 [&>strong]:font-semibold dark:text-gray-300"
     >
-      6 years of experience. <strong
-        >Systems Engineer and Business Administrator</strong
-      > software design & development, project management and strategic growth in
-      the banking and IT services and consulting industry.
+      <strong>Systems Engineer and Business Administrator </strong> with over 6 years
+      of experience in software design, development, and project management. Proven
+      expertise in system development and agile methodologies, particularly within
+      banking and IT consulting sectors.
     </p>
     <nav class="flex flex-wrap gap-4 mt-8">
       <SocialStack href="mailto:oviedocamilo94@gmail.com">
         <MailIcon class="size-4" />
         Contact me
+      </SocialStack>
+      <SocialStack href={ResumePDF} download>
+        <DownloadIcon class="size-4" />
+        Download Resume
       </SocialStack>
       <SocialStack href="https://www.linkedin.com/in/oviedocamilo/">
         <LinkedInIcon class="size-4" />
