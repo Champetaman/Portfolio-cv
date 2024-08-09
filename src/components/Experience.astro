@@ -1,16 +1,56 @@
 ---
+import LocationIcon from "@/icons/Location.astro";
 import ExperienceItem from "../components/ExperienceItem.astro";
 import ExperienceData from "../../data/experience.json";
 
-const EXPERIENCE = ExperienceData;
+interface Position {
+  date: string;
+  title: string;
+  achievements: string[];
+}
+
+interface CompanyExperience {
+  company: string;
+  location: string;
+  positions: Position | Position[];
+}
+
+const EXPERIENCE: CompanyExperience[] = ExperienceData;
 ---
 
-<ol class="relative mt-16">
-  {
-    EXPERIENCE.map((experience) => (
-      <li class="">
-        <ExperienceItem {...experience} />
-      </li>
-    ))
-  }
+<ol class="relative mt-8">
+  {EXPERIENCE.map((companyExperience) => (
+    <div class="mb-6">
+      <h2 class="text-yellow-400 text-2xl font-extrabold">
+        {companyExperience.company}
+      </h2>
+      <h3 class="flex items-center text-md text-gray-500 dark:text-gray-400 mt-1">
+        <LocationIcon class="size-4 ml-1 mr-2" />
+        {companyExperience.location}
+      </h3>
+
+      {/* Handle the case where positions could be an object or an array */}
+      {Array.isArray(companyExperience.positions) ? (
+        companyExperience.positions.map((position, index) => (
+          <li class="mt-4">
+            <ExperienceItem
+              date={position.date}
+              title={position.title}
+              achievements={position.achievements}
+              company={companyExperience.company}
+            />
+          </li>
+        ))
+      ) : (
+        <li class="mt-4">
+          <ExperienceItem
+            date={companyExperience.positions.date}
+            title={companyExperience.positions.title}
+            achievements={companyExperience.positions.achievements}
+            company={companyExperience.company}
+          />
+        </li>
+      )}
+    </div>
+  ))}
 </ol>

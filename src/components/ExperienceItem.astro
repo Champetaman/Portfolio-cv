@@ -1,45 +1,48 @@
 ---
 import LinkInLine from "@/components/LinkInLine.astro";
-import ChevronRightIcon from "@/icons/ChevronRight.astro"
+import ChevronRightIcon from "@/icons/ChevronRight.astro";
+
 interface Props {
   date: string;
   company: string;
   title: string;
-  description: string;
+  achievements: string[];
   link?: string;
 }
-const { date, company, title, description, link } = Astro.props;
+
+const { date, company, title, achievements, link } = Astro.props;
 ---
 
 <div
-  class="relative mx-12 pb-12 grid before:absolute before:left-[-35px] before:block before:h-full before:border-l-2 before:border-black/20 dark:before:border-white/15 before:content-[''] md:grid-cols-5 md:gap-10 md:space-x-4]"
+  class="relative mx-12 pb-8 grid before:absolute before:left-[-35px] before:block before:h-full before:border-l-2 before:border-black/20 dark:before:border-white/15 before:content-[''] md:grid-cols-1 md:gap-2"
 >
-  <div class="relative pb-12 md:col-span-2">
-    <div class="sticky top-0">
+  <div class="relative pb-2">
+    <div>
       <span class="text-yellow-400 -left-[42px] absolute rounded-full text-5xl"
         >&bull;</span
       >
-      <h3 class="text-xl font-bold text-yellow-400">{title}</h3>
-      <h4 class="font-semibold text-xl text-gray-600 dark:text-white">
-        {company}
-      </h4>
-      <time class="p-0 m-0 text-sm text-gray-600/80 dark:text-white/80"
+      <h3 class="text-xl font-bold text-gray-900 dark:text-gray-100">
+        {title}
+      </h3>
+      <time class="block mt-1 text-sm text-gray-500 dark:text-gray-400"
         >{date}</time
       >
     </div>
   </div>
   <div
-    class="relative flex flex-col gap-2 pb-4 text-gray-600 dark:text-gray-300 md:col-span-3"
+    class="relative flex flex-col gap-2 pb-2 text-gray-700 dark:text-gray-300 text-pretty"
   >
-    {description}
-
-    {
-      link && (
-        <LinkInLine href={link}>
-          Learn more{" "}
-          <ChevronRightIcon />
-        </LinkInLine>
-      )
-    }
+    <ul class="list-disc pl-5 marker:text-gray-900 dark:marker:text-gray-100">
+      {
+        achievements.map((achievement, index) => (
+          <li class="pl-1">{achievement}</li>
+        ))
+      }
+    </ul>
+    <!-- {link && (
+      <LinkInLine href={link}>
+        Learn more <ChevronRightIcon />
+      </LinkInLine>
+    )} -->
   </div>
 </div>
