@@ -1,86 +1,119 @@
 ---
-import navItemsData from "@/../data/navItems.json";
-import ThemeToggle from "@/components/ThemeToggle.astro";
+import navItemsData from "@/../data/navItems.json"; // Import the navigation items data from a JSON file
+import HamburguerIcon from "@/icons/Hamburguer.astro"; // Import the Hamburger icon component for mobile menu
+import LightModeIcon from "../icons/Theme/LightMode.astro"; // Import the Light Mode icon for the theme toggle
+import DarkModeIcon from "../icons/Theme/DarkMode.astro"; // Import the Dark Mode icon for the theme toggle
+import MenuCloseIcon from "@/icons/MenuClose.astro"; // Import the Menu Close icon for the mobile menu
 
-const navItems = navItemsData;
+const navItems = navItemsData; // Assign the navigation items data to a constant for easier use
 ---
 
 <header
-  class="fixed top-4 z-10 flex items-center justify-center w-full mx-auto mt-5"
+  class="fixed top-4 z-10 w-full mx-auto mt-5 px-4 md:px-8 lg:px-16 flex justify-between items-center"
 >
-  <nav
-    class="flex px-3  space-x-8 text-base font-medium rounded-full text-gray-600 dark:text-gray-200 justify-center items-center"
-  >
-    {
-      navItems.map((item) => (
-        <a
-          class="relative block px-2 py-2 transition hover:text-yellow-500 dark:hover:text-yellow-400"
-          aria-label={item.label}
-          href={item.url}
+  <div class="flex justify-between items-center w-full">
+    <!-- Navigation for Large Screens (Centered) -->
+    <nav
+      id="nav-menu"
+      class="hidden lg:flex lg:items-center lg:space-x-4 md:space-x-8 text-lg font-medium rounded-full text-gray-600 dark:text-gray-200 mx-auto px-6"
+    >
+      <!-- Loop through the navigation items and render each as a link -->
+      {
+        navItems.map((item) => (
+          <a
+            class="relative block px-2 py-2 transition hover:text-yellow-500 dark:hover:text-yellow-400"
+            aria-label={item.label}
+            href={item.url}
+          >
+            {item.title}
+          </a>
+        ))
+      }
+      <!-- Theme Toggle Button -->
+      <div class="relative ml-1 mr-1">
+        <button
+          id="theme-toggle-btn"
+          class="appearance-none border-none flex hover:scale-125 transition"
         >
-          {item.title}
-        </a>
-      ))
-    }
-    <ThemeToggle />
-  </nav>
+          <span class="sr-only">Toggle theme</span>
+          <!-- Screen reader text for accessibility -->
+          <LightModeIcon
+            id="light-icon"
+            class="theme-toggle-icon size-5 transition-all"
+          />
+          <DarkModeIcon
+            id="dark-icon"
+            class="theme-toggle-icon size-5 transition-all hidden"
+          />
+        </button>
+      </div>
+    </nav>
+
+    <!-- Hamburger Button for Small Screens (Right-Aligned) -->
+    <button
+      id="menu-toggle"
+      class="lg:hidden p-2 text-gray-600 dark:text-gray-200 ml-auto"
+    >
+      <HamburguerIcon class="w-6 h-6" />
+      <!-- Render the Hamburger icon for mobile menu -->
+    </button>
+
+    <!-- Full-Screen Menu for Small Screens -->
+    <div
+      id="mobile-menu"
+      class="fixed inset-0 z-20 hidden bg-black bg-opacity-90 dark:bg-gray-900 p-8 flex flex-col justify-between"
+    >
+      <div class="flex justify-end">
+        <!-- Close Button for Mobile Menu -->
+        <button id="menu-close" class="p-2 text-gray-600 dark:text-gray-200">
+          <MenuCloseIcon class="w-6 h-6" />
+          <!-- Render the MenuCloseIcon -->
+        </button>
+      </div>
+
+      <!-- Mobile Menu Navigation Items -->
+      <nav
+        class="flex flex-col items-center justify-center flex-grow space-y-8 text-2xl text-gray-200"
+      >
+        {
+          navItems.map((item, index) => (
+            <a
+              id={`mobile-nav-item-${index}`}
+              class="relative block px-2 py-2 transition hover:text-yellow-500 dark:hover:text-yellow-400"
+              aria-label={item.label}
+              href={item.url}
+            >
+              {item.title}
+            </a>
+          ))
+        }
+      </nav>
+    </div>
+  </div>
 </header>
 
-<script>
-  document.addEventListener("astro:page-load", () => {
-    const sections = document.querySelectorAll("section");
-    const navItems = document.querySelectorAll("header nav a");
-
-    const callback = (entries: any[]) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          navItems.forEach((item) => {
-            if (item.getAttribute("aria-label") == entry.target.id) {
-              item.classList.add("text-yellow-500");
-            } else {
-              item.classList.remove("text-yellow-500");
-            }
-          });
-        }
-      });
-    };
-
-    const observer = new IntersectionObserver(callback, {
-      root: null,
-      rootMargin: "0px",
-      threshold: 0.3,
-    });
-
-    sections.forEach((section) => {
-      observer.observe(section);
-    });
-
-    // Cleanup function
-    document.onvisibilitychange = () => {
-      if (document.visibilityState === "hidden") {
-        observer.disconnect();
-      } else {
-        sections.forEach((section) => {
-          observer.observe(section);
-        });
-      }
-    };
-  });
-</script>
+<!-- Include external scripts for theme toggle and mobile menu functionality -->
+<script src="/src/scripts/theme-toggle.js"></script>
+<script src="/src/scripts/mobile-menu.js"></script>
 
 <style>
-  nav {
-    animation: nav-shadown 1s linear both;
-    animation-timeline: scroll();
-    animation-range: 0 100px;
-    @apply dark:bg-gray-800/90 bg-white/50;
+  /* Apply styles to the nav element when the screen width is 1024px or more */
+  @media (min-width: 1024px) {
+    nav {
+      animation: nav-shadow 1s linear both; /* Apply a shadow animation */
+      animation-timeline: scroll(); /* Set the animation timeline */
+      animation-range: 0 100px; /* Set the animation range */
+      @apply dark:bg-gray-800/90 bg-white/50; /* Apply background colors based on the theme */
+    }
   }
-  @keyframes nav-shadown {
+
+  /* Define the nav shadow animation */
+  @keyframes nav-shadow {
     0% {
-      @apply dark:bg-gray-800/0 bg-white/0;
+      @apply dark:bg-gray-800/0 bg-white/0; /* Start with transparent backgrounds */
     }
     to {
-      @apply shadow-lg ring-1 backdrop-blur ring-white/10;
+      @apply shadow-lg ring-1 backdrop-blur ring-white/10; /* Apply shadow and blur effects */
     }
   }
 </style>
