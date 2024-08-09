@@ -1,14 +1,47 @@
 [
   {
-    "date": "May 2019 - January 2024",
     "company": "Central Bank of Colombia",
-    "title": "Specialized Engineer",
-    "description": "Pioneered dynamic software initiatives, modernizing legacy systems to strengthen Colombia's financial ecosystem. Led a team of 15 engineers, achieving a 25% reduction in system downtime and a 40% increase in transaction processing speed. Implemented Java, JavaScript, and TypeScript static code analysis tools, resulting in a 30% improvement in code quality. Contributed to reducing project delivery time by 15% while ensuring adherence to budgets, enhancing economic stability and preserving currency integrity."
+    "location": "Bogotá, Colombia",
+    "positions": {
+      "date": "May 2019 - January 2024",
+      "title": "Technical Business Analyst",
+      "achievements": [
+        "Spearheaded software modernization at the Central Bank of Colombia, improving operational efficiency by 30% and system reliability by 25%.",
+        "Led a team of 15 engineers and provided 24/7 technical support, reducing system downtime by 35% and ensuring seamless critical system operations.",
+        "Analyzed and designed software requirements using Java, Angular, and SQL, increasing business alignment.",
+        "Developed PowerApps and SAP Business Objects reports, enhancing data accessibility by 30%.",
+        "Ensured regulatory compliance and led initiatives that streamlined workflows by 25% and boosted performance by 30%."
+      ]
+    }
   },
   {
-    "date": "January 2018 - May 2019",
-    "company": "Sophos Solutions S.A.S",
-    "title": "Implementation Consultant",
-    "description": "Orchestrated transformative software endeavors, architecting solutions that propelled client enterprises to new heights of efficiency and competitiveness. Led a team of 5 engineers, resulting in a 20% increase in client retention and a 15% decrease in support ticket resolution time. Implemented automated testing methodologies, reducing software bugs by 20% and enhancing overall system reliability."
+    "company": "Sophos Solutions",
+    "location": "Bogotá, Colombia",
+    "positions": [
+      {
+        "date": "January 2019 - May 2019",
+        "title": "Software Engineer",
+        "achievements": [
+          "Orchestrated transformative software endeavors, architecting solutions that propelled client enterprises to new heights of efficiency and competitiveness.",
+          "Led a team of 5 engineers at Sophos Solutions, identifying business needs and successfully launching a product.",
+          "Maintained Porvenir's Digital Transformation app with IBM BPM WebSphere.",
+          "Implemented Jenkins CI/CD pipelines, reducing deployment times by 40%.",
+          "Migrated legacy systems to AWS, enhancing reliability by 35%.",
+          "Optimized SQL queries, boosting response times by 30%.",
+          "Improved user experience and customer satisfaction through cross-functional collaboration."
+        ]
+      },
+      {
+        "date": "January 2018 - Dec 2018",
+        "title": "Junior Software Engineer",
+        "achievements": [
+          "Developed full-stack solutions using Java, JavaScript, Angular, SQL, and Docker.",
+          "Created RESTful microservices with Spring, improving data handling efficiency.",
+          "Enhanced software quality by adding automated tests, increasing reliability by 20%.",
+          "Maintained production applications, ensuring high standards.",
+          "Led Porvenir’s Digital Transformation project with IBM BPM WebSphere, reducing request handling time by 80%."
+        ]
+      }
+    ]
   }
 ]
