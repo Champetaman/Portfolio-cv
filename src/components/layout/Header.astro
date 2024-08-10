@@ -1,9 +1,9 @@
 ---
 import navItemsData from "@/../data/navItems.json"; // Import the navigation items data from a JSON file
-import HamburguerIcon from "@/icons/Hamburguer.astro"; // Import the Hamburger icon component for mobile menu
-import LightModeIcon from "../icons/Theme/LightMode.astro"; // Import the Light Mode icon for the theme toggle
-import DarkModeIcon from "../icons/Theme/DarkMode.astro"; // Import the Dark Mode icon for the theme toggle
-import MenuCloseIcon from "@/icons/MenuClose.astro"; // Import the Menu Close icon for the mobile menu
+import HamburguerIcon from "@/icons/common/Hamburguer.astro"; // Import the Hamburger icon component for mobile menu
+import LightModeIcon from "@/icons/theme/LightMode.astro"; // Import the Light Mode icon for the theme toggle
+import DarkModeIcon from "@/icons/theme/DarkMode.astro"; // Import the Dark Mode icon for the theme toggle
+import MenuCloseIcon from "@/icons/common/MenuClose.astro"; // Import the Menu Close icon for the mobile menu
 
 const navItems = navItemsData; // Assign the navigation items data to a constant for easier use
 ---
@@ -12,6 +12,22 @@ const navItems = navItemsData; // Assign the navigation items data to a constant
   class="fixed top-4 z-10 w-full mx-auto mt-5 px-4 md:px-8 lg:px-16 flex justify-between items-center"
 >
   <div class="flex justify-between items-center w-full">
+    <!-- Theme Toggle Button for Small Screens (Left-Aligned) -->
+    <button
+      id="theme-toggle-btn-sm"
+      class="lg:hidden p-2 text-gray-600 dark:text-gray-200"
+      aria-label="Toggle Theme"
+    >
+      <LightModeIcon
+        id="light-icon-sm"
+        class="theme-toggle-icon size-5 transition-all hidden"
+      />
+      <DarkModeIcon
+        id="dark-icon-sm"
+        class="theme-toggle-icon size-5 transition-all hidden"
+      />
+    </button>
+
     <!-- Navigation for Large Screens (Centered) -->
     <nav
       id="nav-menu"
@@ -29,14 +45,13 @@ const navItems = navItemsData; // Assign the navigation items data to a constant
           </a>
         ))
       }
-      <!-- Theme Toggle Button -->
+      <!-- Theme Toggle Button for Large Screens -->
       <div class="relative ml-1 mr-1">
         <button
           id="theme-toggle-btn"
           class="appearance-none border-none flex hover:scale-125 transition"
         >
           <span class="sr-only">Toggle theme</span>
-          <!-- Screen reader text for accessibility -->
           <LightModeIcon
             id="light-icon"
             class="theme-toggle-icon size-5 transition-all"
