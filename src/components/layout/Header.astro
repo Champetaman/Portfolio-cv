@@ -13,20 +13,22 @@ const navItems = navItemsData; // Assign the navigation items data to a constant
 >
   <div class="flex justify-between items-center w-full">
     <!-- Theme Toggle Button for Small Screens (Left-Aligned) -->
-    <button
-      id="theme-toggle-btn-sm"
-      class="lg:hidden p-2 text-gray-600 dark:text-gray-200"
-      aria-label="Toggle Theme"
-    >
-      <LightModeIcon
-        id="light-icon-sm"
-        class="theme-toggle-icon size-5 transition-all hidden"
-      />
-      <DarkModeIcon
-        id="dark-icon-sm"
-        class="theme-toggle-icon size-5 transition-all hidden"
-      />
-    </button>
+    <div class="lg:hidden flex items-center">
+      <button
+        id="theme-toggle-btn-sm"
+        class="p-2 text-gray-600 dark:text-gray-200"
+        aria-label="Toggle Theme"
+      >
+        <LightModeIcon
+          id="light-icon-sm"
+          class="theme-toggle-icon size-5 transition-all hidden"
+        />
+        <DarkModeIcon
+          id="dark-icon-sm"
+          class="theme-toggle-icon size-5 transition-all hidden"
+        />
+      </button>
+    </div>
 
     <!-- Navigation for Large Screens (Centered) -->
     <nav
@@ -70,7 +72,6 @@ const navItems = navItemsData; // Assign the navigation items data to a constant
       class="lg:hidden p-2 text-gray-600 dark:text-gray-200 ml-auto"
     >
       <HamburguerIcon class="w-6 h-6" />
-      <!-- Render the Hamburger icon for mobile menu -->
     </button>
 
     <!-- Full-Screen Menu for Small Screens -->
@@ -82,7 +83,6 @@ const navItems = navItemsData; // Assign the navigation items data to a constant
         <!-- Close Button for Mobile Menu -->
         <button id="menu-close" class="p-2 text-gray-600 dark:text-gray-200">
           <MenuCloseIcon class="w-6 h-6" />
-          <!-- Render the MenuCloseIcon -->
         </button>
       </div>
 
