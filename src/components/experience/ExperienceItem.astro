@@ -1,16 +1,15 @@
 ---
-import LinkInLine from "@/components/common/LinkInLine.astro";
+/* import LinkInLine from "@/components/common/LinkInLine.astro";
 import ChevronRightIcon from "@/icons/common/ChevronRight.astro";
-
+ */
 interface Props {
   date: string;
-  company: string;
   title: string;
   achievements: string[];
   link?: string;
 }
 
-const { date, company, title, achievements, link } = Astro.props;
+const { date, title, achievements} = Astro.props;
 ---
 
 <div
@@ -34,7 +33,7 @@ const { date, company, title, achievements, link } = Astro.props;
   >
     <ul class="list-disc pl-5 marker:text-gray-900 dark:marker:text-gray-100">
       {
-        achievements.map((achievement, index) => (
+        achievements.map((achievement) => (
           <li class="pl-1">{achievement}</li>
         ))
       }

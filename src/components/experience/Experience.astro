@@ -31,13 +31,12 @@ const EXPERIENCE: CompanyExperience[] = ExperienceData;
 
       {/* Handle the case where positions could be an object or an array */}
       {Array.isArray(companyExperience.positions) ? (
-        companyExperience.positions.map((position, index) => (
+        companyExperience.positions.map((position) => (
           <li class="mt-4">
             <ExperienceItem
               date={position.date}
               title={position.title}
               achievements={position.achievements}
-              company={companyExperience.company}
             />
           </li>
         ))
@@ -47,7 +46,6 @@ const EXPERIENCE: CompanyExperience[] = ExperienceData;
             date={companyExperience.positions.date}
             title={companyExperience.positions.title}
             achievements={companyExperience.positions.achievements}
-            company={companyExperience.company}
           />
         </li>
       )}
