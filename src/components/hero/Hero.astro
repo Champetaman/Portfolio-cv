@@ -17,9 +17,9 @@ const ResumePDF =
     alt={personalImageAlt}
   />
 
-  <div class="flex flex-col">
+  <div class="flex flex-col items-center md:items-start">
     <h1
-      class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white"
+      class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white text-center md:text-left"
     >
       Hey, I'm Camilo Oviedo
     </h1>
@@ -32,7 +32,8 @@ const ResumePDF =
       expertise in system development and agile methodologies, particularly within
       banking and IT consulting sectors.
     </p>
-    <nav class="flex flex-wrap gap-4 mt-8">
+
+    <nav class="flex flex-wrap gap-4 mt-8 items-center justify-center md:justify-start">
       <SocialStack href="mailto:oviedocamilo94@gmail.com">
         <MailIcon class="size-4" />
         Contact me
