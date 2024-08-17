@@ -3,7 +3,7 @@ import navItemsData from "@/../data/navItems.json"; // Import the navigation ite
 import HamburguerIcon from "@/icons/common/Hamburguer.astro"; // Import the Hamburger icon component for mobile menu
 import LightModeIcon from "@/icons/Theme/LightMode.astro"; // Import the Light Mode icon for the theme toggle
 import DarkModeIcon from "@/icons/Theme/DarkMode.astro"; // Import the Dark Mode icon for the theme toggle
-import MenuCloseIcon from "@/icons/common/MenuClose.astro"; // Import the Menu Close icon for the mobile menu
+import CloseIcon from "@/icons/common/Close.astro"; // Import the Menu Close icon for the mobile menu
 
 const navItems = navItemsData; // Assign the navigation items data to a constant for easier use
 ---
@@ -82,7 +82,7 @@ const navItems = navItemsData; // Assign the navigation items data to a constant
       <div class="flex justify-end">
         <!-- Close Button for Mobile Menu -->
         <button id="menu-close" class="p-2 text-gray-600 dark:text-gray-200">
-          <MenuCloseIcon class="w-6 h-6" />
+          <CloseIcon class="w-6 h-6" />
         </button>
       </div>
 
