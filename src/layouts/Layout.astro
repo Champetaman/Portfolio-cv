@@ -24,7 +24,8 @@ const { description, title } = Astro.props;
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
-    <ViewTransitions />
+    <!-- //TODO implement ViewTransitions on [slug].astro
+     <ViewTransitions />  -->
   </head>
 
   <body class="relative text-black dark:text-white">
@@ -54,11 +55,17 @@ const { description, title } = Astro.props;
         flex-direction: column;
         min-height: 100vh;
         overscroll-behavior: none;
+        opacity: 0;
+        animation: fadeIn 0.5s ease-in-out forwards;
       }
 
       @media (prefers-reduced-motion: reduce) {
         html {
           scroll-behavior: auto;
+        }
+        body {
+          animation: none;
+          opacity: 1;
         }
       }
 
@@ -85,6 +92,15 @@ const { description, title } = Astro.props;
           align-items: center;
           background-color: rgb(229, 229, 229);
           border-radius: 9999px;
+        }
+      }
+
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
         }
       }
 
@@ -116,3 +132,6 @@ const { description, title } = Astro.props;
     </style>
   </body>
 </html>
+
+<!-- Include the theme toggle script -->
+<script src="/src/scripts/theme-toggle.js" defer></script>
