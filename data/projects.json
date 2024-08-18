@@ -1,34 +1,55 @@
 [
   {
-    "title": "Central Securities Depository",
-    "description": "The CSD modernization aims to enhance efficiency and security while supporting the Colombian market's operation. Its benefits included improving user experience, reducing operational risks, and optimizing response time, aligned with international standards and best practices.",
-    "link": "https://www.banrep.gov.co/es/sistemas-pago/modernizacion-deposito-central-valores",
-    "github": "",
-    "image": "/projects/DCV-Port.webp",
-    "altImage": "Screenshot of the Central Securities Depository (CSD) Software"
+    "personal": [
+      {
+        "title": "AI Dietary Recipe",
+        "description": "Web application that provides personalized recipe suggestions based on user-selected criteria such as ammount of time, cuisine type, dietary restrictions, and religious dietary preferences. Built with modern web technologies, this app leverages AI to enhance the user experience by generating detailed recipe suggestions and accompanying dish images.",
+        "link": "https://ai-dietary-recipe.vercel.app/",
+        "github": "https://github.com/Champetaman/ai-dietary-recipe",
+        "image": "/projects/personal/ai-dietary-recipe.webp",
+        "altImage": "Screenshot of the AI Dietary Recipe Web Application",
+        "slug": "ai-dietary-recipe"
+      }
+    ]
   },
   {
-    "title": "Integrated Operational Manager of Securities",
-    "description": "Aims to serve as the tariffing and reporting system for the Fiduciary and Securities Department at the Central Bank of Colombian. Its primary function is to act as the conduit for operational transformation between the SEN trading system and the CSD. Additionally, it is tasked with calculating fees for the utilization of various FSD services and producing daily reports for stakeholders.",
-    "link": "https://www.banrep.gov.co/",
-    "github": "",
-    "image": "/projects/GOIN.webp",
-    "altImage": "Screenshot of the Integrated Operational Manager of Securities (GOIN)"
-  },
-  {
-    "title": "Porvenir Digital Transformation",
-    "description": "The Porvenir Digital Transformation project involved the implementation of an IBM BPM (Business Process Management) system aimed at revolutionizing the management of pensions for Colombians. The system was designed to significantly reduce processing times for individuals reaching retirement age and eligibility milestones, ensuring faster disbursement of pension funds. By streamlining and automating workflows, Porvenir sought to enhance efficiency, accuracy, and responsiveness in pension processing, ultimately improving the overall customer experience and operational effectiveness.",
-    "link": "#",
-    "github": "",
-    "image": "/projects/Porvenir.webp",
-    "altImage": "Screenshot of the Pension Fund Porvenir Digital Transformation Software"
-  },
-  {
-    "title": "Precia - Provider of Valuation Prices",
-    "description": "Precia's software platform provides up-to-date valuation prices for a variety of financial instruments, including fixed income securities, equities, derivatives, and structured products. It also offers reference rates for different currencies.  The platform was designed to assist Precia in developing financial strategies and maintaining market alignment.",
-    "link": "https://www.precia.co/",
-    "github": "",
-    "image": "/projects/Precia.webp",
-    "altImage": "Screenshot of Precia Application"
+    "professional": [
+      {
+        "title": "Central Securities Depository",
+        "description": "The CSD modernization aims to enhance efficiency and security while supporting the Colombian market's operation. Its benefits included improving user experience, reducing operational risks, and optimizing response time, aligned with international standards and best practices.",
+        "link": "https://www.banrep.gov.co/es/sistemas-pago/modernizacion-deposito-central-valores",
+        "github": "",
+        "image": "/projects/DCV-Port.webp",
+        "altImage": "Screenshot of the Central Securities Depository (CSD) Software",
+        "slug": "central-securities-depository"
+      },
+      {
+        "title": "Integrated Operational Manager of Securities",
+        "description": "Aims to serve as the tariffing and reporting system for the Fiduciary and Securities Department at the Central Bank of Colombian. Its primary function is to act as the conduit for operational transformation between the SEN trading system and the CSD. Additionally, it is tasked with calculating fees for the utilization of various FSD services and producing daily reports for stakeholders.",
+        "link": "https://www.banrep.gov.co/",
+        "github": "",
+        "image": "/projects/GOIN.webp",
+        "altImage": "Screenshot of the Integrated Operational Manager of Securities (GOIN)",
+        "slug": "integrated-operational-manager-securities"
+      },
+      {
+        "title": "Porvenir Digital Transformation",
+        "description": "The Porvenir Digital Transformation project involved the implementation of an IBM BPM (Business Process Management) system aimed at revolutionizing the management of pensions for Colombians. The system was designed to significantly reduce processing times for individuals reaching retirement age and eligibility milestones, ensuring faster disbursement of pension funds. By streamlining and automating workflows, Porvenir sought to enhance efficiency, accuracy, and responsiveness in pension processing, ultimately improving the overall customer experience and operational effectiveness.",
+        "link": "https://www.porvenir.com.co/web/porvenir/home",
+        "github": "",
+        "image": "/projects/Porvenir.webp",
+        "altImage": "Screenshot of the Pension Fund Porvenir Digital Transformation Software",
+        "slug": "porvenir-digital-transformation"
+      },
+      {
+        "title": "Provider of Valuation Prices",
+        "description": "Precia's software platform provides up-to-date valuation prices for a variety of financial instruments, including fixed income securities, equities, derivatives, and structured products. It also offers reference rates for different currencies.  The platform was designed to assist Precia in developing financial strategies and maintaining market alignment.",
+        "link": "https://www.precia.co/",
+        "github": "",
+        "image": "/projects/Precia.webp",
+        "altImage": "Screenshot of Precia Application",
+        "slug": "provider-valuation-prices"
+      }
+    ]
   }
 ]
