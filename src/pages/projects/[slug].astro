@@ -1,0 +1,99 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import SectionContainer from "@/components/layout/SectionContainer.astro";
+import SocialStack from "@/components/common/SocialStack.astro";
+
+import CodeIcon from "@/icons/common/Code.astro";
+import SettingsCode from "@/icons/common/SettingsCode.astro";
+import Technologies from "@/components/technologies/Technologies.astro";
+
+import projectsData from "@/../data/projects.json";
+import navItemsData from "@/../data/navItems.json";
+
+const { slug } = Astro.params;
+
+const allProjects = projectsData.flatMap((category) => [
+  ...(category.personal || []),
+  ...(category.professional || []),
+]);
+
+const project = allProjects.find((proj) => proj.slug === slug);
+
+if (!project) {
+  throw new Error(`Project with slug '${slug}' not found`);
+}
+
+// Find the "Projects" navigation item to use for the Back to Projects link
+const backToProjectsNavItem = navItemsData.find(
+  (item) => item.label === "projects"
+);
+---
+
+<Layout title={project.title} description={project.description}>
+  <!-- Add padding to avoid overlap with the header -->
+  <SectionContainer class="pt-28">
+    <h2
+      class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
+    >
+      <SettingsCode class="size-7" />
+      {project.title}
+    </h2>
+
+    <img
+      src={project.image}
+      alt={project.altImage}
+      class="w-full h-auto rounded-lg shadow-lg mb-8"
+    />
+
+    <p class="text-lg text-gray-700 dark:text-gray-300 mb-8 text-pretty">
+      {project.description}
+    </p>
+  </SectionContainer>
+
+  <SectionContainer>
+    <div class="flex gap-4 justify-around">
+      {
+        project.link && (
+          <SocialStack
+            href={project.link}
+          >
+            Visit Project
+          </SocialStack>
+        )
+      }
+
+      {
+        project.github && (
+          <SocialStack
+            href={project.github}
+          >
+            View on GitHub
+          </SocialStack>
+        )
+      }
+    </div>
+  </SectionContainer>
+
+  <SectionContainer id="Technologies">
+    <h2
+      class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white pt-12"
+    >
+      <CodeIcon class="size-7" />
+      Technologies
+    </h2>
+    <Technologies />
+  </SectionContainer>
+
+  <!-- Back to Projects Button Section -->
+  <SectionContainer class="flex justify-center pt-12">
+    {
+      backToProjectsNavItem && (
+        <SocialStack href={backToProjectsNavItem.url} target="_self">
+          &larr; Back to Projects
+        </SocialStack>
+      )
+    }
+  </SectionContainer>
+</Layout>
+
+<script src="/src/scripts/theme-toggle.js"></script>
