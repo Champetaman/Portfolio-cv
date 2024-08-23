@@ -3,6 +3,7 @@ import ProjectItem from "@/components/projects/ProjectItem.astro";
 import ProjectsData from "@/../data/projects.json";
 
 const PERSONAL_PROJECTS = ProjectsData.find((section) => section.personal)?.personal || [];
+const CONTRIBUTION_PROJECTS = ProjectsData.find((section) => section.contribution)?.contribution || [];
 const PROFESSIONAL_PROJECTS = ProjectsData.find((section) => section.professional)?.professional || [];
 ---
 
@@ -10,6 +11,13 @@ const PROFESSIONAL_PROJECTS = ProjectsData.find((section) => section.professiona
   <h2 class="text-yellow-400 text-2xl font-bold mb-6">Personal Projects</h2>
   <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
     {PERSONAL_PROJECTS.map((project) => (
+      <ProjectItem {...project} />
+    ))}
+  </div>
+
+  <h2 class="text-yellow-400 text-2xl font-bold mt-12 mb-6">Contribution Projects</h2>
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    {CONTRIBUTION_PROJECTS.map((project) => (
       <ProjectItem {...project} />
     ))}
   </div>

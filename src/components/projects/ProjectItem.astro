@@ -4,7 +4,7 @@ import GitHubIcon from "@/icons/Social/GitHub.astro"; // Import the GitHub icon
 import ZoomIcon from "@/icons/common/Zoom.astro"; // Import the Zoom icon
 import SocialStack from "@/components/common/SocialStack.astro"; // Import the SocialStack component
 
-const { title, image, altImage, slug, github } = Astro.props;
+const { title, image, imagehd, altImage, slug, github } = Astro.props;
 let showModal = false;
 ---
 
@@ -63,7 +63,7 @@ let showModal = false;
     onclick="event.stopPropagation();"
   >
     <img
-      src={image}
+      src={imagehd}
       alt={altImage}
       class="max-w-full max-h-full object-contain"
     />
