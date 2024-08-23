@@ -1,5 +1,20 @@
 [
   {
+    "company": "Open Source Projects",
+    "location": "Melbourne, Australia",
+    "positions": {
+      "date": "July 2019 - Present",
+      "title": "Open Source Developer",
+      "achievements": [
+        "Actively contributing to multiple open-source projects, including the BigCapital project, where I develop features and enhance financial technology solutions.",
+        "Writing clean, efficient code across a variety of platforms, leveraging modern technologies and frameworks to solve complex problems.",
+        "Identifying and resolving bugs, optimizing performance, and enhancing the scalability of software solutions across different projects.",
+        "Participating in discussions, proposing new ideas, and helping onboard new contributors to foster growth within the open-source community.",
+        "Continuously learning and applying best practices in software development to deliver innovative and reliable solutions."
+      ]
+    }
+  },
+  {
     "company": "Central Bank of Colombia",
     "location": "Bogotá, Colombia",
     "positions": {
@@ -32,7 +47,7 @@
         ]
       },
       {
-        "date": "January 2018 - Dec 2018",
+        "date": "January 2018 - December 2018",
         "title": "Junior Software Engineer",
         "achievements": [
           "Developed full-stack solutions using Java, JavaScript, Angular, SQL, and Docker.",
