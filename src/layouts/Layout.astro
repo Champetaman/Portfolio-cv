@@ -3,6 +3,9 @@ import "@fontsource-variable/onest";
 
 import Header from "@/components/layout/Header.astro";
 import Footer from "@/components/layout/Footer.astro";
+
+import SpeedInsights from "@vercel/speed-insights/astro";
+
 import { ViewTransitions } from "astro:transitions";
 
 interface Props {
@@ -16,21 +19,25 @@ const { description, title } = Astro.props;
 <!doctype html>
 <html lang="en">
   <head>
+    <title>{title}</title>
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
-    <meta name="keywords" content="Software Engineer, Systems Engineer, Business Administrator, Portfolio, Resume, Technical Business Analyst" />
+    <meta
+      name="keywords"
+      content="Software Engineer, Systems Engineer, Business Administrator, Portfolio, Resume, Technical Business Analyst"
+    />
     <meta name="author" content="Camilo Oviedo" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
     <!-- //TODO implement ViewTransitions on [slug].astro
      <ViewTransitions />  -->
   </head>
+  <SpeedInsights />
 
   <body class="relative text-black dark:text-white">
     <div
-      class="absolute top-0 bottom-0 z-[-2] min-h-screen w-full bg-gray-50 dark:bg-gray-950
+      class="absolute top-0 bottom-0 z-[-2] min-h-screen w-full bg-gray-300 dark:bg-gray-950
       bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(217,216,255,0.5),rgba(255,255,255,0.9))]
       dark:bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"
     >
@@ -131,7 +138,7 @@ const { description, title } = Astro.props;
       }
     </style>
   </body>
-</html>
+  </html>
 
-<!-- Include the theme toggle script -->
-<script src="/src/scripts/theme-toggle.js" defer></script>
+  <!-- Include the theme toggle script -->
+  <script src="/src/scripts/theme-toggle.js" defer></script>
