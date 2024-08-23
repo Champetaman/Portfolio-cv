@@ -1,20 +1,23 @@
 ---
 const personalImageAlt = "Camilo Oviedo";
+
+import { Image } from "astro:assets";
+
+import heroImage from "@/img/profile_image.webp";
 import Badge from "@/components/common/Badge.astro";
 import LinkedInIcon from "@/icons/Social/LinkedIn.astro";
 import MailIcon from "@/icons/common/Mail.astro";
 import DownloadIcon from "@/icons/common/Download.astro";
 import SocialStack from "@/components/common/SocialStack.astro";
 
-const ResumePDF =
-  "https://pub-b87a1e5b7f3244c6a501416d3dcc2ee7.r2.dev/CV_CamiloOviedo_Engineer.pdf";
+const ResumePDF = import.meta.env.RESUME_PDF_URL;
 ---
 
 <article class="flex flex-col items-center gap-8 md:flex-row mt-24">
-  <img
-    class="rounded-full shadow-lg size-44"
-    src="/src/img/profile_image.webp"
+  <Image
+    src={heroImage}
     alt={personalImageAlt}
+    class="rounded-full shadow-lg size-44"
   />
 
   <div class="flex flex-col items-center md:items-start">
