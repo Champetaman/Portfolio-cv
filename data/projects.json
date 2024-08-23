@@ -6,8 +6,8 @@
         "description": "Web application that provides personalized recipe suggestions based on user-selected criteria such as ammount of time, cuisine type, dietary restrictions, and religious dietary preferences. Built with modern web technologies, this app leverages AI to enhance the user experience by generating detailed recipe suggestions and accompanying dish images.",
         "link": "https://ai-dietary-recipe.vercel.app/",
         "github": "https://github.com/Champetaman/ai-dietary-recipe",
-        "image": "/src/img/personal/ai-dietary-recipe.webp",
-        "imagehd": "/src/img/personal/ai-dietary-recipe.png",
+        "image": "/personal/ai-dietary-recipe.webp",
+        "imagehd": "/personal/ai-dietary-recipe.png",
         "altImage": "Screenshot of the AI Dietary Recipe Web Application",
         "slug": "ai-dietary-recipe"
       }
@@ -20,8 +20,8 @@
         "description": "Bigcapital is a smart and open-source accounting and inventory software, Bigcapital keeps all business finances in right place and automates accounting processes to give the business powerful and intelligent financial statements and reports to help in making decisions.",
         "link": "https://my.bigcapital.app/",
         "github": "https://github.com/bigcapitalhq/bigcapital",
-        "image": "/src/img/openSource/bigcapital.webp",
-        "imagehd": "/src/img/openSource/bigcapital.png",
+        "image": "/openSource/bigcapital.webp",
+        "imagehd": "/openSource/bigcapital.png",
         "altImage": "Screenshot of Bigcapital software",
         "slug": "bigcapital"
       }
@@ -34,8 +34,8 @@
         "description": "The CSD modernization aims to enhance efficiency and security while supporting the Colombian market's operation. Its benefits included improving user experience, reducing operational risks, and optimizing response time, aligned with international standards and best practices.",
         "link": "https://www.banrep.gov.co/es/sistemas-pago/modernizacion-deposito-central-valores",
         "github": "",
-        "image": "/src/img/professional/DCV.webp",
-        "imagehd": "/src/img/professional/DCV.png",
+        "image": "/professional/DCV.webp",
+        "imagehd": "/professional/DCV.png",
         "altImage": "Screenshot of the Central Securities Depository (CSD) Software",
         "slug": "central-securities-depository"
       },
@@ -44,8 +44,8 @@
         "description": "Aims to serve as the tariffing and reporting system for the Fiduciary and Securities Department at the Central Bank of Colombian. Its primary function is to act as the conduit for operational transformation between the SEN trading system and the CSD. Additionally, it is tasked with calculating fees for the utilization of various FSD services and producing daily reports for stakeholders.",
         "link": "https://www.banrep.gov.co/",
         "github": "",
-        "image": "/src/img/professional/GOIN.webp",
-        "imagehd": "/src/img/professional/GOIN.png",
+        "image": "/professional/GOIN.webp",
+        "imagehd": "/professional/GOIN.png",
         "altImage": "Screenshot of the Integrated Operational Manager of Securities (GOIN)",
         "slug": "integrated-operational-manager-securities"
       },
@@ -54,8 +54,8 @@
         "description": "The Porvenir Digital Transformation project involved the implementation of an IBM BPM (Business Process Management) system aimed at revolutionizing the management of pensions for Colombians. The system was designed to significantly reduce processing times for individuals reaching retirement age and eligibility milestones, ensuring faster disbursement of pension funds. By streamlining and automating workflows, Porvenir sought to enhance efficiency, accuracy, and responsiveness in pension processing, ultimately improving the overall customer experience and operational effectiveness.",
         "link": "https://www.porvenir.com.co/web/porvenir/home",
         "github": "",
-        "image": "/src/img/professional/Porvenir.webp",
-        "imagehd": "/src/img/professional/Porvenir.png",
+        "image": "/professional/Porvenir.webp",
+        "imagehd": "/professional/Porvenir.png",
         "altImage": "Screenshot of the Pension Fund Porvenir Digital Transformation Software",
         "slug": "porvenir-digital-transformation"
       },
@@ -64,8 +64,8 @@
         "description": "Precia's software platform provides up-to-date valuation prices for a variety of financial instruments, including fixed income securities, equities, derivatives, and structured products. It also offers reference rates for different currencies.  The platform was designed to assist Precia in developing financial strategies and maintaining market alignment.",
         "link": "https://www.precia.co/",
         "github": "",
-        "image": "/src/img/professional/Precia.webp",
-        "imagehd": "/src/img/professional/Precia.webp",
+        "image": "/professional/Precia.webp",
+        "imagehd": "/professional/Precia.webp",
         "altImage": "Screenshot of Precia Application",
         "slug": "provider-valuation-prices"
       }
