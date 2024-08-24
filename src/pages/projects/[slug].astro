@@ -14,6 +14,7 @@ const { slug } = Astro.params;
 
 const allProjects = projectsData.flatMap((category) => [
   ...(category.personal || []),
+  ...(category.contribution || []),
   ...(category.professional || []),
 ]);
 
