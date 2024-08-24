@@ -1,9 +1,9 @@
 ---
-import navItemsData from "@/../data/navItems.json"; // Import the navigation items data from a JSON file
-import HamburguerIcon from "@/icons/common/Hamburguer.astro"; // Import the Hamburger icon component for mobile menu
-import LightModeIcon from "@/icons/Theme/LightMode.astro"; // Import the Light Mode icon for the theme toggle
-import DarkModeIcon from "@/icons/Theme/DarkMode.astro"; // Import the Dark Mode icon for the theme toggle
-import CloseIcon from "@/icons/common/Close.astro"; // Import the Menu Close icon for the mobile menu
+import navItemsData from "@/../data/navItems.json";
+import HamburguerIcon from "@/icons/common/Hamburguer.astro";
+import LightModeIcon from "@/icons/Theme/LightMode.astro";
+import DarkModeIcon from "@/icons/Theme/DarkMode.astro";
+import CloseIcon from "@/icons/common/Close.astro";
 
 const navItems = navItemsData; // Assign the navigation items data to a constant for easier use
 ---
@@ -107,8 +107,7 @@ const navItems = navItemsData; // Assign the navigation items data to a constant
   </div>
 </header>
 
-<!-- Include external scripts for theme toggle and mobile menu functionality -->
-<script src="/src/scripts/theme-toggle.js"></script>
+<!-- Include external scripts for mobile menu functionality -->
 <script src="/src/scripts/mobile-menu.js"></script>
 
 <style>
