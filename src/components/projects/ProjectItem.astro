@@ -5,7 +5,6 @@ import ZoomIcon from "@/icons/common/Zoom.astro"; // Import the Zoom icon
 import SocialStack from "@/components/common/SocialStack.astro"; // Import the SocialStack component
 
 const { title, image, imagehd, altImage, slug, github } = Astro.props;
-let showModal = false;
 ---
 
 <div
@@ -13,8 +12,8 @@ let showModal = false;
 >
   <!-- Button to open the modal -->
   <button
-    class="cursor-pointer project-image focus:outline-none"
-    id="openModalBtn"
+    class="cursor-pointer project-image focus:outline-none openModalBtn"
+    data-imagehd={imagehd}
   >
     <img src={image} alt={altImage} class="w-full h-48 object-cover" />
   </button>
@@ -47,43 +46,45 @@ let showModal = false;
 <div
   id="modal"
   class="fixed inset-0 bg-black bg-opacity-80 hidden justify-center items-center z-50"
-  onclick="closeModal()"
 >
   <!-- Close Icon placed outside the image, in the modal div -->
   <button
-    class="absolute top-4 right-4 p-2 text-white bg-black rounded-full"
-    id="closeModalBtn"
-    onclick="closeModal()"
+    class="absolute top-4 right-4 p-2 text-white bg-black rounded-full closeModalBtn"
   >
     <CloseIcon class="w-6 h-6" />
   </button>
 
-  <div
-    class="relative max-w-3xl max-h-3xl mx-auto"
-    onclick="event.stopPropagation();"
-  >
+  <div class="relative max-w-3xl max-h-3xl mx-auto modalImageContainer">
+    <!-- This image src will be updated dynamically -->
     <img
-      src={imagehd}
+      src=""
       alt={altImage}
-      class="max-w-full max-h-full object-contain"
+      class="max-w-full max-h-full object-contain modalImage"
     />
   </div>
 </div>
 
-<script src="/src/scripts/theme-toggle.js" defer></script>
-
 <script>
   document.addEventListener("DOMContentLoaded", () => {
+    const openModalBtns = document.querySelectorAll(".openModalBtn");
     const modal = document.getElementById("modal");
-    const openModalBtn = document.getElementById("openModalBtn");
-    const closeModalBtn = document.getElementById("closeModalBtn");
+    const closeModalBtn = document.querySelector(".closeModalBtn");
+    const modalImage = modal?.querySelector(
+      ".modalImage"
+    ) as HTMLImageElement | null;
 
-    if (openModalBtn && modal) {
-      openModalBtn.addEventListener("click", () => {
-        modal.classList.remove("hidden");
-        modal.classList.add("flex");
+    openModalBtns.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const imagehd = btn.getAttribute("data-imagehd");
+        if (modalImage && imagehd) {
+          modalImage.src = imagehd; // TypeScript knows modalImage is HTMLImageElement
+        }
+        if (modal) {
+          modal.classList.remove("hidden");
+          modal.classList.add("flex");
+        }
       });
-    }
+    });
 
     if (closeModalBtn && modal) {
       closeModalBtn.addEventListener("click", () => {
@@ -94,9 +95,11 @@ let showModal = false;
 
     // Close the modal when clicking outside the image
     if (modal) {
-      modal.addEventListener("click", () => {
-        modal.classList.add("hidden");
-        modal.classList.remove("flex");
+      modal.addEventListener("click", (event) => {
+        if (event.target === modal) {
+          modal.classList.add("hidden");
+          modal.classList.remove("flex");
+        }
       });
     }
   });
