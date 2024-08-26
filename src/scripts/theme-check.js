@@ -1,17 +1,21 @@
-// Detect system theme and update classes accordingly
-const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+(function () {
+  const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+  const currentTheme = localStorage.getItem("theme");
 
-function updateTheme() {
-  const root = document.documentElement;
-  if (prefersDarkScheme.matches) {
-    root.classList.add("dark");
-  } else {
-    root.classList.remove("dark");
+  function applyTheme(theme) {
+    document.documentElement.classList.remove("light", "dark");
+    document.documentElement.classList.add(theme);
   }
-}
 
-// Listen for changes in system theme
-prefersDarkScheme.addEventListener("change", updateTheme);
+  if (currentTheme === "dark" || (!currentTheme && prefersDarkScheme.matches)) {
+    applyTheme("dark");
+  } else {
+    applyTheme("light");
+  }
 
-// Initial theme check
-updateTheme();
+  prefersDarkScheme.addEventListener("change", (e) => {
+    if (!currentTheme) {
+      applyTheme(e.matches ? "dark" : "light");
+    }
+  });
+})();
