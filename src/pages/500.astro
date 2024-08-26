@@ -1,0 +1,28 @@
+---
+import ErrorLayout from "@/layouts/ErrorLayout.astro";
+import ServerErrorIcon from "@/icons/error/ServerError.astro";
+
+const title = "500 - Server Error";
+const description = "Whoops, something went wrong on our servers.";
+---
+
+<ErrorLayout title={title} description={description}>
+  <div
+    class="flex flex-col lg:flex-row items-center justify-center min-h-screen px-14 bg-background text-foreground"
+  >
+    <!-- Left side text -->
+    <div class="text-center lg:text-left lg:w-1/2">
+      <h1 class="text-5xl lg:text-6xl font-bold mb-6">500 - Server Error</h1>
+      <p class="text-2xl lg:text-3xl mb-10">
+        Whoops, something went wrong on the servers.
+      </p>
+    </div>
+
+    <!-- Right side SVG -->
+    <div class="lg:w-1/2 flex justify-center lg:justify-end">
+      <ServerErrorIcon class="w-full lg:w-auto h-auto mb-10" />
+    </div>
+  </div>
+
+  <script src="/src/scripts/theme-check.js" defer is:inline></script>
+</ErrorLayout>

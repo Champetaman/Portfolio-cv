@@ -1,0 +1,33 @@
+---
+import ErrorLayout from "@/layouts/ErrorLayout.astro";
+import NotFoundIcon from "@/icons/error/NotFound.astro";
+import SocialStack from "@/components/common/SocialStack.astro";
+import ChevronLeftIcon from "@/icons/common/ChevronLeft.astro";
+
+const title = "404 - Page Not Found";
+const description = "Oops! The page you're looking for doesn't exist.";
+---
+
+<ErrorLayout title={title} description={description}>
+  <div
+    class="flex flex-col items-center justify-center min-h-screen px-4 bg-background text-foreground"
+  >
+    <div class="text-center">
+      <h1 class="text-5xl lg:text-6xl font-bold mb-6">404 - Page Not Found</h1>
+      <p class="text-2xl lg:text-3xl mb-10">
+        Oops! The page you're looking for doesn't exist.
+      </p>
+
+      <!-- SVG illustration -->
+      <NotFoundIcon class="w-full lg:w-auto h-auto mb-10" />
+
+      <!-- SocialStack used as a button to go back home -->
+      <SocialStack href="/" target="_self">
+        <ChevronLeftIcon />
+        Go back home
+      </SocialStack>
+    </div>
+  </div>
+
+  <script src="/src/scripts/theme-check.js" defer is:inline></script>
+</ErrorLayout>
