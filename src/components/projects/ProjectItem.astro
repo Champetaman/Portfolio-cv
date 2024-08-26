@@ -57,9 +57,8 @@ const { title, image, imagehd, altImage, slug, github } = Astro.props;
   <div class="relative max-w-3xl max-h-3xl mx-auto modalImageContainer">
     <!-- This image src will be updated dynamically -->
     <img
-      src=""
+      class="modalImage max-w-full max-h-full object-contain"
       alt={altImage}
-      class="max-w-full max-h-full object-contain modalImage"
     />
   </div>
 </div>
