@@ -40,11 +40,13 @@ const backToProjectsNavItem = navItemsData.find(
       {project.title}
     </h2>
 
-    <img
-      src={project.image}
-      alt={project.altImage}
-      class="w-full h-auto rounded-lg shadow-lg mb-8"
-    />
+    <!-- Image transition -->
+      <img
+        src={project.image}
+        alt={project.altImage}
+        class="w-full h-auto rounded-lg shadow-lg mb-8"
+        transition:name={`project-image-${slug}`}
+      />
 
     <p class="text-lg text-gray-700 dark:text-gray-300 mb-8 text-pretty">
       {project.description}
@@ -55,7 +57,7 @@ const backToProjectsNavItem = navItemsData.find(
     <div class="flex gap-4 justify-around">
       {
         project.link && (
-          <SocialStack
+        <SocialStack
             href={project.link}
           >
             Visit Project
@@ -65,7 +67,7 @@ const backToProjectsNavItem = navItemsData.find(
 
       {
         project.github && (
-          <SocialStack
+        <SocialStack
             href={project.github}
           >
             View on GitHub
@@ -87,12 +89,12 @@ const backToProjectsNavItem = navItemsData.find(
 
   <!-- Back to Projects Button Section -->
   <SectionContainer class="flex justify-center pt-12">
-    {
-      backToProjectsNavItem && (
-        <SocialStack href={backToProjectsNavItem.url} target="_self">
-          &larr; Back to Projects
-        </SocialStack>
-      )
-    }
+      {
+        backToProjectsNavItem && (
+          <SocialStack href={backToProjectsNavItem.url} target="_self">
+            &larr; Back to Projects
+          </SocialStack>
+        )
+      }
   </SectionContainer>
 </Layout>

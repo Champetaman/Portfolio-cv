@@ -1,8 +1,8 @@
 ---
-import CloseIcon from "@/icons/common/Close.astro"; // Import the Close icon
-import GitHubIcon from "@/icons/Social/GitHub.astro"; // Import the GitHub icon
-import ZoomIcon from "@/icons/common/Zoom.astro"; // Import the Zoom icon
-import SocialStack from "@/components/common/SocialStack.astro"; // Import the SocialStack component
+import CloseIcon from "@/icons/common/Close.astro";
+import GitHubIcon from "@/icons/social/GitHub.astro";
+import ZoomIcon from "@/icons/common/Zoom.astro";
+import SocialStack from "@/components/common/SocialStack.astro";
 
 const { title, image, imagehd, altImage, slug, github } = Astro.props;
 ---
@@ -10,12 +10,18 @@ const { title, image, imagehd, altImage, slug, github } = Astro.props;
 <div
   class="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 relative flex flex-col justify-between h-full"
 >
-  <!-- Button to open the modal -->
   <button
     class="cursor-pointer project-image focus:outline-none openModalBtn"
     data-imagehd={imagehd}
   >
-    <img src={image} alt={altImage} class="w-full h-48 object-cover" />
+    <!-- Wrap image with ViewTransitions and add a unique transition name -->
+
+    <img
+      src={image}
+      alt={altImage}
+      class="w-full h-48 object-cover"
+      transition:name={`project-image-${slug}`}
+    />
   </button>
 
   <div class="p-4 flex-grow text-center">
