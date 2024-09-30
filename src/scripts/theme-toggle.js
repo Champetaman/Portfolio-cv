@@ -9,72 +9,82 @@
  * or the system's current theme preference.
  */
 
-document.addEventListener("DOMContentLoaded", () => {
-  // Get elements for both large and small screen theme toggle buttons
-  const themeToggleButton = document.getElementById("theme-toggle-btn");
-  const themeToggleButtonSm = document.getElementById("theme-toggle-btn-sm");
-
-  // Get elements for light and dark mode icons for both screen sizes
+// Function to apply the theme based on the stored or system preference
+const applyTheme = (theme) => {
   const lightModeIcon = document.getElementById("light-icon");
   const darkModeIcon = document.getElementById("dark-icon");
-
   const lightModeIconSm = document.getElementById("light-icon-sm");
   const darkModeIconSm = document.getElementById("dark-icon-sm");
 
-  /**
-   * Applies the given theme by updating the DOM and storing the preference in `localStorage`.
-   * @param {string} theme - The theme to apply ('light' or 'dark').
-   */
-  const applyTheme = (theme) => {
-    if (theme === "dark") {
-      document.documentElement.classList.add("dark");
-      localStorage.setItem("theme", "dark");
+  if (theme === "dark") {
+    document.documentElement.classList.add("dark");
+    localStorage.setItem("theme", "dark");
 
-      // Update icons for large screens
+    // Update icons for large screens
+    if (lightModeIcon && darkModeIcon) {
       lightModeIcon.classList.add("hidden");
       darkModeIcon.classList.remove("hidden");
+    }
 
-      // Update icons for small screens
+    // Update icons for small screens
+    if (lightModeIconSm && darkModeIconSm) {
       lightModeIconSm.classList.add("hidden");
       darkModeIconSm.classList.remove("hidden");
-    } else {
-      document.documentElement.classList.remove("dark");
-      localStorage.setItem("theme", "light");
+    }
+  } else {
+    document.documentElement.classList.remove("dark");
+    localStorage.setItem("theme", "light");
 
-      // Update icons for large screens
+    // Update icons for large screens
+    if (darkModeIcon && lightModeIcon) {
       darkModeIcon.classList.add("hidden");
       lightModeIcon.classList.remove("hidden");
+    }
 
-      // Update icons for small screens
+    // Update icons for small screens
+    if (darkModeIconSm && lightModeIconSm) {
       darkModeIconSm.classList.add("hidden");
       lightModeIconSm.classList.remove("hidden");
     }
-  };
+  }
+};
 
-  /**
-   * Determines which theme to apply on initial page load.
-   * - If a theme is stored in `localStorage`, use it.
-   * - Otherwise, use the system's current theme preference.
-   */
+// Function to initialize the theme toggle buttons
+const initializeThemeToggler = () => {
+  const themeToggleButton = document.getElementById("theme-toggle-btn");
+  const themeToggleButtonSm = document.getElementById("theme-toggle-btn-sm");
+
   const storedTheme = localStorage.getItem("theme");
   const systemPrefersDark = window.matchMedia(
     "(prefers-color-scheme: dark)"
   ).matches;
   const themeToApply = storedTheme || (systemPrefersDark ? "dark" : "light");
 
-  // Apply the determined theme on page load
+  // Apply the theme on page load or transition
   applyTheme(themeToApply);
 
-  // Add event listeners to toggle buttons to switch themes
-  themeToggleButton.addEventListener("click", () => {
-    const isCurrentlyDark = document.documentElement.classList.contains("dark");
-    const newTheme = isCurrentlyDark ? "light" : "dark";
-    applyTheme(newTheme);
-  });
+  // Add event listeners to toggle buttons
+  if (themeToggleButton) {
+    themeToggleButton.addEventListener("click", () => {
+      const isCurrentlyDark =
+        document.documentElement.classList.contains("dark");
+      const newTheme = isCurrentlyDark ? "light" : "dark";
+      applyTheme(newTheme);
+    });
+  }
 
-  themeToggleButtonSm.addEventListener("click", () => {
-    const isCurrentlyDark = document.documentElement.classList.contains("dark");
-    const newTheme = isCurrentlyDark ? "light" : "dark";
-    applyTheme(newTheme);
-  });
-});
+  if (themeToggleButtonSm) {
+    themeToggleButtonSm.addEventListener("click", () => {
+      const isCurrentlyDark =
+        document.documentElement.classList.contains("dark");
+      const newTheme = isCurrentlyDark ? "light" : "dark";
+      applyTheme(newTheme);
+    });
+  }
+};
+
+// Initialize the theme toggler when the DOM is loaded
+document.addEventListener("DOMContentLoaded", initializeThemeToggler);
+
+// Reinitialize theme toggler after every Astro page transition
+document.addEventListener("astro:after-swap", initializeThemeToggler);
