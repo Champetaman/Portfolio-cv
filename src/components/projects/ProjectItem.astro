@@ -14,8 +14,6 @@ const { title, image, imagehd, altImage, slug, github } = Astro.props;
     class="cursor-pointer project-image focus:outline-none openModalBtn"
     data-imagehd={imagehd}
   >
-    <!-- Wrap image with ViewTransitions and add a unique transition name -->
-
     <img
       src={image}
       alt={altImage}
@@ -61,7 +59,6 @@ const { title, image, imagehd, altImage, slug, github } = Astro.props;
   </button>
 
   <div class="relative max-w-3xl max-h-3xl mx-auto modalImageContainer">
-    <!-- This image src will be updated dynamically -->
     <img
       class="modalImage max-w-full max-h-full object-contain"
       alt={altImage}
@@ -82,7 +79,7 @@ const { title, image, imagehd, altImage, slug, github } = Astro.props;
       btn.addEventListener("click", () => {
         const imagehd = btn.getAttribute("data-imagehd");
         if (modalImage && imagehd) {
-          modalImage.src = imagehd; // TypeScript knows modalImage is HTMLImageElement
+          modalImage.src = imagehd;
         }
         if (modal) {
           modal.classList.remove("hidden");
