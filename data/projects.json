@@ -9,7 +9,57 @@
         "image": "/personal/ai-dietary-recipe.webp",
         "imagehd": "/personal/ai-dietary-recipe.png",
         "altImage": "Screenshot of the AI Dietary Recipe Web Application",
-        "slug": "ai-dietary-recipe"
+        "slug": "ai-dietary-recipe",
+        "technologies": [
+          {
+            "name": "React",
+            "icon": "ReactIcon",
+            "color": {
+              "dark": "#FFFFFF",
+              "light": "#FFFFFF"
+            }
+          },
+          {
+            "name": "Vercel AI SDK",
+            "icon": "VercelIcon",
+            "color": {
+              "dark": "#000000",
+              "light": "#000000"
+            }
+          },
+          {
+            "name": "DALL·E 3",
+            "icon": "OpenAIGreenIcon",
+            "color": {
+              "dark": "#10A37F",
+              "light": "#10A37F"
+            }
+          },
+          {
+            "name": "Chat GPT 4o",
+            "icon": "OpenAIIcon",
+            "color": {
+              "dark": "#000000",
+              "light": "#000000"
+            }
+          },
+          {
+            "name": "NextJS",
+            "icon": "NextJSIcon",
+            "color": {
+              "dark": "#FFFFFF",
+              "light": "#000000"
+            }
+          },
+          {
+            "name": "pnpm",
+            "icon": "PnpmIcon",
+            "color": {
+              "dark": "#F69220",
+              "light": "#F69220"
+            }
+          }
+        ]
       }
     ]
   },
@@ -23,7 +73,21 @@
         "image": "/openSource/bigcapital.webp",
         "imagehd": "/openSource/bigcapital.png",
         "altImage": "Screenshot of Bigcapital software",
-        "slug": "bigcapital"
+        "slug": "bigcapital",
+        "technologies": [
+          {
+            "name": "React",
+            "icon": "ReactIcon"
+          },
+          {
+            "name": "Vercel AI SDK",
+            "icon": "VercelIcon"
+          },
+          {
+            "name": "Docker",
+            "icon": "DockerIcon"
+          }
+        ]
       }
     ]
   },
@@ -47,7 +111,21 @@
         "image": "/professional/GOIN.webp",
         "imagehd": "/professional/GOIN.png",
         "altImage": "Screenshot of the Integrated Operational Manager of Securities (GOIN)",
-        "slug": "integrated-operational-manager-securities"
+        "slug": "integrated-operational-manager-securities",
+        "technologies": [
+          {
+            "name": "React",
+            "icon": "ReactIcon"
+          },
+          {
+            "name": "Vercel AI SDK",
+            "icon": "VercelIcon"
+          },
+          {
+            "name": "Docker",
+            "icon": "DockerIcon"
+          }
+        ]
       },
       {
         "title": "Porvenir Digital Transformation",
@@ -57,7 +135,21 @@
         "image": "/professional/Porvenir.webp",
         "imagehd": "/professional/Porvenir.png",
         "altImage": "Screenshot of the Pension Fund Porvenir Digital Transformation Software",
-        "slug": "porvenir-digital-transformation"
+        "slug": "porvenir-digital-transformation",
+        "technologies": [
+          {
+            "name": "React",
+            "icon": "ReactIcon"
+          },
+          {
+            "name": "Vercel AI SDK",
+            "icon": "VercelIcon"
+          },
+          {
+            "name": "Docker",
+            "icon": "DockerIcon"
+          }
+        ]
       },
       {
         "title": "Provider of Valuation Prices",
@@ -67,7 +159,21 @@
         "image": "/professional/Precia.webp",
         "imagehd": "/professional/Precia.webp",
         "altImage": "Screenshot of Precia Application",
-        "slug": "provider-valuation-prices"
+        "slug": "provider-valuation-prices",
+        "technologies": [
+          {
+            "name": "React",
+            "icon": "ReactIcon"
+          },
+          {
+            "name": "Vercel AI SDK",
+            "icon": "VercelIcon"
+          },
+          {
+            "name": "Docker",
+            "icon": "DockerIcon"
+          }
+        ]
       }
     ]
   }
