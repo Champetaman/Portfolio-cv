@@ -1,50 +1,60 @@
 ---
-import TailwindIcon from "@/icons/styling/Tailwind.astro";
+import ReactIcon from "@/icons/front/React.astro";
+import VercelIcon from "@/icons/host/Vercel.astro";
+import OpenAIIcon from "@/icons/ai/OpenAI.astro";
+import OpenAIGreenIcon from "@/icons/ai/OpenAIGreen.astro";
 import NextJSIcon from "@/icons/framework/NextJS.astro";
-import HTMLIcon from "@/icons/front/HTML.astro";
-import CSSIcon from "@/icons/styling/CSS.astro";
-import JavaScriptIcon from "@/icons/front/JavaScript.astro";
-import TechnologiesData from "@/../data/technologies.json";
+import PnpmIcon from "@/icons/packageManager/pnpm.astro";
+import DockerIcon from "@/icons/virtualization/Docker.astro";
 
-// Define a union type for the icon names
-type IconName =
-  | "TailwindIcon"
-  | "NextJSIcon"
-  | "HTMLIcon"
-  | "CSSIcon"
-  | "JavaScriptIcon";
-
-// Create an interface for each technology
 interface Technology {
   name: string;
-  icon: IconName; // Ensure icon is one of the valid keys
-  colorClasses: string;
+  icon: string;
+  color?: {
+    light: string;
+    dark: string;
+  };
 }
 
-// Create a mapping from icon names to components
-const ICONS: Record<IconName, any> = {
-  TailwindIcon,
+const ICONS: Record<string, any> = {
+  ReactIcon,
+  VercelIcon,
+  OpenAIIcon,
+  OpenAIGreenIcon,
   NextJSIcon,
-  HTMLIcon,
-  CSSIcon,
-  JavaScriptIcon,
+  PnpmIcon,
+  DockerIcon,
 };
 
-// Assert the data from JSON as Technology[]
-const TECHNOLOGIES = TechnologiesData as Technology[];
+const { technologies = [] }: { technologies?: Technology[] } = Astro.props;
 ---
 
-<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mx-4 md:mx-0">
   {
-    TECHNOLOGIES.map((technology) => {
-      const IconComponent = ICONS[technology.icon]; // Safely get the icon component
+    technologies.map((technology) => {
+      const IconComponent = ICONS[technology.icon];
+      const lightColor = technology.color?.light || "#000000"; // Default fallback for light mode
+      const darkColor = technology.color?.dark || "#FFFFFF"; // Default fallback for dark mode
 
       return (
-        <div
-          class={`flex flex-col items-center justify-center p-4 transition-all duration-300 ${technology.colorClasses} hover:scale-110 rounded-lg shadow-md`}
-        >
-          <IconComponent class="size-12" />
-          <span class="mt-2 text-sm font-semibold text-gray-150">
+        <div class="flex flex-col items-center justify-center p-2 transition-transform duration-300 transform hover:scale-110 rounded-lg">
+          {/* Inner div with background color switching between light/dark */}
+          <div
+            class="relative w-20 h-20 flex items-center justify-center rounded-full"
+            style={`background-color: ${lightColor};`}
+            class="dark:bg-none"
+          >
+            <div
+              class="absolute inset-0 rounded-full dark:block hidden"
+              style={`background-color: ${darkColor};`}
+            />
+
+            {/* Icon */}
+            <IconComponent class="size-12 relative z-10" />
+          </div>
+
+          {/* Technology Name */}
+          <span class="mt-2 text-sm font-semibold text-gray-900 dark:text-gray-100">
             {technology.name}
           </span>
         </div>
