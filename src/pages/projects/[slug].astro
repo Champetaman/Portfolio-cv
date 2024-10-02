@@ -1,11 +1,14 @@
 ---
 import Layout from "@/layouts/Layout.astro";
+
 import SectionContainer from "@/components/layout/SectionContainer.astro";
 import SocialStack from "@/components/common/SocialStack.astro";
+import Technologies from "@/components/technologies/Technologies.astro";
 
 import CodeIcon from "@/icons/common/Code.astro";
-import SettingsCode from "@/icons/common/SettingsCode.astro";
-import Technologies from "@/components/technologies/Technologies.astro";
+import SettingsCodeIcon from "@/icons/common/SettingsCode.astro";
+import WWWIcon from "@/icons/common/WWW.astro";
+import GithubRepoIcon from "@/icons/social/GithubRepo.astro";
 
 import projectsData from "@/../data/projects.json";
 import navItemsData from "@/../data/navItems.json";
@@ -36,39 +39,51 @@ const backToProjectsNavItem = navItemsData.find(
     <h2
       class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
     >
-      <SettingsCode class="size-7" />
+      <SettingsCodeIcon class="size-7" />
       {project.title}
     </h2>
 
-    <!-- Image transition -->
-    <img
-      src={project.image}
-      alt={project.altImage}
-      class="w-full h-auto rounded-lg shadow-lg mb-8"
-      transition:name={`project-image-${slug}`}
-    />
+    <!-- Flexbox container for image and description -->
+    <div class="flex flex-col lg:flex-row gap-8 items-start mx-4 lg:mx-0">
+      <!-- Image positioned on the left for larger screens, centered for small screens -->
+      <div class="w-full lg:w-2/3">
+        <img
+          src={project.image}
+          alt={project.altImage}
+          class="w-full h-auto rounded-lg shadow-lg"
+          transition:name={`project-image-${slug}`}
+        />
+      </div>
 
-    <p class="text-lg text-gray-700 dark:text-gray-300 mb-8 text-pretty">
-      {project.description}
-    </p>
-  </SectionContainer>
+      <!-- Project description positioned on the right for larger screens, below for small screens -->
+      <div class="w-full lg:w-1/3">
+        <p class="text-lg text-gray-700 dark:text-gray-300 text-pretty">
+          {project.description}
+        </p>
+      </div>
+    </div>
 
-  <SectionContainer>
-    <div class="flex gap-4 justify-around">
+    <!-- Links to visit the project or view on GitHub -->
+    <div class="flex gap-4 justify-evenly pt-12">
       {
         project.link && (
-          <SocialStack href={project.link}>Visit Project</SocialStack>
+          <SocialStack href={project.link}>
+            Visit Project <WWWIcon class="size-5" />
+          </SocialStack>
         )
       }
 
       {
         project.github && (
-          <SocialStack href={project.github}>View on GitHub</SocialStack>
+          <SocialStack href={project.github}>
+            GitHub Repository <GithubRepoIcon class="size-5" />
+          </SocialStack>
         )
       }
     </div>
   </SectionContainer>
 
+  <!-- Technologies Section -->
   <SectionContainer id="Technologies">
     <h2
       class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white pt-12"
@@ -76,7 +91,7 @@ const backToProjectsNavItem = navItemsData.find(
       <CodeIcon class="size-7" />
       Technologies
     </h2>
-    <Technologies />
+    <Technologies technologies={project.technologies} />
   </SectionContainer>
 
   <!-- Back to Projects Button Section -->
