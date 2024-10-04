@@ -15,7 +15,7 @@
             "name": "React",
             "icon": "ReactIcon",
             "color": {
-              "dark": "#FFFFFF",
+              "dark": "#20232A",
               "light": "#FFFFFF"
             }
           },
@@ -33,6 +33,14 @@
             "color": {
               "dark": "#10A37F",
               "light": "#10A37F"
+            }
+          },
+          {
+            "name": "TypeScript",
+            "icon": "TypeScriptIcon",
+            "color": {
+              "dark": "#FFFFFF",
+              "light": "#FFFFFF"
             }
           },
           {
@@ -77,15 +85,75 @@
         "technologies": [
           {
             "name": "React",
-            "icon": "ReactIcon"
+            "icon": "ReactIcon",
+            "color": {
+              "dark": "#20232A",
+              "light": "#FFFFFF"
+            }
           },
           {
-            "name": "Vercel AI SDK",
-            "icon": "VercelIcon"
+            "name": "Node",
+            "icon": "NodeIcon",
+            "color": {
+              "dark": "#333333",
+              "light": "#333333"
+            }
+          },
+          {
+            "name": "JWT",
+            "icon": "JWTIcon",
+            "color": {
+              "dark": "#000000",
+              "light": "#000000"
+            }
           },
           {
             "name": "Docker",
-            "icon": "DockerIcon"
+            "icon": "DockerIcon",
+            "color": {
+              "dark": "#FFFFFF",
+              "light": "#FFFFFF"
+            }
+          },
+          {
+            "name": "AWS",
+            "icon": "AWSIcon",
+            "color": {
+              "dark": "#FFFFFF",
+              "light": "#FFFFFF"
+            }
+          },
+          {
+            "name": "MySQL",
+            "icon": "MySQLIcon",
+            "color": {
+              "dark": "#FFFFFF",
+              "light": "#FFFFFF"
+            }
+          },
+          {
+            "name": "TypeScript",
+            "icon": "TypeScriptIcon",
+            "color": {
+              "dark": "#FFFFFF",
+              "light": "#FFFFFF"
+            }
+          },
+          {
+            "name": "CSS",
+            "icon": "CSSIcon",
+            "color": {
+              "dark": "#FFFFFF",
+              "light": "#FFFFFF"
+            }
+          },
+          {
+            "name": "express",
+            "icon": "ExpressIcon",
+            "color": {
+              "dark": "#000000",
+              "light": "#000000"
+            }
           }
         ]
       }
@@ -101,7 +169,65 @@
         "image": "/professional/DCV.webp",
         "imagehd": "/professional/DCV.png",
         "altImage": "Screenshot of the Central Securities Depository (CSD) Software",
-        "slug": "central-securities-depository"
+        "slug": "central-securities-depository",
+        "technologies": [
+          {
+            "name": "Angular",
+            "icon": "AngularIcon",
+            "color": {
+              "dark": "#E23237",
+              "light": "#FFFFFF"
+            }
+          },
+          {
+            "name": "Java",
+            "icon": "JavaIcon",
+            "color": {
+              "dark": "#FFFFFF",
+              "light": "#FFFFFF"
+            }
+          },
+          {
+            "name": "CSS",
+            "icon": "CSSIcon",
+            "color": {
+              "dark": "#FFFFFF",
+              "light": "#FFFFFF"
+            }
+          },
+          {
+            "name": "Microsoft SQL Server",
+            "icon": "MicrosoftSQLServerIcon",
+            "color": {
+              "dark": "#FFFFFF",
+              "light": "#FFFFFF"
+            }
+          },
+          {
+            "name": "LinuxRedHat",
+            "icon": "LinuxRedHatIcon",
+            "color": {
+              "dark": "#FFFFFF",
+              "light": "#FFFFFF"
+            }
+          },
+          {
+            "name": "HTML 5",
+            "icon": "HTMLIcon",
+            "color": {
+              "dark": "#F16529",
+              "light": "#FFFFFF"
+            }
+          },
+          {
+            "name": "Node",
+            "icon": "NodeIcon",
+            "color": {
+              "dark": "#333333",
+              "light": "#333333"
+            }
+          }
+        ]
       },
       {
         "title": "Integrated Operational Manager of Securities",
@@ -114,16 +240,60 @@
         "slug": "integrated-operational-manager-securities",
         "technologies": [
           {
-            "name": "React",
-            "icon": "ReactIcon"
+            "name": "Angular",
+            "icon": "AngularIcon",
+            "color": {
+              "dark": "#E23237",
+              "light": "#FFFFFF"
+            }
           },
           {
-            "name": "Vercel AI SDK",
-            "icon": "VercelIcon"
+            "name": "Java",
+            "icon": "JavaIcon",
+            "color": {
+              "dark": "#FFFFFF",
+              "light": "#FFFFFF"
+            }
           },
           {
-            "name": "Docker",
-            "icon": "DockerIcon"
+            "name": "CSS",
+            "icon": "CSSIcon",
+            "color": {
+              "dark": "#FFFFFF",
+              "light": "#FFFFFF"
+            }
+          },
+          {
+            "name": "Microsoft SQL Server",
+            "icon": "MicrosoftSQLServerIcon",
+            "color": {
+              "dark": "#FFFFFF",
+              "light": "#FFFFFF"
+            }
+          },
+          {
+            "name": "LinuxRedHat",
+            "icon": "LinuxRedHatIcon",
+            "color": {
+              "dark": "#FFFFFF",
+              "light": "#FFFFFF"
+            }
+          },
+          {
+            "name": "HTML 5",
+            "icon": "HTMLIcon",
+            "color": {
+              "dark": "#F16529",
+              "light": "#FFFFFF"
+            }
+          },
+          {
+            "name": "Node",
+            "icon": "NodeIcon",
+            "color": {
+              "dark": "#333333",
+              "light": "#333333"
+            }
           }
         ]
       },
@@ -138,16 +308,36 @@
         "slug": "porvenir-digital-transformation",
         "technologies": [
           {
-            "name": "React",
-            "icon": "ReactIcon"
+            "name": "JavaScript",
+            "icon": "JavaScriptIcon",
+            "color": {
+              "dark": "#323330",
+              "light": "#FFFFFF"
+            }
           },
           {
-            "name": "Vercel AI SDK",
-            "icon": "VercelIcon"
+            "name": "IBM",
+            "icon": "IBMIcon",
+            "color": {
+              "dark": "#FFFFFF",
+              "light": "#FFFFFF"
+            }
           },
           {
-            "name": "Docker",
-            "icon": "DockerIcon"
+            "name": "Swagger",
+            "icon": "SwaggerIcon",
+            "color": {
+              "dark": "#85EA2D",
+              "light": "#85EA2D"
+            }
+          },
+          {
+            "name": "HTML 5",
+            "icon": "HTMLIcon",
+            "color": {
+              "dark": "#F16529",
+              "light": "#FFFFFF"
+            }
           }
         ]
       },
@@ -162,16 +352,44 @@
         "slug": "provider-valuation-prices",
         "technologies": [
           {
-            "name": "React",
-            "icon": "ReactIcon"
+            "name": "Angular",
+            "icon": "AngularIcon",
+            "color": {
+              "dark": "#E23237",
+              "light": "#FFFFFF"
+            }
           },
           {
-            "name": "Vercel AI SDK",
-            "icon": "VercelIcon"
+            "name": "Selenium",
+            "icon": "SeleniumIcon",
+            "color": {
+              "dark": "#FFFFFF",
+              "light": "#FFFFFF"
+            }
           },
           {
-            "name": "Docker",
-            "icon": "DockerIcon"
+            "name": "Java",
+            "icon": "JavaIcon",
+            "color": {
+              "dark": "#FFFFFF",
+              "light": "#FFFFFF"
+            }
+          },
+          {
+            "name": "CSS",
+            "icon": "CSSIcon",
+            "color": {
+              "dark": "#FFFFFF",
+              "light": "#FFFFFF"
+            }
+          },
+          {
+            "name": "Microsoft SQL Server",
+            "icon": "MicrosoftSQLServerIcon",
+            "color": {
+              "dark": "#FFFFFF",
+              "light": "#FFFFFF"
+            }
           }
         ]
       }
