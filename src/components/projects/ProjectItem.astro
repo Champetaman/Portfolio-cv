@@ -9,7 +9,7 @@ const { title, image, imagehd, altImage, slug, github } = Astro.props;
 ---
 
 <div
-  class="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 relative flex flex-col justify-between h-full"
+  class="bg-slate-180 dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 relative flex flex-col justify-between h-full"
 >
   <button
     class="cursor-pointer project-image focus:outline-none openModalBtn"
@@ -23,14 +23,14 @@ const { title, image, imagehd, altImage, slug, github } = Astro.props;
     />
   </button>
 
-  <div class="p-4 flex-grow text-center">
-    <h2 class="text-xl font-bold text-gray-800 dark:text-white mb-2">
+  <div class="p-2 flex-grow text-center">
+    <h2 class="text-xl font-bold text-gray-800 dark:text-white">
       {title}
     </h2>
   </div>
 
   <!-- Vertically stacked buttons with equal width and height using SocialStack component -->
-  <div class="p-4 flex flex-col items-center gap-2">
+  <div class="p-2 flex flex-col items-center gap-2 mb-2">
     <SocialStack href={`/projects/${slug}`} target="_self">
       Project Details
       <ZoomIcon class="size-5" />
