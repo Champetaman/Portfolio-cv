@@ -1,5 +1,19 @@
 [
   {
+    "company": "Thriday",
+    "location": "Melbourne, Australia",
+    "positions": {
+      "date": "October 2024 - December 2024",
+      "title": "Technical Business Analyst Intern",
+      "achievements": [
+        "Created comprehensive documentation and diagrams (e.g., Activity, Data Flow, Sequence, Use Case, and Entity Relationship Diagrams) to bridge communication gaps among developers, managers, and clients.",
+        "Collaborated with stakeholders to gather, analyze, and document business requirements, ensuring alignment with development goals and app functionality.",
+        "Supported white-label app customization by documenting and analyzing differences in components, workflows, and functionalities for external clients.",
+        "Developed artifacts tailored to diverse audiences, providing both high-level overviews for management and detailed technical specifications for developers."
+      ]
+    }
+  },
+  {
     "company": "Open Source Projects",
     "location": "Melbourne, Australia",
     "positions": {
