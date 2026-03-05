@@ -113,21 +113,29 @@ const navItems = navItemsData; // Assign the navigation items data to a constant
 <style>
   /* Apply styles to the nav element when the screen width is 1024px or more */
   @media (min-width: 1024px) {
-    nav {
+    #nav-menu {
       animation: nav-shadow 1s linear both; /* Apply a shadow animation */
       animation-timeline: scroll(); /* Set the animation timeline */
       animation-range: 0 100px; /* Set the animation range */
-      @apply dark:bg-gray-800/90 bg-white/50; /* Apply background colors based on the theme */
+      background-color: rgb(255 255 255 / 0.5);
+    }
+
+    :global(.dark) #nav-menu {
+      background-color: rgb(31 41 55 / 0.9);
     }
   }
 
   /* Define the nav shadow animation */
   @keyframes nav-shadow {
     0% {
-      @apply dark:bg-gray-800/0 bg-white/0; /* Start with transparent backgrounds */
+      background-color: transparent;
     }
     to {
-      @apply shadow-lg ring-1 backdrop-blur ring-white/10; /* Apply shadow and blur effects */
+      box-shadow:
+        0 10px 15px -3px rgb(0 0 0 / 0.1),
+        0 4px 6px -4px rgb(0 0 0 / 0.1),
+        0 0 0 1px rgb(255 255 255 / 0.1);
+      backdrop-filter: blur(8px);
     }
   }
 </style>

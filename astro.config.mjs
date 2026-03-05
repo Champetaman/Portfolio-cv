@@ -1,11 +1,14 @@
 import { defineConfig } from "astro/config";
-import tailwind from "@astrojs/tailwind";
-import vercel from "@astrojs/vercel/serverless";
+import tailwindcss from "@tailwindcss/vite";
+import vercel from "@astrojs/vercel";
 import robotsTxt from "astro-robots-txt";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), robotsTxt()],
+  integrations: [robotsTxt()],
+  vite: {
+    plugins: [tailwindcss()],
+  },
   site: "https://camilooviedo.com/",
   output: 'server',
   adapter: vercel({
