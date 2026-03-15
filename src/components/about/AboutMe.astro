@@ -1,5 +1,4 @@
 ---
-import { Image } from "astro:assets";
 import casualImage from "@/img/casual_image.webp";
 
 const personalImageAlt = "Camilo Oviedo";
@@ -8,9 +7,13 @@ const personalImageAlt = "Camilo Oviedo";
 <article
   class="flex flex-col items-center justify-center gap-10 text-gray-700 dark:text-gray-300 md:flex-row md:gap-16"
 >
-  <Image
-    src={casualImage}
+  <img
+    src={casualImage.src}
+    width={casualImage.width}
+    height={casualImage.height}
     alt={personalImageAlt}
+    loading="lazy"
+    decoding="async"
     class="rounded-full w-60 h-60 md:w-80 md:h-96 object-cover"
   />
 

@@ -1,8 +1,6 @@
 ---
 const personalImageAlt = "Camilo Oviedo";
 
-import { Image } from "astro:assets";
-
 import heroImage from "@/img/profile_image.webp";
 import Badge from "@/components/common/Badge.astro";
 import LinkedInIcon from "@/icons/social/LinkedIn.astro";
@@ -14,9 +12,13 @@ const ResumePDF = import.meta.env.RESUME_PDF_URL;
 ---
 
 <article class="flex flex-col items-center gap-8 md:flex-row mt-24">
-  <Image
-    src={heroImage}
+  <img
+    src={heroImage.src}
+    width={heroImage.width}
+    height={heroImage.height}
     alt={personalImageAlt}
+    loading="eager"
+    decoding="async"
     class="rounded-full shadow-lg size-44"
   />
 
