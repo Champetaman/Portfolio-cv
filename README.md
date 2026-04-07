@@ -36,7 +36,7 @@ This website serves as my online portfolio and resume. It showcases my work expe
 
 You can download my latest resume in PDF format by clicking the button below:
 
-[![Download Resume](https://img.shields.io/badge/Download%20Resume-PDF-blue?style=for-the-badge)](https://pub-b87a1e5b7f3244c6a501416d3dcc2ee7.r2.dev/CV_CamiloOviedo_Engineer.pdf)
+[![Download Resume](https://img.shields.io/badge/Download%20Resume-PDF-blue?style=for-the-badge)](https://pub-b87a1e5b7f3244c6a501416d3dcc2ee7.r2.dev/CV_CamiloOviedo_Engineer_April2026.pdf)
 
 ## Setup and Installation
 
