@@ -1,5 +1,19 @@
 [
   {
+    "company": "Bountiful Grace Pty Ltd",
+    "location": "Melbourne, Australia",
+    "positions": {
+      "date": " April 2025 - Present",
+      "title": "Operations & Systems Automation Analyst",
+      "achievements": [
+        "Engineered and maintained end-to-end order management workflows by integrating platforms (e.g., Faire, Fieldfolio) via Zapier and APIs, reducing manual processing time from ~40 minutes to ~2 minutes per order (~95% efficiency gain).",
+        "Designed and implemented inventory control solutions using NETO by Maropost API, generating automated stocktake reports that enabled weekly audits and eliminated stock discrepancies and lost sales due to out-of stock issues.",
+        "Administered operational systems including payment reconciliation, order state management, and tool configuration (e.g., FairScan), improving data consistency and reducing manual intervention across business processes.",
+        "Supported customer operations through CRM-style interactions (calls, showroom support, and outbound engagement) while leveraging process improvements to increase conversion efficiency and streamline sales workflows."
+      ]
+    }
+  },
+  {
     "company": "Thriday",
     "location": "Melbourne, Australia",
     "positions": {
