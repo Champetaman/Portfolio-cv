@@ -10,20 +10,20 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/vercel": "10.0.4",
+    "@astrojs/vercel": "10.0.7",
     "@fontsource-variable/onest": "5.2.11",
-    "@tailwindcss/vite": "4.2.2",
+    "@tailwindcss/vite": "4.3.0",
     "@vercel/analytics": "2.0.1",
     "@vercel/speed-insights": "2.0.0",
-    "astro": "6.1.7",
+    "astro": "6.3.6",
     "astro-robots-txt": "1.0.0",
-    "tailwindcss": "4.2.2",
-    "typescript": "6.0.2"
+    "tailwindcss": "4.3.0",
+    "typescript": "6.0.3"
   },
   "overrides": {
     "@astrojs/vercel": {
       "esbuild": "0.28.0"
     },
-    "@sveltejs/vite-plugin-svelte": "7.0.0"
+    "@sveltejs/vite-plugin-svelte": "7.1.2"
   }
 }
