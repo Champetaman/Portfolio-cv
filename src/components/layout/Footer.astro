@@ -1,62 +1,25 @@
 ---
-const currentYear = new Date().getFullYear();
 import GitHubIcon from "@/icons/social/GitHub.astro";
+import LinkedInIcon from "@/icons/social/LinkedIn.astro";
+import MailIcon from "@/icons/common/Mail.astro";
+import DownloadIcon from "@/icons/common/Download.astro";
+
+const currentYear = new Date().getFullYear();
+const ResumePDF = import.meta.env.RESUME_PDF_URL;
 ---
 
-<footer
-  class="w-full mx-auto container scroll-m-20 lg:max-w-4xl md:max-w-2xl py-4 px-4 mt-16"
->
-  <div
-    class="flex flex-col items-center justify-between space-y-4 md:flex-row md:space-y-0"
-  >
-    <div class="flex flex-col items-center text-center md:text-left">
-      <span class="text-sm text-zinc-800/90 dark:text-zinc-200/90">
-        &copy; {currentYear} Camilo Oviedo.
-        <a
-          href="https://flowbite.com/"
-          class="hover:underline"
-          aria-label="Flowbite website"
-          target="_blank"
-        >
-          Almost all Rights Reserved.
-        </a>
-      </span>
-      <span
-        class="flex items-center justify-center text-xs text-zinc-600/90 dark:text-zinc-400/90"
-      >
-        <a
-          href="https://github.com/midudev/porfolio.dev"
-          class="hover:underline"
-          aria-label="GitHub repository for Portfolio.dev by Midudev"
-          target="_blank"
-        >
-          Inspired from Portfolio.dev by Midudev
-        </a>
-        <GitHubIcon class="ml-1 w-4 h-4 text-zinc-800/90 dark:text-white/90" />
-      </span>
+<footer class="mt-8 border-t border-[var(--rule)]">
+  <div class="shell grid gap-8 py-8 text-sm md:grid-cols-[1fr_auto] md:items-end">
+    <div>
+      <p class="font-semibold">Camilo Oviedo</p>
+      <p class="mt-1 max-w-xl text-[var(--muted)]">Technical Business Analyst · Business Systems Analyst · Application Analyst</p>
+      <p class="mt-4 font-mono text-xs text-[var(--muted)]">© {currentYear} · Melbourne, Australia</p>
     </div>
-    <div class="flex space-x-4 md:space-x-6">
-      <a
-        href="#/about-me"
-        class="text-sm text-zinc-800/90 dark:text-white/90 hover:underline"
-        aria-label="About me"
-      >
-        About me
-      </a>
-      <a
-        href="mailto:oviedocamilo94@gmail.com"
-        class="text-sm text-zinc-800/90 dark:text-white/90 hover:underline"
-        aria-label="Contact Camilo Oviedo"
-      >
-        Contact
-      </a>
-      <a
-        href="https://github.com/Champetaman"
-        aria-label="Visit Camilo Oviedo's github profile"
-        target="_blank"
-      >
-        <GitHubIcon class="w-5 h-5 text-zinc-800/90 dark:text-white/90" />
-      </a>
-    </div>
+    <nav aria-label="Footer" class="flex flex-wrap gap-x-5 gap-y-3">
+      <a class="inline-link gap-2" href="mailto:oviedocamilo94@gmail.com"><MailIcon class="size-4" /> Email</a>
+      <a class="inline-link gap-2" href="https://www.linkedin.com/in/oviedocamilo/" target="_blank" rel="noopener noreferrer"><LinkedInIcon class="size-4" /> LinkedIn</a>
+      <a class="inline-link gap-2" href="https://github.com/Champetaman" target="_blank" rel="noopener noreferrer"><GitHubIcon class="size-4" /> GitHub</a>
+      {ResumePDF && <a class="inline-link gap-2" href={ResumePDF} target="_blank" rel="noopener noreferrer"><DownloadIcon class="size-4" /> Résumé (PDF)</a>}
+    </nav>
   </div>
 </footer>

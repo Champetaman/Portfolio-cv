@@ -1,96 +1,28 @@
 ---
-import ReactIcon from "@/icons/front/React.astro";
-import VercelIcon from "@/icons/host/Vercel.astro";
-import OpenAIIcon from "@/icons/ai/OpenAI.astro";
-import OpenAIGreenIcon from "@/icons/ai/OpenAIGreen.astro";
-import NextJSIcon from "@/icons/framework/NextJS.astro";
-import PnpmIcon from "@/icons/packageManager/pnpm.astro";
-import DockerIcon from "@/icons/virtualization/Docker.astro";
-import NodeIcon from "@/icons/packageManager/Node.astro";
-import AWSIcon from "@/icons/cloud/AWS.astro";
-import TypeScriptIcon from "@/icons/scripting/TypeScript.astro";
-import MySQLIcon from "@/icons/database/MySQL.astro";
-import ExpressIcon from "@/icons/framework/Express.astro";
-import JWTIcon from "@/icons/authentication/JWT.astro";
-import CSSIcon from "@/icons/styling/CSS.astro";
-import AngularIcon from "@/icons/front/Angular.astro";
-import JavaIcon from "@/icons/back/Java.astro";
-import LinuxRedHatIcon from "@/icons/os/LinuxRedHat.astro";
-import MicrosoftSQLServerIcon from "@/icons/database/MicrosoftSQLServer.astro";
-import HTMLIcon from "@/icons/front/HTML.astro";
-import JavaScriptIcon from "@/icons/front/JavaScript.astro";
-import IBMIcon from "@/icons/cloud/IBM.astro";
-import SwaggerIcon from "@/icons/framework/Swagger.astro";
-import SeleniumIcon from "@/icons/test/Selenium.astro";
+import TechnologyIcon from "@/components/technologies/TechnologyIcon.astro";
 
 interface Technology {
   name: string;
-  icon: string;
-  color?: {
-    light: string;
-    dark: string;
-  };
+  icon?: string;
 }
 
-const ICONS: Record<string, any> = {
-  ReactIcon,
-  TypeScriptIcon,
-  MySQLIcon,
-  MicrosoftSQLServerIcon,
-  JWTIcon,
-  SeleniumIcon,
-  JavaScriptIcon,
-  JavaIcon,
-  IBMIcon,
-  SwaggerIcon,
-  LinuxRedHatIcon,
-  AngularIcon,
-  VercelIcon,
-  HTMLIcon,
-  OpenAIIcon,
-  OpenAIGreenIcon,
-  CSSIcon,
-  ExpressIcon,
-  NextJSIcon,
-  PnpmIcon,
-  NodeIcon,
-  AWSIcon,
-  DockerIcon,
-};
+interface Props {
+  technologies?: Technology[];
+  limit?: number;
+  compact?: boolean;
+}
 
-const { technologies = [] }: { technologies?: Technology[] } = Astro.props;
+const { technologies = [], limit, compact = false } = Astro.props;
+const visibleTechnologies = typeof limit === "number" ? technologies.slice(0, limit) : technologies;
+const remaining = technologies.length - visibleTechnologies.length;
 ---
 
-<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mx-4 md:mx-0">
-  {
-    technologies.map((technology) => {
-      const IconComponent = ICONS[technology.icon];
-      const lightColor = technology.color?.light || "#000000"; // Default fallback for light mode
-      const darkColor = technology.color?.dark || "#FFFFFF"; // Default fallback for dark mode
-
-      return (
-        <div class="flex flex-col items-center justify-center p-2 transition-transform duration-300 transform hover:scale-110 rounded-lg">
-          {/* Inner div with background color switching between light/dark */}
-          <div
-            class="relative w-20 h-20 flex items-center justify-center rounded-full"
-            style={`background-color: ${lightColor};`}
-            class="dark:bg-none"
-          >
-            <div
-              class="absolute inset-0 rounded-full dark:block hidden"
-              style={`background-color: ${darkColor};`}
-            />
-
-            {/* Icon */}
-            <IconComponent class="size-12 relative z-10" />
-          </div>
-
-          {/* Technology Name */}
-          <span class="mt-2 text-sm font-semibold text-gray-900 dark:text-gray-100">
-            {technology.name}
-          </span>
-        </div>
-      );
-    })
-  }
-</div>
+<ul class:list={["technology-list", compact && "technology-list--compact"]} aria-label="Technologies used">
+  {visibleTechnologies.map((technology) => (
+    <li>
+      <span class="technology-icon"><TechnologyIcon icon={technology.icon} class="size-5" /></span>
+      <span>{technology.name}</span>
+    </li>
+  ))}
+  {remaining > 0 && <li class="technology-more">+{remaining} more technologies</li>}
+</ul>

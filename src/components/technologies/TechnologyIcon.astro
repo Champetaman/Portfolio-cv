@@ -1,0 +1,75 @@
+---
+import OpenAIIcon from "@/icons/ai/OpenAI.astro";
+import OpenAIGreenIcon from "@/icons/ai/OpenAIGreen.astro";
+import JWTIcon from "@/icons/authentication/JWT.astro";
+import JavaIcon from "@/icons/back/Java.astro";
+import AWSIcon from "@/icons/cloud/AWS.astro";
+import IBMIcon from "@/icons/cloud/IBM.astro";
+import CodeIcon from "@/icons/common/Code.astro";
+import SettingsCodeIcon from "@/icons/common/SettingsCode.astro";
+import WWWIcon from "@/icons/common/WWW.astro";
+import MicrosoftSQLServerIcon from "@/icons/database/MicrosoftSQLServer.astro";
+import MySQLIcon from "@/icons/database/MySQL.astro";
+import PostgreSQLIcon from "@/icons/database/PostgreSQL.astro";
+import ExpressIcon from "@/icons/framework/Express.astro";
+import MaterialUIIcon from "@/icons/framework/MaterialUI.astro";
+import NextJSIcon from "@/icons/framework/NextJS.astro";
+import SwaggerIcon from "@/icons/framework/Swagger.astro";
+import AngularIcon from "@/icons/front/Angular.astro";
+import HTMLIcon from "@/icons/front/HTML.astro";
+import JavaScriptIcon from "@/icons/front/JavaScript.astro";
+import ReactIcon from "@/icons/front/React.astro";
+import VercelIcon from "@/icons/host/Vercel.astro";
+import LinuxRedHatIcon from "@/icons/os/LinuxRedHat.astro";
+import NodeIcon from "@/icons/packageManager/Node.astro";
+import PnpmIcon from "@/icons/packageManager/pnpm.astro";
+import TypeScriptIcon from "@/icons/scripting/TypeScript.astro";
+import GitHubIcon from "@/icons/social/GitHub.astro";
+import CSSIcon from "@/icons/styling/CSS.astro";
+import TailwindIcon from "@/icons/styling/Tailwind.astro";
+import SeleniumIcon from "@/icons/test/Selenium.astro";
+import DockerIcon from "@/icons/virtualization/Docker.astro";
+
+interface Props {
+  icon?: string;
+  class?: string;
+}
+
+const { icon = "CodeIcon", class: className = "size-5" } = Astro.props;
+const iconMap = {
+  AngularIcon,
+  AWSIcon,
+  CodeIcon,
+  CSSIcon,
+  DockerIcon,
+  ExpressIcon,
+  GitHubIcon,
+  HTMLIcon,
+  IBMIcon,
+  JavaIcon,
+  JavaScriptIcon,
+  JWTIcon,
+  LinuxRedHatIcon,
+  MaterialUIIcon,
+  MicrosoftSQLServerIcon,
+  MySQLIcon,
+  NextJSIcon,
+  NodeIcon,
+  OpenAIGreenIcon,
+  OpenAIIcon,
+  PnpmIcon,
+  PostgreSQLIcon,
+  ReactIcon,
+  SeleniumIcon,
+  SettingsCodeIcon,
+  SwaggerIcon,
+  TailwindIcon,
+  TypeScriptIcon,
+  VercelIcon,
+  WWWIcon,
+};
+
+const Icon = iconMap[icon as keyof typeof iconMap] ?? CodeIcon;
+---
+
+<Icon class={className} aria-hidden="true" focusable="false" />

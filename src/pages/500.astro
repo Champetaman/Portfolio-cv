@@ -1,28 +1,21 @@
 ---
 import ErrorLayout from "@/layouts/ErrorLayout.astro";
-import ServerErrorIcon from "@/icons/error/ServerError.astro";
-
-const title = "500 - Server Error";
-const description = "Whoops, something went wrong on our servers.";
+import ChevronLeftIcon from "@/icons/common/ChevronLeft.astro";
+import MailIcon from "@/icons/common/Mail.astro";
 ---
 
-<ErrorLayout title={title} description={description}>
-  <div
-    class="flex flex-col lg:flex-row items-center justify-center min-h-screen px-14 bg-background text-foreground"
-  >
-    <!-- Left side text -->
-    <div class="text-center lg:text-left lg:w-1/2">
-      <h1 class="text-5xl lg:text-6xl font-bold mb-6">500 - Server Error</h1>
-      <p class="text-2xl lg:text-3xl mb-10">
-        Whoops, something went wrong on the servers.
-      </p>
+<ErrorLayout title="Server error — Camilo Oviedo" description="An unexpected server error occurred.">
+  <main id="main-content" class="shell grid min-h-[calc(100vh-16rem)] content-center py-16">
+    <div class="error-record">
+      <p class="error-code" aria-hidden="true">500</p>
+      <div>
+        <h1 class="section-title">Something went wrong.</h1>
+        <p class="section-intro">The server could not complete your request. Try again shortly or return to the homepage.</p>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a class="primary-action" href="/"><ChevronLeftIcon class="size-5" /> Portfolio home</a>
+          <a class="secondary-action" href="mailto:oviedocamilo94@gmail.com"><MailIcon class="size-5" /> Email Camilo</a>
+        </div>
+      </div>
     </div>
-
-    <!-- Right side SVG -->
-    <div class="lg:w-1/2 flex justify-center lg:justify-end">
-      <ServerErrorIcon class="w-full lg:w-auto h-auto mb-10" />
-    </div>
-  </div>
+  </main>
 </ErrorLayout>
-
-<script src="/src/scripts/theme-check.js"></script>

@@ -1,0 +1,266 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-28T13:08:12.2167173Z",
+  "title": "Design System: Camilo Oviedo Portfolio",
+  "extensions": {
+    "colorMeta": {
+      "cobalt-signal": {
+        "role": "primary",
+        "displayName": "Cobalt Signal",
+        "tonalRamp": ["oklch(15% 0.203 262.4)", "oklch(27% 0.203 262.4)", "oklch(39% 0.203 262.4)", "oklch(51% 0.203 262.4)", "oklch(63% 0.203 262.4)", "oklch(75% 0.203 262.4)", "oklch(87% 0.203 262.4)", "oklch(95% 0.203 262.4)"]
+      },
+      "cobalt-press": {
+        "role": "primary",
+        "displayName": "Cobalt Press",
+        "tonalRamp": ["oklch(15% 0.161 262.8)", "oklch(27% 0.161 262.8)", "oklch(39% 0.161 262.8)", "oklch(51% 0.161 262.8)", "oklch(63% 0.161 262.8)", "oklch(75% 0.161 262.8)", "oklch(87% 0.161 262.8)", "oklch(95% 0.161 262.8)"]
+      },
+      "mineral-canvas": {
+        "role": "neutral",
+        "displayName": "Mineral Canvas",
+        "tonalRamp": ["oklch(15% 0.004 236.5)", "oklch(27% 0.004 236.5)", "oklch(39% 0.004 236.5)", "oklch(51% 0.004 236.5)", "oklch(63% 0.004 236.5)", "oklch(75% 0.004 236.5)", "oklch(87% 0.004 236.5)", "oklch(95% 0.004 236.5)"]
+      },
+      "ledger-paper": {
+        "role": "neutral",
+        "displayName": "Ledger Paper",
+        "tonalRamp": ["oklch(15% 0.002 247.8)", "oklch(27% 0.002 247.8)", "oklch(39% 0.002 247.8)", "oklch(51% 0.002 247.8)", "oklch(63% 0.002 247.8)", "oklch(75% 0.002 247.8)", "oklch(87% 0.002 247.8)", "oklch(95% 0.002 247.8)"]
+      },
+      "carbon-ink": {
+        "role": "neutral",
+        "displayName": "Carbon Ink",
+        "tonalRamp": ["oklch(15% 0.020 248.8)", "oklch(27% 0.020 248.8)", "oklch(39% 0.020 248.8)", "oklch(51% 0.020 248.8)", "oklch(63% 0.020 248.8)", "oklch(75% 0.020 248.8)", "oklch(87% 0.020 248.8)", "oklch(95% 0.020 248.8)"]
+      },
+      "slate-copy": {
+        "role": "neutral",
+        "displayName": "Slate Copy",
+        "tonalRamp": ["oklch(15% 0.027 246.4)", "oklch(27% 0.027 246.4)", "oklch(39% 0.027 246.4)", "oklch(51% 0.027 246.4)", "oklch(63% 0.027 246.4)", "oklch(75% 0.027 246.4)", "oklch(87% 0.027 246.4)", "oklch(95% 0.027 246.4)"]
+      },
+      "steel-rule": {
+        "role": "neutral",
+        "displayName": "Steel Rule",
+        "tonalRamp": ["oklch(15% 0.016 241.8)", "oklch(27% 0.016 241.8)", "oklch(39% 0.016 241.8)", "oklch(51% 0.016 241.8)", "oklch(63% 0.016 241.8)", "oklch(75% 0.016 241.8)", "oklch(87% 0.016 241.8)", "oklch(95% 0.016 241.8)"]
+      },
+      "white-on-cobalt": {
+        "role": "neutral",
+        "displayName": "White on Cobalt",
+        "tonalRamp": ["oklch(15% 0 0)", "oklch(27% 0 0)", "oklch(39% 0 0)", "oklch(51% 0 0)", "oklch(63% 0 0)", "oklch(75% 0 0)", "oklch(87% 0 0)", "oklch(95% 0 0)"]
+      },
+      "night-canvas": {
+        "role": "neutral",
+        "displayName": "Night Canvas",
+        "tonalRamp": ["oklch(15% 0.013 248.5)", "oklch(27% 0.013 248.5)", "oklch(39% 0.013 248.5)", "oklch(51% 0.013 248.5)", "oklch(63% 0.013 248.5)", "oklch(75% 0.013 248.5)", "oklch(87% 0.013 248.5)", "oklch(95% 0.013 248.5)"]
+      },
+      "night-paper": {
+        "role": "neutral",
+        "displayName": "Night Paper",
+        "tonalRamp": ["oklch(15% 0.017 248.6)", "oklch(27% 0.017 248.6)", "oklch(39% 0.017 248.6)", "oklch(51% 0.017 248.6)", "oklch(63% 0.017 248.6)", "oklch(75% 0.017 248.6)", "oklch(87% 0.017 248.6)", "oklch(95% 0.017 248.6)"]
+      },
+      "night-ink": {
+        "role": "neutral",
+        "displayName": "Night Ink",
+        "tonalRamp": ["oklch(15% 0.005 247.9)", "oklch(27% 0.005 247.9)", "oklch(39% 0.005 247.9)", "oklch(51% 0.005 247.9)", "oklch(63% 0.005 247.9)", "oklch(75% 0.005 247.9)", "oklch(87% 0.005 247.9)", "oklch(95% 0.005 247.9)"]
+      },
+      "night-copy": {
+        "role": "neutral",
+        "displayName": "Night Copy",
+        "tonalRamp": ["oklch(15% 0.020 248.1)", "oklch(27% 0.020 248.1)", "oklch(39% 0.020 248.1)", "oklch(51% 0.020 248.1)", "oklch(63% 0.020 248.1)", "oklch(75% 0.020 248.1)", "oklch(87% 0.020 248.1)", "oklch(95% 0.020 248.1)"]
+      },
+      "night-rule": {
+        "role": "neutral",
+        "displayName": "Night Rule",
+        "tonalRamp": ["oklch(15% 0.026 244.1)", "oklch(27% 0.026 244.1)", "oklch(39% 0.026 244.1)", "oklch(51% 0.026 244.1)", "oklch(63% 0.026 244.1)", "oklch(75% 0.026 244.1)", "oklch(87% 0.026 244.1)", "oklch(95% 0.026 244.1)"]
+      },
+      "night-signal": {
+        "role": "primary",
+        "displayName": "Night Signal",
+        "tonalRamp": ["oklch(15% 0.137 264.9)", "oklch(27% 0.137 264.9)", "oklch(39% 0.137 264.9)", "oklch(51% 0.137 264.9)", "oklch(63% 0.137 264.9)", "oklch(75% 0.137 264.9)", "oklch(87% 0.137 264.9)", "oklch(95% 0.137 264.9)"]
+      },
+      "night-signal-press": {
+        "role": "primary",
+        "displayName": "Night Signal Press",
+        "tonalRamp": ["oklch(15% 0.085 268.4)", "oklch(27% 0.085 268.4)", "oklch(39% 0.085 268.4)", "oklch(51% 0.085 268.4)", "oklch(63% 0.085 268.4)", "oklch(75% 0.085 268.4)", "oklch(87% 0.085 268.4)", "oklch(95% 0.085 268.4)"]
+      },
+      "night-focus": {
+        "role": "primary",
+        "displayName": "Night Focus",
+        "tonalRamp": ["oklch(15% 0.093 268.8)", "oklch(27% 0.093 268.8)", "oklch(39% 0.093 268.8)", "oklch(51% 0.093 268.8)", "oklch(63% 0.093 268.8)", "oklch(75% 0.093 268.8)", "oklch(87% 0.093 268.8)", "oklch(95% 0.093 268.8)"]
+      }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Hero and project-record titles, capped at roughly 15–18 characters per line." },
+      "headline": { "displayName": "Headline", "purpose": "Major section headings with tight leading and balanced wrapping." },
+      "title": { "displayName": "Title", "purpose": "Project and capability names within evidence registers." },
+      "body": { "displayName": "Body", "purpose": "Narrative and evidence copy at a readable 58–68 character measure." },
+      "intro": { "displayName": "Section Intro", "purpose": "Secondary framing copy immediately below section headlines." },
+      "action": { "displayName": "Action", "purpose": "Compact, confident text for primary and secondary actions." },
+      "label": { "displayName": "Evidence Label", "purpose": "Uppercase metadata for cases, dates, locations, technologies, and captions." },
+      "folio-number": { "displayName": "Folio Number", "purpose": "Tabular two-character register indexes in section rails." }
+    },
+    "shadows": [
+      {
+        "name": "mobile-disclosure",
+        "value": "0 18px 45px rgba(0, 0, 0, 0.14)",
+        "purpose": "Separates the temporary mobile navigation panel from the flat document beneath it."
+      }
+    ],
+    "motion": [
+      {
+        "name": "document-enter",
+        "value": "650ms cubic-bezier(0.22, 1, 0.36, 1)",
+        "purpose": "Settles hero document blocks upward by 1rem on initial entry."
+      },
+      {
+        "name": "document-enter-delay",
+        "value": "90ms",
+        "purpose": "Offsets the second hero block without creating a long sequence."
+      },
+      {
+        "name": "action-state",
+        "value": "180ms ease",
+        "purpose": "Color and border changes for primary and secondary actions."
+      },
+      {
+        "name": "inline-link-state",
+        "value": "160ms ease",
+        "purpose": "Text and underline color changes for evidence links."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "folio-rail",
+        "value": "64rem"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Action",
+      "kind": "button",
+      "refersTo": "action-primary",
+      "description": "The filled cobalt action for the next meaningful step.",
+      "html": "<a class=\"ds-action-primary\" href=\"#\">View selected work <span aria-hidden=\"true\">→</span></a>",
+      "css": ".ds-action-primary { display: inline-flex; min-height: 2.75rem; align-items: center; justify-content: center; gap: 0.65rem; border: 1px solid var(--accent, #124fcc); border-radius: 2px; padding: 0.7rem 1rem; background: var(--accent, #124fcc); color: var(--on-accent, #fff); font: 570 1rem/1.2 \"Onest Variable\", \"Segoe UI\", sans-serif; text-decoration: none; transition: background-color 180ms ease, border-color 180ms ease; } .ds-action-primary:hover { background: var(--accent-strong, #0b3694); border-color: var(--accent-strong, #0b3694); } .ds-action-primary:focus-visible { outline: 3px solid var(--focus, #124fcc); outline-offset: 4px; } .ds-action-primary:active { background: var(--accent-strong, #0b3694); }"
+    },
+    {
+      "name": "Secondary Action",
+      "kind": "button",
+      "refersTo": "action-secondary",
+      "description": "The outlined companion action for résumé and source links.",
+      "html": "<a class=\"ds-action-secondary\" href=\"#\">Download résumé</a>",
+      "css": ".ds-action-secondary { display: inline-flex; min-height: 2.75rem; align-items: center; justify-content: center; gap: 0.65rem; border: 1px solid var(--accent, #124fcc); border-radius: 2px; padding: 0.7rem 1rem; background: transparent; color: var(--accent, #124fcc); font: 570 1rem/1.2 \"Onest Variable\", \"Segoe UI\", sans-serif; text-decoration: none; transition: background-color 180ms ease, color 180ms ease, border-color 180ms ease; } .ds-action-secondary:hover { background: color-mix(in srgb, var(--accent, #124fcc) 8%, transparent); } .ds-action-secondary:focus-visible { outline: 3px solid var(--focus, #124fcc); outline-offset: 4px; } .ds-action-secondary:active { color: var(--accent-strong, #0b3694); border-color: var(--accent-strong, #0b3694); }"
+    },
+    {
+      "name": "Inline Evidence Link",
+      "kind": "custom",
+      "refersTo": "inline-link",
+      "description": "A traceable text action used beside project and supporting evidence.",
+      "html": "<a class=\"ds-inline-link\" href=\"#\">Read project record <span aria-hidden=\"true\">→</span></a>",
+      "css": ".ds-inline-link { display: inline-flex; min-height: 2.75rem; align-items: center; gap: 0.5rem; color: var(--accent, #124fcc); font: 400 1rem/1.65 \"Onest Variable\", \"Segoe UI\", sans-serif; text-decoration-color: color-mix(in srgb, var(--accent, #124fcc) 45%, transparent); text-decoration-line: underline; text-decoration-thickness: 1px; text-underline-offset: 0.28em; transition: color 160ms ease, text-decoration-color 160ms ease; } .ds-inline-link:hover { color: var(--accent-strong, #0b3694); text-decoration-color: currentColor; } .ds-inline-link:focus-visible { border-radius: 2px; outline: 3px solid var(--focus, #124fcc); outline-offset: 4px; } .ds-inline-link:active { color: var(--accent-strong, #0b3694); }"
+    },
+    {
+      "name": "Primary Navigation",
+      "kind": "nav",
+      "description": "A quiet ruled header with role metadata and plain-text destinations.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Primary preview\"><a class=\"ds-nav-home\" href=\"#\"><strong>Camilo Oviedo</strong><span>Systems analysis</span></a><div class=\"ds-nav-links\"><a href=\"#\">Work</a><a href=\"#\">Experience</a><a href=\"#\">Capabilities</a><a href=\"#\">Contact</a></div></nav>",
+      "css": ".ds-nav { display: flex; min-height: 4rem; align-items: center; justify-content: space-between; gap: 1.25rem; border-bottom: 1px solid var(--rule, #c6d0d8); background: var(--canvas, #f2f5f7); color: var(--ink, #101820); font-family: \"Onest Variable\", \"Segoe UI\", sans-serif; } .ds-nav-home { display: flex; min-height: 2.75rem; align-items: center; gap: 0.75rem; color: inherit; text-decoration: none; } .ds-nav-home strong { font-weight: 600; letter-spacing: -0.025em; } .ds-nav-home span { color: var(--muted, #52606d); font: 400 0.68rem/1.2 \"Cascadia Code\", \"SFMono-Regular\", Consolas, monospace; letter-spacing: 0.08em; text-transform: uppercase; } .ds-nav-links { display: flex; align-items: center; gap: 1.5rem; } .ds-nav-links a { display: inline-flex; min-height: 2.75rem; align-items: center; color: var(--muted, #52606d); font-size: 0.875rem; text-decoration: none; } .ds-nav-links a:hover, .ds-nav-links a:active { color: var(--ink, #101820); } .ds-nav a:focus-visible { border-radius: 2px; outline: 3px solid var(--focus, #124fcc); outline-offset: 4px; } @media (max-width: 42rem) { .ds-nav-home span { display: none; } .ds-nav-links { gap: 0.75rem; overflow-x: auto; } }"
+    },
+    {
+      "name": "Section Folio",
+      "kind": "custom",
+      "description": "The numbered rail marker that turns sections into a continuous evidence register.",
+      "html": "<div class=\"ds-folio\"><strong>01</strong><span>Selected work</span></div>",
+      "css": ".ds-folio { display: flex; align-items: baseline; gap: 0.75rem; padding-block: 1rem; color: var(--muted, #52606d); font: 400 0.72rem/1.2 \"Cascadia Code\", \"SFMono-Regular\", Consolas, monospace; letter-spacing: 0.06em; text-transform: uppercase; } .ds-folio strong { color: var(--accent, #124fcc); font: 520 1.5rem/1 \"Onest Variable\", \"Segoe UI\", sans-serif; font-variant-numeric: tabular-nums; letter-spacing: -0.03em; } .ds-folio:hover strong { color: var(--accent-strong, #0b3694); } .ds-folio:focus-within { outline: 3px solid var(--focus, #124fcc); outline-offset: 4px; } @media (min-width: 64rem) { .ds-folio { width: 6.5rem; min-height: 9rem; align-items: flex-start; border-right: 1px solid var(--rule, #c6d0d8); flex-direction: column; padding: 1.3rem 1rem 0 0; } }"
+    },
+    {
+      "name": "Work Exhibit",
+      "kind": "custom",
+      "refersTo": "exhibit-frame",
+      "description": "An artifact frame, provenance caption, and adjacent case analysis without card styling.",
+      "html": "<article class=\"ds-exhibit\"><figure class=\"ds-exhibit-figure\"><div class=\"ds-exhibit-frame\"><div class=\"ds-exhibit-artifact\" role=\"img\" aria-label=\"Repository artifact preview\"><span>Repository artifact</span></div></div><figcaption>Platform screenshot · system context</figcaption></figure><div class=\"ds-exhibit-copy\"><p class=\"ds-exhibit-label\">Case 01 · Systems modernisation</p><h3>Central Securities Depository</h3><p>Critical platform work documented through context, contribution, and supported outcomes.</p><dl><div><dt>Contribution</dt><dd>Requirements analysis across business and technical delivery.</dd></div><div><dt>Supported outcome</dt><dd>Recorded operational and reliability improvements.</dd></div></dl></div></article>",
+      "css": ".ds-exhibit { display: grid; gap: 2rem; color: var(--ink, #101820); font-family: \"Onest Variable\", \"Segoe UI\", sans-serif; } .ds-exhibit-frame { border: 1px solid var(--rule, #c6d0d8); background: var(--paper, #fafbfc); padding: 0.5rem; } .ds-exhibit-artifact { display: grid; min-height: 12rem; place-items: center; background: var(--canvas, #f2f5f7); color: var(--muted, #52606d); font: 400 0.7rem/1.2 \"Cascadia Code\", \"SFMono-Regular\", Consolas, monospace; letter-spacing: 0.07em; text-transform: uppercase; } .ds-exhibit-figure { margin: 0; } .ds-exhibit-figure figcaption, .ds-exhibit-label, .ds-exhibit-copy dt { margin-top: 0.75rem; color: var(--muted, #52606d); font: 400 0.68rem/1.5 \"Cascadia Code\", \"SFMono-Regular\", Consolas, monospace; letter-spacing: 0.06em; text-transform: uppercase; } .ds-exhibit-copy h3 { margin: 1rem 0 0; font-size: 2rem; font-weight: 500; letter-spacing: -0.03em; line-height: 1.05; } .ds-exhibit-copy > p:not(.ds-exhibit-label) { color: var(--muted, #52606d); } .ds-exhibit-copy dl { border-block: 1px solid var(--rule, #c6d0d8); } .ds-exhibit-copy dl div { padding-block: 1rem; } .ds-exhibit-copy dl div + div { border-top: 1px solid var(--rule, #c6d0d8); } .ds-exhibit-copy dt { margin-top: 0; } .ds-exhibit-copy dd { margin: 0.5rem 0 0; line-height: 1.65; } .ds-exhibit:hover .ds-exhibit-frame { border-color: var(--accent, #124fcc); } .ds-exhibit:focus-within { outline: 3px solid var(--focus, #124fcc); outline-offset: 4px; } @media (min-width: 48rem) { .ds-exhibit { grid-template-columns: 1.22fr 0.78fr; align-items: start; gap: 3.5rem; } }"
+    },
+    {
+      "name": "Experience Register Row",
+      "kind": "custom",
+      "description": "A ruled employer, role, date, and evidence row that compresses chronology.",
+      "html": "<article class=\"ds-experience-row\"><div class=\"ds-experience-employer\"><h3>Central Bank</h3><p>Bogotá, Colombia</p></div><div class=\"ds-experience-role\"><div><h4>Systems Analyst</h4><time>2018–2020</time></div><ul><li>Translated operational needs into system requirements.</li><li>Supported critical financial-platform continuity.</li></ul></div></article>",
+      "css": ".ds-experience-row { display: grid; gap: 1.5rem; border-block: 1px solid var(--rule, #c6d0d8); padding-block: 2rem; color: var(--ink, #101820); font-family: \"Onest Variable\", \"Segoe UI\", sans-serif; } .ds-experience-employer h3, .ds-experience-role h4 { margin: 0; font-size: 1.25rem; font-weight: 500; letter-spacing: -0.02em; } .ds-experience-employer p, .ds-experience-role time { display: block; margin-top: 0.5rem; color: var(--muted, #52606d); font: 400 0.75rem/1.4 \"Cascadia Code\", \"SFMono-Regular\", Consolas, monospace; letter-spacing: 0.05em; text-transform: uppercase; } .ds-experience-role { display: grid; gap: 1.25rem; } .ds-experience-role ul { margin: 0; padding-left: 1.25rem; color: var(--muted, #52606d); line-height: 1.65; } .ds-experience-role li + li { margin-top: 0.75rem; } .ds-experience-row:hover { border-color: var(--accent, #124fcc); } .ds-experience-row:focus-within { outline: 3px solid var(--focus, #124fcc); outline-offset: 4px; } @media (min-width: 48rem) { .ds-experience-row { grid-template-columns: 14rem 1fr; } .ds-experience-role { grid-template-columns: minmax(12rem, 0.7fr) minmax(0, 1.3fr); } }"
+    },
+    {
+      "name": "Capability Register",
+      "kind": "custom",
+      "description": "Plain-language capability groups divided by rules instead of badges or tiles.",
+      "html": "<div class=\"ds-capabilities\"><article><h3>Business and systems analysis</h3><p>Requirements gathering, process analysis, stakeholder alignment, use cases, and data flows.</p></article><article><h3>Applications and automation</h3><p>API integrations, workflow automation, operational administration, controls, and reporting.</p></article></div>",
+      "css": ".ds-capabilities { display: grid; border-block: 1px solid var(--rule, #c6d0d8); color: var(--ink, #101820); font-family: \"Onest Variable\", \"Segoe UI\", sans-serif; } .ds-capabilities article { padding-block: 1.75rem; } .ds-capabilities article + article { border-top: 1px solid var(--rule, #c6d0d8); } .ds-capabilities h3 { margin: 0; font-size: 1.5rem; font-weight: 500; letter-spacing: -0.025em; } .ds-capabilities p { max-width: 58ch; margin: 1rem 0 0; color: var(--muted, #52606d); line-height: 1.65; } .ds-capabilities article:hover h3 { color: var(--accent, #124fcc); } .ds-capabilities article:focus-within { outline: 3px solid var(--focus, #124fcc); outline-offset: 4px; } @media (min-width: 48rem) { .ds-capabilities { grid-template-columns: 1fr 1fr; } .ds-capabilities article:first-child { border-right: 1px solid var(--rule, #c6d0d8); padding-right: 2rem; } .ds-capabilities article + article { border-top: 0; padding-left: 2rem; } }"
+    },
+    {
+      "name": "Outcome Register",
+      "kind": "custom",
+      "description": "A compact three-part register for supported outcomes in the opening evidence trail.",
+      "html": "<dl class=\"ds-outcomes\"><div><dt>Operations automation</dt><dd>~40 min → ~2 min</dd></div><div><dt>Systems modernisation</dt><dd>30% efficiency recorded</dd></div><div><dt>Technical continuity</dt><dd>35% less downtime</dd></div></dl>",
+      "css": ".ds-outcomes { display: grid; margin: 0; border-top: 1px solid var(--rule, #c6d0d8); color: var(--ink, #101820); font-family: \"Onest Variable\", \"Segoe UI\", sans-serif; } .ds-outcomes div { border-bottom: 1px solid var(--rule, #c6d0d8); padding-block: 1.25rem; } .ds-outcomes dt { color: var(--muted, #52606d); font: 400 0.7rem/1.4 \"Cascadia Code\", \"SFMono-Regular\", Consolas, monospace; letter-spacing: 0.07em; text-transform: uppercase; } .ds-outcomes dd { margin: 0.5rem 0 0; font-size: 1.125rem; font-weight: 500; line-height: 1.4; } .ds-outcomes div:hover dd { color: var(--accent, #124fcc); } .ds-outcomes div:focus-within { outline: 3px solid var(--focus, #124fcc); outline-offset: 4px; } @media (min-width: 48rem) { .ds-outcomes { grid-template-columns: repeat(3, 1fr); } .ds-outcomes div { border-bottom: 0; padding-inline: 1.5rem; } .ds-outcomes div:first-child { padding-left: 0; } .ds-outcomes div + div { border-left: 1px solid var(--rule, #c6d0d8); } }"
+    }
+  ],
+  "narrative": {
+    "northStar": "Systems Evidence Ledger",
+    "overview": "The systems evidence ledger treats the portfolio as an authored record of business problems, technical contribution, and supported outcomes. It borrows the discipline of requirements traceability, operational change records, and engineering case files without imitating a dashboard.\n\nThe interface is precise, quiet, and human. Cool mineral surfaces, carbon text, cobalt annotations, numbered folios, and hairline rules establish a continuous reading system; asymmetrical evidence layouts and authentic artifacts keep the work itself in command.",
+    "keyCharacteristics": [
+      "Evidence-led rather than chronology-led.",
+      "Flat mineral surfaces divided by precise rules.",
+      "One cobalt annotation color across actions and evidence markers.",
+      "Onest narrative type paired with sparse monospace metadata.",
+      "Desktop folio rails that collapse into the mobile reading flow.",
+      "Authentic portraits and repository artifacts presented as documented exhibits."
+    ],
+    "rules": [
+      {
+        "name": "The Cobalt Annotation Rule",
+        "body": "Cobalt marks actions, folios, links, and small evidence signals; it never becomes a broad decorative field.",
+        "section": "colors"
+      },
+      {
+        "name": "The Theme Pair Rule",
+        "body": "Light and dark modes swap complete role sets; never mix a light surface token with dark-mode copy or rule tokens.",
+        "section": "colors"
+      },
+      {
+        "name": "The Two-Voice Rule",
+        "body": "Onest carries narrative and hierarchy; monospace is reserved for evidence metadata, not personality or decoration.",
+        "section": "typography"
+      },
+      {
+        "name": "The Rail-to-Flow Rule",
+        "body": "The folio rail appears only when the viewport can sustain it; below 64rem it becomes an inline section header without changing reading order.",
+        "section": "layout"
+      },
+      {
+        "name": "The Ruled Rhythm Rule",
+        "body": "Use border lines and deliberate vertical intervals to group evidence; do not wrap every unit in a container.",
+        "section": "layout"
+      },
+      {
+        "name": "The Flat Evidence Rule",
+        "body": "Major content surfaces stay flat at rest; shadow is reserved for a temporary layer that physically overlaps the document.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Almost-Square Rule",
+        "body": "Two-pixel action corners are the maximum recurring radius; larger rounding, capsules, and decorative pills do not belong in the ledger.",
+        "section": "shapes"
+      }
+    ],
+    "dos": [
+      "Do use evidence labels, folios, captions, and rules to make contribution and context easy to trace.",
+      "Do keep Cobalt Signal rare enough that every appearance reads as action or annotation.",
+      "Do present repository screenshots and portraits as flat exhibits with honest captions.",
+      "Do vary evidence-layout proportions while preserving a clear semantic reading order.",
+      "Do preserve 2.75rem minimum interaction targets, visible focus, dark-mode role parity, and reduced-motion behavior."
+    ],
+    "donts": [
+      "Don't introduce gradients, glow, glass effects, or decorative saturation.",
+      "Don't turn evidence into repeated rounded cards, bento tiles, chips, or skill-logo walls.",
+      "Don't imitate a dashboard, add fake case-study artifacts, or imply unsupported authorship.",
+      "Don't use large radii, decorative pills, or shadows on persistent content surfaces.",
+      "Don't give every project, role, or capability equal visual emphasis."
+    ]
+  }
+}

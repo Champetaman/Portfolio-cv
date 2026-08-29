@@ -1,66 +1,146 @@
 ---
-const personalImageAlt = "Camilo Oviedo";
-
 import heroImage from "@/img/profile_image.webp";
-import Badge from "@/components/common/Badge.astro";
-import LinkedInIcon from "@/icons/social/LinkedIn.astro";
-import MailIcon from "@/icons/common/Mail.astro";
 import DownloadIcon from "@/icons/common/Download.astro";
-import SocialStack from "@/components/common/SocialStack.astro";
+import ChevronRightIcon from "@/icons/common/ChevronRight.astro";
+import BriefcaseIcon from "@/icons/common/Briefcase.astro";
+import MailIcon from "@/icons/common/Mail.astro";
 
 const ResumePDF = import.meta.env.RESUME_PDF_URL;
 ---
 
-<article class="flex flex-col items-center gap-8 md:flex-row mt-24">
-  <img
-    src={heroImage.src}
-    width={heroImage.width}
-    height={heroImage.height}
-    alt={personalImageAlt}
-    loading="eager"
-    decoding="async"
-    class="rounded-full shadow-lg size-44"
-  />
+<section
+  class="shell grid border-b border-[var(--rule)] lg:grid-cols-[6.5rem_minmax(0,1fr)]"
+>
+  <aside
+    class="hidden border-r border-[var(--rule)] pt-7 pr-4 font-mono text-[0.68rem] uppercase tracking-[0.08em] text-[var(--muted)] lg:block"
+    aria-label="Profile metadata"
+  >
+    <p class="text-[var(--accent)]">Profile</p>
+    <p class="mt-7">Technical<br />business<br />analysis</p>
+    <p class="mt-7">Melbourne<br />Australia</p>
+  </aside>
 
-  <div class="flex flex-col items-center md:items-start">
-    <h1
-      class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white text-center md:text-left"
+  <div class="py-10 lg:pl-[clamp(2.5rem,5vw,5rem)] lg:pt-16">
+    <div
+      class="grid items-start gap-10 lg:grid-cols-[minmax(0,1.25fr)_minmax(19rem,0.75fr)]"
     >
-      Hey, I'm Camilo Oviedo
-    </h1>
+      <div class="document-enter">
+        <p
+          class="max-w-2xl text-sm font-medium text-[var(--accent)] sm:text-base"
+        >
+          Technical Business Analyst · Business Systems Analyst · Application
+          Analyst
+        </p>
+        <h1
+          class="mt-6 max-w-[18ch] text-[clamp(2.2rem,3.8vw,3.6rem)] font-[560] leading-[0.96] tracking-[-0.04em] text-balance"
+        >
+          I turn complex operations into clear requirements, reliable
+          applications and better ways of working.
+        </h1>
+        <p
+          class="mt-7 max-w-[62ch] text-lg leading-relaxed text-[var(--muted)] sm:text-xl"
+        >
+          I connect business needs, stakeholder context and technical delivery
+          across financial systems, workflow automation and application
+          modernisation.
+        </p>
+        <div
+          class="availability-signal"
+          role="note"
+          aria-label="Employment availability"
+        >
+          <span class="availability-icon"><BriefcaseIcon class="size-5" /></span
+          >
+          <span>Open to analyst and application-focused opportunities.</span>
+        </div>
+        <div
+          class="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center"
+        >
+          <a class="primary-action" href="mailto:oviedocamilo94@gmail.com">
+            <MailIcon class="size-5" />
+            Email Camilo
+          </a>
+          {
+            ResumePDF && (
+              <a
+                class="secondary-action"
+                href={ResumePDF}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Download résumé
+                <DownloadIcon class="size-5" />
+              </a>
+            )
+          }
+          <a class="inline-link px-1" href="#projects">
+            View projects
+            <ChevronRightIcon class="size-5" />
+          </a>
+        </div>
+      </div>
 
-    <p
-      class="mt-6 text-xl text-pretty text-gray-800 dark:[&>strong]:text-yellow-200 [&>strong]:text-yellow-500 [&>strong]:font-semibold dark:text-gray-300"
-    >
-      <strong>Systems Engineer and Business Administrator </strong> with over 6 years
-      of experience in software design, development, and project management. Proven
-      expertise in system development and agile methodologies, particularly within
-      banking and IT consulting sectors.
-    </p>
-
-    <nav
-      class="flex flex-wrap gap-4 mt-8 items-center justify-center md:justify-start"
-    >
-      <SocialStack href="mailto:oviedocamilo94@gmail.com">
-        <MailIcon class="size-4" />
-        Contact me
-      </SocialStack>
-      <SocialStack href={ResumePDF} download>
-        <DownloadIcon class="size-4" />
-        Download Resume
-      </SocialStack>
-      <SocialStack href="https://www.linkedin.com/in/oviedocamilo/">
-        <LinkedInIcon class="size-4" />
-        LinkedIn
-      </SocialStack>
-      <a
-        href="https://www.linkedin.com/in/oviedocamilo/"
-        target="_blank"
-        rel="noopener"
-        class="flex items-center transition md:justify-center md:hover:scale-105"
+      <figure
+        class="document-enter document-enter-delay lg:justify-self-end lg:pt-12"
       >
-        <Badge>Open to Work</Badge>
-      </a>
-    </nav>
+        <div class="relative border border-[var(--rule)] bg-[var(--paper)] p-2">
+          <img
+            src={heroImage.src}
+            width={heroImage.width}
+            height={heroImage.height}
+            alt="Portrait of Camilo Oviedo"
+            loading="eager"
+            decoding="async"
+            class="aspect-[4/5] w-full object-cover object-top grayscale-[12%]"
+          />
+          <span
+            class="absolute -top-px -left-px size-3 border-t border-l border-[var(--accent)]"
+            aria-hidden="true"></span>
+          <span
+            class="absolute -right-px -bottom-px size-3 border-r border-b border-[var(--accent)]"
+            aria-hidden="true"></span>
+        </div>
+        <figcaption
+          class="mt-3 flex justify-between gap-4 font-mono text-[0.68rem] uppercase tracking-[0.06em] text-[var(--muted)]"
+        >
+          <span>Camilo Oviedo</span>
+          <span>Melbourne</span>
+        </figcaption>
+      </figure>
+    </div>
+
+    <section
+      class="mt-12 border-t border-[var(--rule)] pt-6"
+      aria-labelledby="achievement-title"
+    >
+      <h2 id="achievement-title" class="text-xl font-medium tracking-[-0.02em]">
+        Selected career achievements
+      </h2>
+      <dl class="mt-5 grid border-y border-[var(--rule)] md:grid-cols-3">
+        <div
+          class="border-b border-[var(--rule)] py-5 md:border-r md:border-b-0 md:pr-6"
+        >
+          <dt class="meta-label">Operations automation</dt>
+          <dd class="mt-2 text-lg font-medium">
+            Order processing reduced from ~40 minutes to ~2 minutes.
+          </dd>
+        </div>
+        <div
+          class="border-b border-[var(--rule)] py-5 md:border-r md:border-b-0 md:px-6"
+        >
+          <dt class="meta-label">Systems modernisation</dt>
+          <dd class="mt-2 text-lg font-medium">
+            30% operational-efficiency and 25% reliability improvements
+            recorded.
+          </dd>
+        </div>
+        <div class="py-5 md:pl-6">
+          <dt class="meta-label">Technical continuity</dt>
+          <dd class="mt-2 text-lg font-medium">
+            35% reduction in system downtime recorded at the Central Bank.
+          </dd>
+        </div>
+      </dl>
+    </section>
   </div>
-</article>
+</section>

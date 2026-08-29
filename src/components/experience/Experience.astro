@@ -1,6 +1,4 @@
 ---
-import LocationIcon from "@/icons/common/Location.astro";
-import ExperienceItem from "@/components/experience/ExperienceItem.astro";
 import ExperienceData from "@/../data/experience.json";
 
 interface Position {
@@ -15,40 +13,41 @@ interface CompanyExperience {
   positions: Position | Position[];
 }
 
-const EXPERIENCE: CompanyExperience[] = ExperienceData;
+const EXPERIENCE = ExperienceData as CompanyExperience[];
+const positionsFor = (entry: CompanyExperience) => Array.isArray(entry.positions) ? entry.positions : [entry.positions];
 ---
 
-<ol class="relative mt-8">
-  {EXPERIENCE.map((companyExperience) => (
-    <div class="mb-6">
-      <h2 class="text-yellow-400 text-2xl font-extrabold">
-        {companyExperience.company}
-      </h2>
-      <h3 class="flex items-center text-md text-gray-500 dark:text-gray-400 mt-1">
-        <LocationIcon class="size-4 ml-1 mr-2" />
-        {companyExperience.location}
-      </h3>
+<section id="experience" class="shell section-grid" aria-labelledby="experience-title">
+  <div class="section-folio" aria-hidden="true">
+    <strong>01</strong>
+    <span>Experience</span>
+  </div>
+  <div class="section-body">
+    <h2 id="experience-title" class="section-title">Experience across systems and operations.</h2>
+    <p class="section-intro">8+ years connecting operational needs with reliable software delivery across Australia and Colombia.</p>
 
-      {/* Handle the case where positions could be an object or an array */}
-      {Array.isArray(companyExperience.positions) ? (
-        companyExperience.positions.map((position) => (
-          <li class="mt-4">
-            <ExperienceItem
-              date={position.date}
-              title={position.title}
-              achievements={position.achievements}
-            />
-          </li>
-        ))
-      ) : (
-        <li class="mt-4">
-          <ExperienceItem
-            date={companyExperience.positions.date}
-            title={companyExperience.positions.title}
-            achievements={companyExperience.positions.achievements}
-          />
+    <ol class="mt-12 border-y border-[var(--rule)]">
+      {EXPERIENCE.map((entry) => (
+        <li class="grid gap-6 border-b border-[var(--rule)] py-8 last:border-b-0 lg:grid-cols-[14rem_1fr]">
+          <div>
+            <h3 class="text-xl font-medium tracking-[-0.02em]">{entry.company}</h3>
+            <p class="mt-2 font-mono text-xs uppercase tracking-[0.05em] text-[var(--muted)]">{entry.location}</p>
+          </div>
+          <div class="rule-list">
+            {positionsFor(entry).map((position) => (
+              <article class="grid gap-5 py-1 first:pt-0 not-first:mt-7 not-first:pt-7 md:grid-cols-[minmax(12rem,0.7fr)_minmax(0,1.3fr)]">
+                <div>
+                  <h4 class="text-lg font-medium">{position.title}</h4>
+                  <time class="mt-2 block font-mono text-xs text-[var(--muted)]">{position.date.trim()}</time>
+                </div>
+                <ul class="space-y-3 text-[var(--muted)]">
+                  {position.achievements.slice(0, 2).map((achievement) => <li>{achievement}</li>)}
+                </ul>
+              </article>
+            ))}
+          </div>
         </li>
-      )}
-    </div>
-  ))}
-</ol>
+      ))}
+    </ol>
+  </div>
+</section>

@@ -10,13 +10,18 @@
     "url": "/#projects"
   },
   {
-    "title": "About Me",
-    "label": "about-me",
-    "url": "/#about-me"
+    "title": "Capabilities",
+    "label": "capabilities",
+    "url": "/#capabilities"
+  },
+  {
+    "title": "About",
+    "label": "about",
+    "url": "/#about"
   },
   {
     "title": "Contact",
     "label": "contact",
-    "url": "mailto:oviedocamilo94@gmail.com"
+    "url": "/#contact"
   }
 ]

@@ -4,92 +4,59 @@ import "@/styles/global.css";
 
 import Header from "@/components/layout/Header.astro";
 import Footer from "@/components/layout/Footer.astro";
-
 import SpeedInsights from "@vercel/speed-insights/astro";
 
 interface Props {
   title: string;
   description: string;
+  image?: string;
 }
 
-const { description, title } = Astro.props;
+const { description, title, image = "/professional/DCV.webp" } = Astro.props;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const socialImage = new URL(image, Astro.site);
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
-    <title>{title}</title>
     <meta charset="UTF-8" />
-    <meta name="description" content={description} />
-    <meta
-      name="keywords"
-      content="Software Engineer, Systems Engineer, Business Administrator, Portfolio, Resume, Technical Business Analyst"
-    />
-    <meta name="author" content="Camilo Oviedo" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <meta name="description" content={description} />
+    <meta name="author" content="Camilo Oviedo" />
     <meta name="generator" content={Astro.generator} />
+    <meta name="theme-color" content="#F2F5F7" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0E1318" media="(prefers-color-scheme: dark)" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:image" content={socialImage} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="canonical" href={canonicalURL} />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <title>{title}</title>
+    <script is:inline>
+      (() => {
+        const stored = localStorage.getItem("theme");
+        const dark = stored ? stored === "dark" : matchMedia("(prefers-color-scheme: dark)").matches;
+        document.documentElement.classList.toggle("dark", dark);
+      })();
+    </script>
   </head>
-  <SpeedInsights />
-
-  <body class="relative text-black dark:text-white">
-    <div
-      class="fixed inset-0 z-[-2] h-full w-full bg-gray-600 dark:bg-gray-900
-  bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(217,216,255,0.5),rgba(255,255,255,0.9))]
-  dark:bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"
-    >
-    </div>
+  <body>
+    <!-- THESIS: Camilo's work is read as an evidence trail, not a generic developer portfolio or exhaustive CV.
+    OWN-WORLD: Cool mineral paper, carbon ink, one cobalt accent, numbered rails, hairline rules, and flat authentic exhibits.
+    STORY: Recruiters identify analyst fit and availability, review chronology, inspect the complete project portfolio, then make contact.
+    FIRST VIEWPORT: A compact analyst thesis and actions sit beside Camilo's portrait; an evidence register begins within the fold.
+    FORM: Systems evidence ledger, grounded direction 7, seed 1cb0c18f.
+    FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance -->
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <Header />
     <slot />
     <Footer />
-
-    <style is:global>
-      :root {
-        color-scheme: light dark;
-      }
-
-      html {
-        font-family: "Onest Variable", system-ui, sans-serif;
-        scroll-behavior: smooth;
-      }
-
-      body {
-        color: rgba(17, 17, 17, 0.9);
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh;
-        overscroll-behavior: none;
-        opacity: 0;
-        animation: fadeIn 0.5s ease-in-out forwards;
-      }
-
-      @media (prefers-reduced-motion: reduce) {
-        html {
-          scroll-behavior: auto;
-        }
-        body {
-          animation: none;
-          opacity: 1;
-        }
-      }
-
-      @media (prefers-color-scheme: dark) {
-        body {
-          color: rgba(255, 255, 255, 0.9);
-        }
-      }
-
-      @keyframes fadeIn {
-        0% {
-          opacity: 0;
-        }
-        100% {
-          opacity: 1;
-        }
-      }
-    </style>
+    <SpeedInsights />
+    <script src="/src/scripts/theme-toggle.js"></script>
+    <script src="/src/scripts/mobile-menu.js"></script>
   </body>
 </html>
-
-<!-- Include the theme toggle script -->
-<script src="/src/scripts/theme-toggle.js"></script>

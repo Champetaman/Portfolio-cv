@@ -1,0 +1,9 @@
+Use case: ui-mockup
+Asset type: north-star desktop web portfolio composition, 16:10 first viewport
+Primary request: Create a high-fidelity homepage concept for Camilo Oviedo, positioned as a Technical Business Analyst / Business Systems Analyst / Application Analyst with strong technical delivery experience. The visual system is a systems evidence ledger: sophisticated contemporary technical-editorial design inspired by operational change records, requirements traceability matrices, and engineering case files, not a fake dashboard.
+Composition: selective asymmetry with a narrow numbered left rail; a large analyst-first thesis; a rectangular portrait; a horizontal evidence register; selected work entering the fold with one wide screenshot exhibit and marginal captions.
+Text: CAMILO OVIEDO; TECHNICAL BUSINESS ANALYST; I translate complex operations into systems teams can build, run and improve.; Selected evidence; View selected work; Download resume.
+Palette: cool mineral white, deep carbon ink, one restrained cobalt blue accent; no gradients or glow.
+Materials: hairline rules, registration marks, document folios, baseline rhythm, square corners, screenshots as flat exhibits.
+Constraints: professional, precise, human, Astro/Tailwind-feasible, high contrast, no invented metrics, logos, testimonial, education, or certification claims.
+Avoid: cards, bento grids, SaaS patterns, gradients, neon, glow, pills, rounded containers, fake dashboards, badge walls, generic developer styling, equal work treatment, warm cream and red, serif-editorial cliché, watermark.

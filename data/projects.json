@@ -3,7 +3,8 @@
     "personal": [
       {
         "title": "AI Dietary Recipe",
-        "description": "Web application that provides personalized recipe suggestions based on user-selected criteria such as ammount of time, cuisine type, dietary restrictions, and religious dietary preferences. Built with modern web technologies, this app leverages AI to enhance the user experience by generating detailed recipe suggestions and accompanying dish images.",
+        "summary": "An AI-assisted recipe application that adapts suggestions to available time, cuisine and dietary requirements.",
+        "description": "Web application that provides personalized recipe suggestions based on user-selected criteria such as amount of time, cuisine type, dietary restrictions, and religious dietary preferences. Built with modern web technologies, this app leverages AI to enhance the user experience by generating detailed recipe suggestions and accompanying dish images.",
         "link": "https://ai-dietary-recipe.vercel.app/",
         "github": "https://github.com/Champetaman/ai-dietary-recipe",
         "image": "/personal/ai-dietary-recipe.webp",
@@ -75,6 +76,7 @@
     "contribution": [
       {
         "title": "Bigcapital",
+        "summary": "An open-source accounting and inventory platform that turns operational data into useful financial reporting.",
         "description": "Bigcapital is a smart and open-source accounting and inventory software, Bigcapital keeps all business finances in right place and automates accounting processes to give the business powerful and intelligent financial statements and reports to help in making decisions.",
         "link": "https://my.bigcapital.app/",
         "github": "https://github.com/bigcapitalhq/bigcapital",
@@ -162,7 +164,100 @@
   {
     "professional": [
       {
+        "title": "Anthem Price Monitor",
+        "date": "February 2026 - Present",
+        "description": "A private price-intelligence platform that consolidates competitor product and pricing data into a secure, filterable workspace for faster commercial review.",
+        "summary": "A private price-intelligence platform for monitoring competitor catalogues, comparing products and reviewing commercial signals.",
+        "contribution": "Designed and delivered the end-to-end monitoring workflow, joining automated catalog discovery and reconciliation with a responsive analysis interface and a production API engineered for bounded, predictable performance.",
+        "highlights": [
+          "Granular API endpoints reduce over-fetching and keep operational views focused.",
+          "Filter-aware SQL queries use capped result sets, cached summary and domain responses, and tuned SQLAlchemy connection pooling.",
+          "Rate limiting, security headers and safe error envelopes strengthen the production API boundary."
+        ],
+        "link": "",
+        "github": "",
+        "visibility": "Private Anthem Workwear system",
+        "image": "/professional/Anthem_PriceMonitor.webp",
+        "imagehd": "/professional/Anthem_PriceMonitor.png",
+        "altImage": "Anthem Workwear Price Monitor showing competitor price filters and a product comparison matrix",
+        "slug": "anthem-price-monitor",
+        "technologies": [
+          { "name": "Next.js", "icon": "NextJSIcon" },
+          { "name": "TypeScript", "icon": "TypeScriptIcon" },
+          { "name": "Python", "icon": "CodeIcon" },
+          { "name": "Playwright", "icon": "CodeIcon" },
+          { "name": "Neon PostgreSQL", "icon": "PostgreSQLIcon" },
+          { "name": "SQLAlchemy", "icon": "CodeIcon" },
+          { "name": "Render", "icon": "VercelIcon" },
+          { "name": "GitHub Actions", "icon": "GitHubIcon" }
+        ]
+      },
+      {
+        "title": "Anthem Forecast App",
+        "date": "May 2026 - Present",
+        "description": "A private inventory-forecasting workspace that connects sales, stock and purchase-order data to demand forecasts, stock projections and recommended buying decisions.",
+        "summary": "A private forecasting workspace that turns sales, stock and purchase-order data into clearer buying decisions.",
+        "contribution": "Built an authenticated decision-support application that translates complex inventory data into traceable forecasts and purchasing signals for operational users.",
+        "highlights": [
+          "Combines statistical forecasting with current stock, safety-stock and lead-time assumptions.",
+          "Supports date-aware monthly stock projections and existing purchase-order arrivals.",
+          "Uses virtualised, query-driven interfaces to keep large operational datasets responsive."
+        ],
+        "link": "",
+        "github": "",
+        "visibility": "Private Anthem Workwear system",
+        "image": "/professional/Anthem_ForecastApp.webp",
+        "imagehd": "/professional/Anthem_ForecastApp.png",
+        "altImage": "Anthem Inventory Forecast App secure sign-in screen",
+        "slug": "anthem-forecast-app",
+        "technologies": [
+          { "name": "Next.js", "icon": "NextJSIcon" },
+          { "name": "React", "icon": "ReactIcon" },
+          { "name": "TypeScript", "icon": "TypeScriptIcon" },
+          { "name": "Tailwind CSS", "icon": "TailwindIcon" },
+          { "name": "Auth0", "icon": "JWTIcon" },
+          { "name": "TanStack Query", "icon": "CodeIcon" },
+          { "name": "TanStack Table", "icon": "CodeIcon" },
+          { "name": "TanStack Virtual", "icon": "CodeIcon" },
+          { "name": "Radix UI", "icon": "MaterialUIIcon" },
+          { "name": "React Hook Form", "icon": "ReactIcon" },
+          { "name": "Zod", "icon": "TypeScriptIcon" },
+          { "name": "FastAPI", "icon": "CodeIcon" },
+          { "name": "PostgreSQL", "icon": "PostgreSQLIcon" },
+          { "name": "SQLAlchemy", "icon": "CodeIcon" },
+          { "name": "Pandas", "icon": "CodeIcon" },
+          { "name": "SciPy", "icon": "CodeIcon" },
+          { "name": "Statsmodels", "icon": "CodeIcon" }
+        ]
+      },
+      {
+        "title": "Grace Park Hawthorn Club Website",
+        "date": "July 2026 - Present",
+        "description": "A website update for a Melbourne sports and fitness club, covering its core membership, facilities, activities and community journeys.",
+        "summary": "A complete Wix website update for a Melbourne sports and fitness club, built around membership and activity journeys.",
+        "contribution": "Restructured and redesigned the club website in Wix Editor, improving information hierarchy, page consistency, search visibility and the path from discovery to membership, bookings and enquiries.",
+        "highlights": [
+          "Reworked the site architecture and navigation around real member and visitor tasks.",
+          "Redesigned key tennis, squash, pickleball, About and supporting club pages.",
+          "Refined copy and metadata for clearer scanning, stronger SEO and more consistent calls to action."
+        ],
+        "link": "https://www.gphc.com.au/",
+        "github": "",
+        "visibility": "Redesign in progress; linked site may still show the previous version",
+        "image": "/professional/GPHC_Website.webp",
+        "imagehd": "/professional/GPHC_Website.png",
+        "altImage": "Grace Park Hawthorn Club website redesign shown in a browser frame",
+        "slug": "grace-park-hawthorn-club-website",
+        "technologies": [
+          { "name": "Wix Editor", "icon": "WWWIcon" },
+          { "name": "Information Architecture", "icon": "SettingsCodeIcon" },
+          { "name": "SEO", "icon": "WWWIcon" },
+          { "name": "UX and Content Design", "icon": "CodeIcon" }
+        ]
+      },
+      {
         "title": "Central Securities Depository",
+        "summary": "Modernisation of a critical securities platform focused on efficiency, security, operational risk and response time.",
         "description": "The CSD modernization aims to enhance efficiency and security while supporting the Colombian market's operation. Its benefits included improving user experience, reducing operational risks, and optimizing response time, aligned with international standards and best practices.",
         "link": "https://www.banrep.gov.co/es/sistemas-pago/modernizacion-deposito-central-valores",
         "github": "",
@@ -231,7 +326,8 @@
       },
       {
         "title": "Integrated Operational Manager of Securities",
-        "description": "Aims to serve as the tariffing and reporting system for the Fiduciary and Securities Department at the Central Bank of Colombian. Its primary function is to act as the conduit for operational transformation between the SEN trading system and the CSD. Additionally, it is tasked with calculating fees for the utilization of various FSD services and producing daily reports for stakeholders.",
+        "summary": "A tariffing and reporting system connecting securities operations, service-fee calculation and daily stakeholder reporting.",
+        "description": "Aims to serve as the tariffing and reporting system for the Fiduciary and Securities Department at the Central Bank of Colombia. Its primary function is to act as the conduit for operational transformation between the SEN trading system and the CSD. Additionally, it is tasked with calculating fees for the utilization of various FSD services and producing daily reports for stakeholders.",
         "link": "https://www.banrep.gov.co/",
         "github": "",
         "image": "/professional/GOIN.webp",
@@ -299,6 +395,7 @@
       },
       {
         "title": "Porvenir Digital Transformation",
+        "summary": "An IBM BPM programme that streamlined pension workflows to improve processing speed, accuracy and responsiveness.",
         "description": "The Porvenir Digital Transformation project involved the implementation of an IBM BPM (Business Process Management) system aimed at revolutionizing the management of pensions for Colombians. The system was designed to significantly reduce processing times for individuals reaching retirement age and eligibility milestones, ensuring faster disbursement of pension funds. By streamlining and automating workflows, Porvenir sought to enhance efficiency, accuracy, and responsiveness in pension processing, ultimately improving the overall customer experience and operational effectiveness.",
         "link": "https://www.porvenir.com.co/web/porvenir/home",
         "github": "",
@@ -343,6 +440,7 @@
       },
       {
         "title": "Provider of Valuation Prices",
+        "summary": "A financial platform providing valuation prices, reference rates and market-aligned information across multiple instruments.",
         "description": "Precia's software platform provides up-to-date valuation prices for a variety of financial instruments, including fixed income securities, equities, derivatives, and structured products. It also offers reference rates for different currencies.  The platform was designed to assist Precia in developing financial strategies and maintaining market alignment.",
         "link": "https://www.precia.co/",
         "github": "",

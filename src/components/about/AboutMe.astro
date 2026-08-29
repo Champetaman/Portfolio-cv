@@ -1,49 +1,78 @@
 ---
 import casualImage from "@/img/casual_image.webp";
+import OpenAIIcon from "@/icons/ai/OpenAI.astro";
+import SettingsCodeIcon from "@/icons/common/SettingsCode.astro";
+import CodeIcon from "@/icons/common/Code.astro";
 
-const personalImageAlt = "Camilo Oviedo";
+const currentPractices = [
+  {
+    title: "AI-assisted analysis and delivery",
+    Icon: OpenAIIcon,
+  },
+  {
+    title: "Modern application architecture",
+    Icon: SettingsCodeIcon,
+  },
+  {
+    title: "Automated testing and review",
+    Icon: CodeIcon,
+  },
+];
 ---
 
-<article
-  class="flex flex-col items-center justify-center gap-10 text-gray-700 dark:text-gray-300 md:flex-row md:gap-16"
->
-  <img
-    src={casualImage.src}
-    width={casualImage.width}
-    height={casualImage.height}
-    alt={personalImageAlt}
-    loading="lazy"
-    decoding="async"
-    class="rounded-full w-60 h-60 md:w-80 md:h-96 object-cover"
-  />
-
-  <div
-    class="[&>p]:mb-4 [&>p>strong]:text-yellow-500 dark:[&>p>strong]:text-yellow-100 [&>p>strong]:font-normal [&>p>strong]:font-mono text-pretty order-last md:order-1"
-  >
-    <p>
-      Hello! I'm Camilo Oviedo, a versatile professional with a robust
-      background in <strong>Business Administration</strong> and <strong
-        >Systems Engineering</strong
-      >. With over <strong>eight years of experience</strong>, I've developed a
-      strong foundation in software design and development, significantly
-      impacting the financial sector in Colombia.
-    </p>
-    <p>
-      I thrive at the intersection of technology and business, where my
-      technical skills and analytical mindset enable me to drive innovation and
-      deliver impactful solutions. My <strong><em>adaptability</em></strong>
-      allows me to seamlessly transition between various roles, providing insights
-      and driving strategic initiatives in the IT industry.
-    </p>
-    <p>
-      I'm passionate about <strong>learning</strong> and staying abreast of the latest
-      advancements in technology and fintech. Outside of my professional pursuits,
-      you can find me engaging in discussions about the latest <strong
-        >tech trends</strong
-      >, exploring the evolving role of <strong>AI</strong> in financial markets,
-      and delving into the nuances of <strong>behavioral economics</strong>.
-      Let's connect and embark on a journey to unlock new possibilities and
-      opportunities with you.
-    </p>
+<section id="about" class="shell section-grid" aria-labelledby="about-title">
+  <div class="section-folio" aria-hidden="true">
+    <strong>04</strong>
+    <span>About</span>
   </div>
-</article>
+  <div class="section-body">
+    <h2 id="about-title" class="section-title">
+      Modern engineering, grounded in business outcomes.
+    </h2>
+    <div class="about-layout">
+      <figure class="about-portrait">
+        <div class="about-portrait-frame">
+          <img
+            src={casualImage.src}
+            width={casualImage.width}
+            height={casualImage.height}
+            alt="Camilo Oviedo seated outdoors"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+        <figcaption>Beyond the systems</figcaption>
+      </figure>
+      <div class="about-copy">
+        <div class="max-w-[65ch] space-y-5 text-lg text-[var(--muted)]">
+          <p>
+            My combined business and technical perspective shapes how I approach
+            change: understand the operating reality, make the technical
+            implications clear, and keep stakeholders aligned.
+          </p>
+          <p>
+            I keep my engineering practice current across AI-assisted delivery,
+            modern application architecture, automated quality and coordinated
+            development tools. I adopt new methods where they sharpen analysis,
+            accelerate delivery and make software more reliable not for novelty.
+          </p>
+        </div>
+        <ul
+          class="about-practice-list"
+          aria-label="Current engineering practices"
+        >
+          {
+            currentPractices.map(({ title, Icon }) => (
+              <li>
+                <span class="about-practice-icon" aria-hidden="true">
+                  <Icon class="size-5" />
+                </span>
+                <span>{title}</span>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

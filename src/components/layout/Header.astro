@@ -1,141 +1,55 @@
 ---
-import navItemsData from "@/../data/navItems.json";
+import navItems from "@/../data/navItems.json";
 import HamburguerIcon from "@/icons/common/Hamburguer.astro";
 import LightModeIcon from "@/icons/Theme/LightMode.astro";
 import DarkModeIcon from "@/icons/Theme/DarkMode.astro";
-import CloseIcon from "@/icons/common/Close.astro";
+import GitHubIcon from "@/icons/social/GitHub.astro";
+import LinkedInIcon from "@/icons/social/LinkedIn.astro";
 
-const navItems = navItemsData; // Assign the navigation items data to a constant for easier use
+const navHref = (url: string) =>
+  Astro.url.pathname === "/" && url.startsWith("/#") ? url.slice(1) : url;
 ---
 
-<header
-  class="fixed top-4 z-10 w-full mx-auto mt-5 px-4 md:px-8 lg:px-16 flex justify-between items-center"
->
-  <div class="flex justify-between items-center w-full">
-    <!-- Theme Toggle Button for Small Screens (Left-Aligned) -->
-    <div class="lg:hidden flex items-center">
-      <button
-        id="theme-toggle-btn-sm"
-        class="p-2 text-gray-600 dark:text-gray-200"
-        aria-label="Toggle Theme"
-      >
-        <LightModeIcon
-          id="light-icon-sm"
-          class="theme-toggle-icon size-5 transition-all hidden"
-        />
-        <DarkModeIcon
-          id="dark-icon-sm"
-          class="theme-toggle-icon size-5 transition-all hidden"
-        />
-      </button>
-    </div>
+<header class="sticky top-0 z-40 border-b border-[var(--rule)] bg-[var(--canvas)]">
+  <div class="shell flex min-h-16 items-center justify-between gap-5">
+    <a href="/" class="flex min-h-11 items-center gap-3 no-underline" aria-label="Camilo Oviedo, home">
+      <span class="font-semibold tracking-[-0.025em]">Camilo Oviedo</span>
+      <span class="hidden font-mono text-[0.7rem] uppercase tracking-[0.06em] text-[var(--muted)] md:inline">Systems Engineering &amp; Business Administration</span>
+    </a>
 
-    <!-- Navigation for Large Screens (Centered) -->
-    <nav
-      id="nav-menu"
-      class="hidden lg:flex lg:items-center lg:space-x-4 md:space-x-8 text-lg font-medium rounded-full text-gray-600 dark:text-gray-200 mx-auto px-6"
-    >
-      <!-- Loop through the navigation items and render each as a link -->
-      {
-        navItems.map((item) => (
-          <a
-            class="relative block px-2 py-2 transition hover:text-yellow-500 dark:hover:text-yellow-400"
-            aria-label={item.label}
-            href={item.url}
-          >
-            {item.title}
-          </a>
-        ))
-      }
-      <!-- Theme Toggle Button for Large Screens -->
-      <div class="relative ml-1 mr-1">
-        <button
-          id="theme-toggle-btn"
-          class="appearance-none border-none flex hover:scale-125 transition"
-        >
-          <span class="sr-only">Toggle theme</span>
-          <LightModeIcon
-            id="light-icon"
-            class="theme-toggle-icon size-5 transition-all"
-          />
-          <DarkModeIcon
-            id="dark-icon"
-            class="theme-toggle-icon size-5 transition-all hidden"
-          />
-        </button>
-      </div>
+    <nav aria-label="Primary" class="hidden items-center gap-4 xl:flex">
+      {navItems.map((item) => (
+        <a class="inline-flex min-h-11 items-center text-sm text-[var(--muted)] hover:text-[var(--ink)]" href={navHref(item.url)}>
+          {item.title}
+        </a>
+      ))}
+      <span class="h-5 w-px bg-[var(--rule)]" aria-hidden="true"></span>
+      <a class="social-icon-link" href="https://www.linkedin.com/in/oviedocamilo/" target="_blank" rel="noopener noreferrer" aria-label="Camilo Oviedo on LinkedIn"><LinkedInIcon class="size-5" /></a>
+      <a class="social-icon-link" href="https://github.com/Champetaman" target="_blank" rel="noopener noreferrer" aria-label="Camilo Oviedo on GitHub"><GitHubIcon class="size-5" /></a>
+      <button class="theme-toggle grid size-11 place-items-center text-[var(--muted)] hover:text-[var(--ink)]" type="button" data-theme-toggle aria-label="Switch to dark theme" aria-pressed="false">
+        <LightModeIcon class="size-5" data-theme-icon="light" />
+        <DarkModeIcon class="hidden size-5" data-theme-icon="dark" />
+      </button>
     </nav>
 
-    <!-- Hamburger Button for Small Screens (Right-Aligned) -->
-    <button
-      id="menu-toggle"
-      class="lg:hidden p-2 text-gray-600 dark:text-gray-200 ml-auto"
-    >
-      <HamburguerIcon class="w-6 h-6" />
-    </button>
-
-    <!-- Full-Screen Menu for Small Screens -->
-    <div
-      id="mobile-menu"
-      class="fixed inset-0 z-20 hidden bg-black bg-opacity-90 dark:bg-gray-900 p-8 flex-col justify-between"
-    >
-      <div class="flex justify-end">
-        <!-- Close Button for Mobile Menu -->
-        <button id="menu-close" class="p-2 text-gray-600 dark:text-gray-200">
-          <CloseIcon class="w-6 h-6" />
-        </button>
-      </div>
-
-      <!-- Mobile Menu Navigation Items -->
-      <nav
-        class="flex flex-col items-center justify-center grow space-y-8 text-2xl text-gray-200"
-      >
-        {
-          navItems.map((item, index) => (
-            <a
-              id={`mobile-nav-item-${index}`}
-              class="relative block px-2 py-2 transition hover:text-yellow-500 dark:hover:text-yellow-400"
-              aria-label={item.label}
-              href={item.url}
-            >
-              {item.title}
+    <div class="flex items-center gap-1 xl:hidden">
+      <button class="theme-toggle grid size-11 place-items-center text-[var(--muted)]" type="button" data-theme-toggle aria-label="Switch to dark theme" aria-pressed="false">
+        <LightModeIcon class="size-5" data-theme-icon="light" />
+        <DarkModeIcon class="hidden size-5" data-theme-icon="dark" />
+      </button>
+      <details data-mobile-menu class="relative">
+        <summary class="grid size-11 cursor-pointer list-none place-items-center text-[var(--muted)]" aria-label="Open navigation">
+          <HamburguerIcon class="size-6" />
+        </summary>
+        <nav aria-label="Mobile" class="absolute right-0 top-13 w-[min(19rem,calc(100vw-2rem))] border border-[var(--rule)] bg-[var(--paper)] p-2 shadow-[0_18px_45px_rgba(0,0,0,0.14)]">
+          {navItems.map((item, index) => (
+            <a class="flex min-h-12 items-center justify-between border-b border-[var(--rule)] px-3 text-base last:border-b-0" href={navHref(item.url)}>
+              <span>{item.title}</span>
+              <span class="font-mono text-xs text-[var(--muted)]" aria-hidden="true">{String(index + 1).padStart(2, "0")}</span>
             </a>
-          ))
-        }
-      </nav>
+          ))}
+        </nav>
+      </details>
     </div>
   </div>
 </header>
-
-<!-- Include external scripts for mobile menu functionality -->
-<script src="/src/scripts/mobile-menu.js"></script>
-
-<style>
-  /* Apply styles to the nav element when the screen width is 1024px or more */
-  @media (min-width: 1024px) {
-    #nav-menu {
-      animation: nav-shadow 1s linear both; /* Apply a shadow animation */
-      animation-timeline: scroll(); /* Set the animation timeline */
-      animation-range: 0 100px; /* Set the animation range */
-      background-color: rgb(255 255 255 / 0.5);
-    }
-
-    :global(.dark) #nav-menu {
-      background-color: rgb(31 41 55 / 0.9);
-    }
-  }
-
-  /* Define the nav shadow animation */
-  @keyframes nav-shadow {
-    0% {
-      background-color: transparent;
-    }
-    to {
-      box-shadow:
-        0 10px 15px -3px rgb(0 0 0 / 0.1),
-        0 4px 6px -4px rgb(0 0 0 / 0.1),
-        0 0 0 1px rgb(255 255 255 / 0.1);
-      backdrop-filter: blur(8px);
-    }
-  }
-</style>

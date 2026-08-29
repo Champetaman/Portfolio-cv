@@ -1,0 +1,29 @@
+---
+import DownloadIcon from "@/icons/common/Download.astro";
+import MailIcon from "@/icons/common/Mail.astro";
+import GitHubIcon from "@/icons/social/GitHub.astro";
+import LinkedInIcon from "@/icons/social/LinkedIn.astro";
+
+const ResumePDF = import.meta.env.RESUME_PDF_URL;
+---
+
+<section id="contact" class="shell section-grid border-b border-[var(--rule)]" aria-labelledby="contact-title">
+  <div class="section-folio" aria-hidden="true">
+    <strong>05</strong>
+    <span>Contact</span>
+  </div>
+  <div class="section-body grid gap-10 lg:grid-cols-[1fr_auto] lg:items-end">
+    <div>
+      <h2 id="contact-title" class="section-title">Start a conversation.</h2>
+      <p class="section-intro">For Technical Business Analyst, Business Systems Analyst or Application Analyst opportunities, email is the most direct way to start.</p>
+      <p class="mt-7 flex flex-wrap gap-x-7 gap-y-3">
+        <a class="inline-link gap-2" href="https://www.linkedin.com/in/oviedocamilo/" target="_blank" rel="noopener noreferrer"><LinkedInIcon class="size-4" /> LinkedIn</a>
+        <a class="inline-link gap-2" href="https://github.com/Champetaman" target="_blank" rel="noopener noreferrer"><GitHubIcon class="size-4" /> GitHub</a>
+      </p>
+    </div>
+    <div class="flex flex-col gap-3 sm:flex-row lg:flex-col">
+      <a class="primary-action" href="mailto:oviedocamilo94@gmail.com"><MailIcon class="size-5" /> Email Camilo</a>
+      {ResumePDF && <a class="secondary-action" href={ResumePDF} target="_blank" rel="noopener noreferrer"><DownloadIcon class="size-5" /> Download résumé</a>}
+    </div>
+  </div>
+</section>

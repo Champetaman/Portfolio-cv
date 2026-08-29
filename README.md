@@ -1,100 +1,60 @@
-# My Personal Website
+# Camilo Oviedo Portfolio
 
-Welcome to my personal website, where you can learn more about my professional background, skills, and projects. This website is built using [Astro](https://astro.build/) and is designed to be fast, responsive, and easy to navigate.
+Professional portfolio for Camilo Oviedo, focused on Technical Business Analyst, Business Systems Analyst, and Application Analyst opportunities.
 
-## Table of Contents
+## What the site includes
 
-- [Overview](#overview)
-- [Features](#features)
-- [Technologies Used](#technologies-used)
-- [Resume](#resume)
-- [Setup and Installation](#setup-and-installation)
-- [Contributing](#contributing)
-- [License](#license)
-- [Acknowledgements](#acknowledgements)
-- [Contact](#contact)
+- Recruiter-focused profile, availability, and contact actions
+- 8+ years of professional experience
+- Complete personal, open-source, and professional project portfolio
+- Project-detail routes with screenshots, contributions, and technologies
+- Agentic software practice overview covering LLMs, harness engineering, orchestration, and autonomous review loops
+- Responsive light/dark interface and accessible keyboard navigation
+- General-purpose custom 404 and 500 error pages
 
-## Overview
+## Technology
 
-This website serves as my online portfolio and resume. It showcases my work experience, projects, and skills, and provides an easy way for potential employers and collaborators to get in touch with me.
+- Astro 7 with server output
+- Tailwind CSS 4 through its Vite plugin
+- Vercel adapter, Web Analytics, and Speed Insights
+- Cloudflare R2 resume delivery through `RESUME_PDF_URL`
+- pnpm 11.24
 
-## Features
+## Local development
 
-- **Responsive Design**: The website is fully responsive and works on all devices.
-- **Dark Mode**: Toggle between light and dark themes using the theme switcher.
-- **Downloadable Resume**: Visitors can download my resume in PDF format directly from the website.
-- **Cloudflare R2 Integration**: My resume is stored in Cloudflare R2 for efficient and cost-effective file delivery.
+```sh
+git clone https://github.com/Champetaman/Portfolio-cv
+cd Portfolio-cv
+pnpm install
+pnpm dev
+```
 
-## Technologies Used
+Create a local environment file when resume delivery is needed:
 
-- **Astro**: Static site generator for building fast, modern websites.
-- **Tailwind CSS**: Utility-first CSS framework for styling.
-- **Cloudflare R2**: Cloud storage service used to host my resume PDF.
-- **JavaScript**: Adds interactivity, such as theme switching and mobile menu toggling.
+```sh
+RESUME_PDF_URL=https://your-resume-url.example/resume.pdf
+```
 
-## Resume
+## Production checks
 
-You can download my latest resume in PDF format by clicking the button below:
+```sh
+pnpm check
+pnpm build
+pnpm preview
+```
 
-[![Download Resume](https://img.shields.io/badge/Download%20Resume-PDF-blue?style=for-the-badge)](https://pub-b87a1e5b7f3244c6a501416d3dcc2ee7.r2.dev/CV_CamiloOviedo_Engineer_April2026.pdf)
+Project uses Astro server output and `@astrojs/vercel`. Unknown routes use `src/pages/404.astro`; on-demand server failures use `src/pages/500.astro`.
 
-## Setup and Installation
+## Deployment
 
-To run this project locally, follow these steps:
-
-1. **Clone the repository**:
-
-   ```sh
-    git clone https://github.com/Champetaman/Portfolio-cv
-    cd Portfolio-cv
-   ```
-
-2. **Install dependencies**:
-
-   ```sh
-   npm install
-   ```
-
-3. **Run the development server**:
-
-   ```sh
-   npm run dev
-   ```
-
-4. **Build for production**:
-
-   ```sh
-   npm run build
-   ```
-
-5. **Deploy**:
-
-- You can deploy the built files to any static hosting service, or use services like Vercel, Netlify, or Cloudflare Pages.
-
-## Contributing
-
-Contributions are welcome! Please fork the repository and create a pull request with your changes. Ensure your code adheres to existing styles and passes linting checks.
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
-## Acknowledgements
-
-I would like to express my heartfelt gratitude to those who have supported me in my professional journey and in the creation of this website. Special thanks to:
-
-- **[The Astro Community](https://astro.build/)**: For developing a powerful static site generator that made this project possible.
-- **[The Tailwind CSS Team](https://tailwindcss.com/)**: For creating an efficient and flexible CSS framework that significantly streamlined the styling process.
-- **[Cloudflare](https://www.cloudflare.com/)**: For offering robust tools and services that ensure the reliability and speed of this website.
-- **[Vercel](https://vercel.com/)**: For providing an outstanding platform that makes deploying this website seamless and efficient.
+Connect repository to Vercel, configure `RESUME_PDF_URL`, and deploy with repository defaults. Vercel uses `pnpm-lock.yaml` and pinned pnpm version from `package.json`.
 
 ## Contact
 
-If you have any questions, feel free to reach out to me:
+- Email: [oviedocamilo94@gmail.com](mailto:oviedocamilo94@gmail.com)
+- LinkedIn: [linkedin.com/in/oviedocamilo](https://www.linkedin.com/in/oviedocamilo/)
+- GitHub: [github.com/Champetaman](https://github.com/Champetaman)
 
-- **Email**: oviedocamilo94@gmail.com
-- **LinkedIn**: [linkedin.com/in/oviedocamilo](https://www.linkedin.com/in/oviedocamilo/)
+## License
 
----
-
-© 2024 Camilo Oviedo. Almost all Rights Reserved.
+Licensed under [MIT License](LICENSE).

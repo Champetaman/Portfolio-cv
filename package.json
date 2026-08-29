@@ -2,28 +2,30 @@
   "name": "portfolio-cv",
   "type": "module",
   "version": "1.5.0",
+  "packageManager": "pnpm@11.24.0",
+  "engines": {
+    "pnpm": ">=11.24.0 <12"
+  },
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
+    "check": "astro check",
     "preview": "astro preview",
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/vercel": "10.0.7",
-    "@fontsource-variable/onest": "5.2.11",
-    "@tailwindcss/vite": "4.3.0",
+    "@astrojs/vercel": "11.0.8",
+    "@fontsource-variable/onest": "5.3.0",
+    "@tailwindcss/vite": "4.3.3",
     "@vercel/analytics": "2.0.1",
     "@vercel/speed-insights": "2.0.0",
-    "astro": "6.3.6",
+    "astro": "7.2.9",
     "astro-robots-txt": "1.0.0",
-    "tailwindcss": "4.3.0",
+    "tailwindcss": "4.3.3",
     "typescript": "6.0.3"
   },
-  "overrides": {
-    "@astrojs/vercel": {
-      "esbuild": "0.28.0"
-    },
-    "@sveltejs/vite-plugin-svelte": "7.1.2"
+  "devDependencies": {
+    "@astrojs/check": "0.9.10"
   }
 }
