@@ -21,34 +21,59 @@ colors:
 typography:
   display:
     fontFamily: '"Onest Variable", "Segoe UI", sans-serif'
-    fontSize: "clamp(2.8rem, 6.6vw, 5.7rem)"
+    fontSize: "clamp(1.875rem, 3.5vw, 3rem)"
     fontWeight: 560
-    lineHeight: 0.96
-    letterSpacing: "-0.04em"
+    lineHeight: 1.12
+    letterSpacing: "-0.03em"
+  hero:
+    fontFamily: '"Onest Variable", "Segoe UI", sans-serif'
+    fontSize: "clamp(1.75rem, 2.8vw, 2.5rem)"
+    fontWeight: 560
+    lineHeight: 1.12
+    letterSpacing: "-0.03em"
   headline:
     fontFamily: '"Onest Variable", "Segoe UI", sans-serif'
-    fontSize: "clamp(2rem, 4.5vw, 4.2rem)"
+    fontSize: "clamp(1.625rem, 2.8vw, 2.5rem)"
     fontWeight: 560
-    lineHeight: 0.98
-    letterSpacing: "-0.035em"
+    lineHeight: 1.12
+    letterSpacing: "-0.03em"
   title:
     fontFamily: '"Onest Variable", "Segoe UI", sans-serif'
-    fontSize: "1.875rem"
-    fontWeight: 500
+    fontSize: "clamp(1.25rem, 1.8vw, 1.5rem)"
+    fontWeight: 560
     letterSpacing: "-0.03em"
+  item:
+    fontFamily: '"Onest Variable", "Segoe UI", sans-serif'
+    fontSize: "clamp(1.125rem, 1.6vw, 1.375rem)"
+    fontWeight: 560
+    lineHeight: 1.12
+  subheading:
+    fontFamily: '"Onest Variable", "Segoe UI", sans-serif'
+    fontSize: "1.125rem"
+    fontWeight: 560
+    lineHeight: 1.3
+  navigation:
+    fontFamily: '"Onest Variable", "Segoe UI", sans-serif'
+    fontSize: "0.8125rem"
+    fontWeight: 400
+  error-code:
+    fontFamily: '"Onest Variable", "Segoe UI", sans-serif'
+    fontSize: "clamp(3rem, 8vw, 4rem)"
+    fontWeight: 560
+    lineHeight: 0.78
   body:
     fontFamily: '"Onest Variable", "Segoe UI", sans-serif'
     fontSize: "1rem"
     fontWeight: 400
-    lineHeight: 1.65
+    lineHeight: 1.55
   intro:
     fontFamily: '"Onest Variable", "Segoe UI", sans-serif'
-    fontSize: "clamp(1.05rem, 1.7vw, 1.25rem)"
+    fontSize: "clamp(1rem, 1.2vw, 1.0625rem)"
     fontWeight: 400
-    lineHeight: 1.65
+    lineHeight: 1.55
   action:
     fontFamily: '"Onest Variable", "Segoe UI", sans-serif'
-    fontSize: "1rem"
+    fontSize: "0.875rem"
     fontWeight: 570
     lineHeight: 1.2
   label:
@@ -58,7 +83,7 @@ typography:
     letterSpacing: "0.07em"
   section-folio:
     fontFamily: '"Onest Variable", "Segoe UI", sans-serif'
-    fontSize: "1.5rem"
+    fontSize: "1.25rem"
     fontWeight: 520
     letterSpacing: "-0.03em"
 rounded:
@@ -69,15 +94,17 @@ spacing:
   md: "1rem"
   lg: "1.5rem"
   xl: "2.5rem"
-  section-min: "3rem"
-  section-max: "6rem"
+  section-min: "2rem"
+  section-max: "3.5rem"
+  register-min: "1.5rem"
+  register-max: "2.5rem"
 components:
   action-primary:
     backgroundColor: "{colors.cobalt-signal}"
     textColor: "{colors.white-on-cobalt}"
     typography: "{typography.action}"
     rounded: "{rounded.micro}"
-    padding: "0.7rem 1rem"
+    padding: "0.6rem 0.875rem"
   action-primary-hover:
     backgroundColor: "{colors.cobalt-press}"
     textColor: "{colors.white-on-cobalt}"
@@ -86,7 +113,7 @@ components:
     textColor: "{colors.cobalt-signal}"
     typography: "{typography.action}"
     rounded: "{rounded.micro}"
-    padding: "0.7rem 1rem"
+    padding: "0.6rem 0.875rem"
   inline-link:
     backgroundColor: "transparent"
     textColor: "{colors.cobalt-signal}"
@@ -155,9 +182,9 @@ The palette pairs cool, low-chroma mineral neutrals with a single clear cobalt s
 
 ### Hierarchy
 
-- **Display** (weight 560, `typography.display`): Hero and project titles; tight, balanced, and capped at roughly 15–18 characters per line.
+- **Display** (weight 560, `typography.display`): Project-page titles at 30–48px. Hero uses `typography.hero` at 28–40px with a 27ch measure; both remain balanced and readable.
 - **Headline** (weight 560, `typography.headline`): Major section headings with compact leading and no ornamental treatment.
-- **Title** (weight 500, `typography.title`): Project and capability titles; project titles rise to 2.25rem from the small breakpoint.
+- **Title** (weight 560, `typography.title`): Group and capability titles at 20–24px. Individual projects use `typography.item` at 18–22px; employer and supporting headings use the 18px subheading role.
 - **Body** (weight 400, `typography.body`): Default narrative and evidence copy; reading measures stay near 58–68 characters.
 - **Intro** (weight 400, `typography.intro`): Section framing copy, always secondary to the headline.
 - **Label** (weight 400, `typography.label`): Short uppercase metadata with restrained tracking; never long prose.
@@ -168,7 +195,7 @@ The palette pairs cool, low-chroma mineral neutrals with a single clear cobalt s
 
 The system uses an 80rem maximum shell with 1rem minimum side gutters. Major sections are full-width registers with a consistent numbered rail and clear descriptive headline. Section bodies use fluid vertical padding between the `section-min` and `section-max` spacing tokens.
 
-Evidence layouts vary their proportions instead of repeating an equal card grid. Project entries pair a compact artifact at left with contribution, technologies, and actions at right; experience uses a 14rem employer column; capabilities use a ruled two-column register from the medium breakpoint. Mobile preserves source order and keeps actions and controls at least 2.75rem tall.
+Evidence layouts vary their proportions instead of repeating an equal card grid. Project entries pair a compact artifact at left with contribution, technologies, and actions at right; experience uses a 13rem employer column; capabilities use a ruled two-column register from the medium breakpoint. Mobile preserves source order and keeps actions and controls at least 2.75rem tall. Hero portraits are capped at 13rem on small mobile, 15rem from the small breakpoint, and 16rem on desktop, retaining the 4:5 crop. The About portrait is capped at 21rem with a 4:3 crop and never stretched to match the copy height. Section padding spans 2–3.5rem; project register padding spans 1.5–2.5rem.
 
 **The Section-Rail Rule.** Homepage sections use one stable reading sequence: `01 Experience`, `02 Projects`, `03 Capabilities`, `04 About`, `05 Contact`. On wide screens each label occupies a narrow ruled rail; on small screens it becomes a compact horizontal marker above the section body.
 

@@ -28,11 +28,11 @@ const capabilities = [
     <h2 id="capabilities-title" class="section-title">How I work across analysis and delivery.</h2>
     <p class="section-intro">Tools matter in context. These groups describe where I contribute across analysis, implementation and operations.</p>
 
-    <div class="mt-12 grid border-y border-[var(--rule)] md:grid-cols-2">
+    <div class="section-content grid border-y border-[var(--rule)] md:grid-cols-2">
       {capabilities.map((capability, index) => (
-        <article class:list={["py-7", index % 2 === 0 ? "md:border-r md:pr-8" : "md:pl-8", index > 1 ? "border-t border-[var(--rule)]" : "", index === 1 ? "border-t border-[var(--rule)] md:border-t-0" : ""]}>
-          <h3 class="text-2xl font-medium tracking-[-0.025em]">{capability.title}</h3>
-          <p class="mt-4 max-w-[58ch] text-[var(--muted)]">{capability.copy}</p>
+        <article class:list={["py-5", index % 2 === 0 ? "md:border-r md:pr-6" : "md:pl-6", index > 1 ? "border-t border-[var(--rule)]" : "", index === 1 ? "border-t border-[var(--rule)] md:border-t-0" : ""]}>
+          <h3 class="group-title">{capability.title}</h3>
+          <p class="mt-3 max-w-[58ch] text-[var(--muted)]">{capability.copy}</p>
         </article>
       ))}
     </div>

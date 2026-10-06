@@ -11,15 +11,15 @@ const navHref = (url: string) =>
 ---
 
 <header class="sticky top-0 z-40 border-b border-[var(--rule)] bg-[var(--canvas)]">
-  <div class="shell flex min-h-16 items-center justify-between gap-5">
+  <div class="shell flex min-h-14 items-center justify-between gap-4">
     <a href="/" class="flex min-h-11 items-center gap-3 no-underline" aria-label="Camilo Oviedo, home">
-      <span class="font-semibold tracking-[-0.025em]">Camilo Oviedo</span>
+      <span class="text-sm font-semibold tracking-[-0.025em]">Camilo Oviedo</span>
       <span class="hidden font-mono text-[0.7rem] uppercase tracking-[0.06em] text-[var(--muted)] md:inline">Systems Engineering &amp; Business Administration</span>
     </a>
 
     <nav aria-label="Primary" class="hidden items-center gap-4 xl:flex">
       {navItems.map((item) => (
-        <a class="inline-flex min-h-11 items-center text-sm text-[var(--muted)] hover:text-[var(--ink)]" href={navHref(item.url)}>
+        <a class="inline-flex min-h-11 items-center text-[0.8125rem] text-[var(--muted)] hover:text-[var(--ink)]" href={navHref(item.url)}>
           {item.title}
         </a>
       ))}
@@ -43,7 +43,7 @@ const navHref = (url: string) =>
         </summary>
         <nav aria-label="Mobile" class="absolute right-0 top-13 w-[min(19rem,calc(100vw-2rem))] border border-[var(--rule)] bg-[var(--paper)] p-2 shadow-[0_18px_45px_rgba(0,0,0,0.14)]">
           {navItems.map((item, index) => (
-            <a class="flex min-h-12 items-center justify-between border-b border-[var(--rule)] px-3 text-base last:border-b-0" href={navHref(item.url)}>
+            <a class="flex min-h-12 items-center justify-between border-b border-[var(--rule)] px-3 text-sm last:border-b-0" href={navHref(item.url)}>
               <span>{item.title}</span>
               <span class="font-mono text-xs text-[var(--muted)]" aria-hidden="true">{String(index + 1).padStart(2, "0")}</span>
             </a>

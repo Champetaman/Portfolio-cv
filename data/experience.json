@@ -14,6 +14,19 @@
     }
   },
   {
+    "company": "Innovation Collective Pty Ltd (Snap Shades)",
+    "location": "Sydney, NSW",
+    "positions": {
+      "date": "February 2024 – April 2025",
+      "title": "Digital Technical Business Analyst",
+      "achievements": [
+        "Analysed and redesigned e-commerce workflows across order processing, inventory, fulfilment and customer operations, reducing manual handling and improving process consistency.",
+        "Translated business needs into functional requirements, process maps and system improvements, bridging communication between business stakeholders, developers and external technology providers.",
+        "Improved operational reporting and data visibility across inventory and order management, reducing reporting effort to 20 minutes and enabling faster identification of stock and fulfilment issues."
+      ]
+    }
+  },
+  {
     "company": "Thriday",
     "location": "Melbourne, Australia",
     "positions": {
@@ -24,21 +37,6 @@
         "Collaborated with stakeholders to gather, analyze, and document business requirements, ensuring alignment with development goals and app functionality.",
         "Supported white-label app customization by documenting and analyzing differences in components, workflows, and functionalities for external clients.",
         "Developed artifacts tailored to diverse audiences, providing both high-level overviews for management and detailed technical specifications for developers."
-      ]
-    }
-  },
-  {
-    "company": "Open Source Projects",
-    "location": "Melbourne, Australia",
-    "positions": {
-      "date": "July 2024 - Present",
-      "title": "Open Source Developer",
-      "achievements": [
-        "Actively contributing to multiple open-source projects, including the BigCapital project, where I develop features and enhance financial technology solutions.",
-        "Writing clean, efficient code across a variety of platforms, leveraging modern technologies and frameworks to solve complex problems.",
-        "Identifying and resolving bugs, optimizing performance, and enhancing the scalability of software solutions across different projects.",
-        "Participating in discussions, proposing new ideas, and helping onboard new contributors to foster growth within the open-source community.",
-        "Continuously learning and applying best practices in software development to deliver innovative and reliable solutions."
       ]
     }
   },

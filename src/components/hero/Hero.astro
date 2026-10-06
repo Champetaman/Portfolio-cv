@@ -20,25 +20,25 @@ const ResumePDF = import.meta.env.RESUME_PDF_URL;
     <p class="mt-7">Melbourne<br />Australia</p>
   </aside>
 
-  <div class="py-10 lg:pl-[clamp(2.5rem,5vw,5rem)] lg:pt-16">
+  <div class="py-8 lg:pl-[clamp(2rem,3vw,3rem)] lg:pt-10">
     <div
-      class="grid items-start gap-10 lg:grid-cols-[minmax(0,1.25fr)_minmax(19rem,0.75fr)]"
+      class="grid items-start gap-6 lg:grid-cols-[minmax(0,1fr)_16rem] lg:gap-8"
     >
       <div class="document-enter">
         <p
-          class="max-w-2xl text-sm font-medium text-[var(--accent)] sm:text-base"
+          class="max-w-2xl text-sm font-medium text-[var(--accent)]"
         >
           Technical Business Analyst · Business Systems Analyst · Application
           Analyst
         </p>
         <h1
-          class="mt-6 max-w-[18ch] text-[clamp(2.2rem,3.8vw,3.6rem)] font-[560] leading-[0.96] tracking-[-0.04em] text-balance"
+          class="hero-title mt-4"
         >
           I turn complex operations into clear requirements, reliable
           applications and better ways of working.
         </h1>
         <p
-          class="mt-7 max-w-[62ch] text-lg leading-relaxed text-[var(--muted)] sm:text-xl"
+          class="lead-copy mt-4 max-w-[62ch] text-[var(--muted)]"
         >
           I connect business needs, stakeholder context and technical delivery
           across financial systems, workflow automation and application
@@ -54,7 +54,7 @@ const ResumePDF = import.meta.env.RESUME_PDF_URL;
           <span>Open to analyst and application-focused opportunities.</span>
         </div>
         <div
-          class="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center"
+          class="mt-5 flex flex-col gap-2 sm:flex-row sm:flex-wrap sm:items-center"
         >
           <a class="primary-action" href="mailto:oviedocamilo94@gmail.com">
             <MailIcon class="size-5" />
@@ -73,7 +73,7 @@ const ResumePDF = import.meta.env.RESUME_PDF_URL;
               </a>
             )
           }
-          <a class="inline-link px-1" href="#projects">
+          <a class="inline-link px-1 text-sm" href="#projects">
             View projects
             <ChevronRightIcon class="size-5" />
           </a>
@@ -81,7 +81,7 @@ const ResumePDF = import.meta.env.RESUME_PDF_URL;
       </div>
 
       <figure
-        class="document-enter document-enter-delay lg:justify-self-end lg:pt-12"
+        class="document-enter document-enter-delay w-full max-w-[13rem] sm:max-w-[15rem] lg:max-w-[16rem] lg:justify-self-end lg:pt-6"
       >
         <div class="relative border border-[var(--rule)] bg-[var(--paper)] p-2">
           <img
@@ -110,33 +110,33 @@ const ResumePDF = import.meta.env.RESUME_PDF_URL;
     </div>
 
     <section
-      class="mt-12 border-t border-[var(--rule)] pt-6"
+      class="mt-8 border-t border-[var(--rule)] pt-5"
       aria-labelledby="achievement-title"
     >
-      <h2 id="achievement-title" class="text-xl font-medium tracking-[-0.02em]">
+      <h2 id="achievement-title" class="subheading">
         Selected career achievements
       </h2>
-      <dl class="mt-5 grid border-y border-[var(--rule)] md:grid-cols-3">
+      <dl class="mt-4 grid border-y border-[var(--rule)] md:grid-cols-3">
         <div
-          class="border-b border-[var(--rule)] py-5 md:border-r md:border-b-0 md:pr-6"
+          class="border-b border-[var(--rule)] py-4 md:border-r md:border-b-0 md:pr-5"
         >
           <dt class="meta-label">Operations automation</dt>
-          <dd class="mt-2 text-lg font-medium">
+          <dd class="mt-2 font-medium">
             Order processing reduced from ~40 minutes to ~2 minutes.
           </dd>
         </div>
         <div
-          class="border-b border-[var(--rule)] py-5 md:border-r md:border-b-0 md:px-6"
+          class="border-b border-[var(--rule)] py-4 md:border-r md:border-b-0 md:px-5"
         >
           <dt class="meta-label">Systems modernisation</dt>
-          <dd class="mt-2 text-lg font-medium">
+          <dd class="mt-2 font-medium">
             30% operational-efficiency and 25% reliability improvements
             recorded.
           </dd>
         </div>
-        <div class="py-5 md:pl-6">
+        <div class="py-4 md:pl-5">
           <dt class="meta-label">Technical continuity</dt>
-          <dd class="mt-2 text-lg font-medium">
+          <dd class="mt-2 font-medium">
             35% reduction in system downtime recorded at the Central Bank.
           </dd>
         </div>
