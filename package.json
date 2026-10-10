@@ -2,7 +2,7 @@
   "name": "portfolio-cv",
   "type": "module",
   "version": "2.0.0",
-  "packageManager": "pnpm@12.9.1",
+  "packageManager": "pnpm@12.10.1",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -12,12 +12,12 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/vercel": "11.0.11",
+    "@astrojs/vercel": "11.0.13",
     "@fontsource-variable/onest": "5.3.1",
     "@tailwindcss/vite": "4.3.3",
     "@vercel/analytics": "2.0.1",
     "@vercel/speed-insights": "2.0.0",
-    "astro": "7.3.5",
+    "astro": "7.3.8",
     "astro-robots-txt": "1.0.0",
     "tailwindcss": "4.3.3",
     "typescript": "6.0.3"
