@@ -1,0 +1,45 @@
+---
+import CareerOpsLayout from "@/layouts/CareerOpsLayout.astro";
+
+export const prerender = true;
+---
+
+<CareerOpsLayout
+  title="Career Ops"
+  description="Career Ops is Camilo Oviedo's personal AI-powered job-search workflow using Gmail, Hermes AI and OpenAI Codex. Learn how it works and why it needs Gmail access."
+  intro="A personal AI-powered job-search workflow that turns LinkedIn and SEEK email alerts into opportunities to review and application materials to prepare."
+  page="overview"
+>
+  <section aria-labelledby="purpose-title">
+    <h2 id="purpose-title" class="group-title">Purpose and access</h2>
+    <p>Career Ops helps Camilo Oviedo organise his own job search, evaluate opportunities against his professional profile, and prepare application materials. It integrates Gmail, Hermes AI and OpenAI Codex.</p>
+    <p>The application runs as a private personal workflow. It is not offered to customers, has no public account registration, and is not a commercial SaaS product. These public pages explain the application and its data practices; they do not connect a Gmail account.</p>
+  </section>
+
+  <section aria-labelledby="workflow-title">
+    <h2 id="workflow-title" class="group-title">How it works</h2>
+    <ol>
+      <li><strong>Read job alerts.</strong> Process LinkedIn and SEEK job-alert emails received in Camilo's authorised Gmail account.</li>
+      <li><strong>Assess opportunities.</strong> Use the personal automation workflow with Hermes AI and OpenAI Codex to evaluate job information against Camilo's professional profile.</li>
+      <li><strong>Prepare applications.</strong> Assist with application preparation for Camilo to review. AI output is advisory; Camilo remains responsible for the accuracy of any application he submits.</li>
+    </ol>
+  </section>
+
+  <section aria-labelledby="gmail-title">
+    <h2 id="gmail-title" class="group-title">Why Gmail access is required</h2>
+    <p>Job alerts arrive by email. Gmail read-only access lets Career Ops read those alerts and extract the job information needed for assessment. Message bodies are needed to understand opportunities, rather than only email headers.</p>
+    <p>The permission described for this workflow is <code>https://www.googleapis.com/auth/gmail.readonly</code>. It allows reading Gmail messages and settings, including messages beyond job alerts; it is not a Google-enforced restriction to LinkedIn or SEEK emails. This permission does not allow sending email, creating Gmail drafts, or changing or deleting messages.</p>
+    <p>The exact scopes configured in the OAuth client still need confirmation. See <a href="https://developers.google.com/workspace/gmail/api/auth/scopes">Google's Gmail scope documentation</a>.</p>
+  </section>
+
+  <section aria-labelledby="data-title">
+    <h2 id="data-title" class="group-title">Where information is processed</h2>
+    <p>The personal workflow processes information on Camilo's private DigitalOcean VPS, which only Camilo can access. Selected job-alert information is also sent to OpenAI Codex for AI assistance. Processing is therefore not confined to the VPS. Career Ops does not publish that information publicly.</p>
+    <p>Retention rules, specific VPS security controls, and the exact OpenAI data-handling settings still require confirmation. Read the <a href="/career-ops/privacy">Privacy Policy</a> before authorising access, and the <a href="/career-ops/terms-of-service">Terms of Service</a> for use and limitations.</p>
+  </section>
+
+  <section aria-labelledby="contact-title">
+    <h2 id="contact-title" class="group-title">Contact</h2>
+    <p>For questions about Career Ops or its data practices, contact Camilo Oviedo at <a href="mailto:oviedocamilo94@gmail.com">oviedocamilo94@gmail.com</a>.</p>
+  </section>
+</CareerOpsLayout>

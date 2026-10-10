@@ -1,0 +1,148 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import ChevronLeftIcon from "@/icons/common/ChevronLeft.astro";
+
+interface Props {
+  title: string;
+  description: string;
+  intro: string;
+  page: "overview" | "privacy" | "terms";
+}
+
+const { title, description, intro, page } = Astro.props;
+const pages = [
+  { id: "overview", label: "Application overview", href: "/career-ops" },
+  { id: "privacy", label: "Privacy Policy", href: "/career-ops/privacy" },
+  { id: "terms", label: "Terms of Service", href: "/career-ops/terms-of-service" },
+];
+---
+
+<Layout title={`${title === "Career Ops" ? title : `${title} — Career Ops`} | Camilo Oviedo`} description={description}>
+  <main id="main-content" class="shell career-ops">
+    <header class="project-detail-hero">
+      <a class="inline-link gap-2" href="/"><ChevronLeftIcon class="size-5" /> Back to main website</a>
+      <h1 class="page-title mt-6">{title}</h1>
+      <p class="lead-copy mt-4 max-w-[68ch] text-[var(--muted)]">{intro}</p>
+      <p class="mt-4 text-sm text-[var(--muted)]">A personal-use application by Camilo Oviedo. Not a commercial SaaS product.</p>
+      <p class="mt-2 text-sm text-[var(--muted)]">Last updated: <time datetime="2026-10-10">10 October 2026</time></p>
+    </header>
+
+    <div class="career-ops-reading page-section">
+      <nav aria-label="Career Ops" class="career-ops-navigation">
+        <ul>
+          {pages.map((item) => (
+            <li>
+              <a href={item.href} aria-current={page === item.id ? "page" : undefined}>{item.label}</a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+      <div class="career-ops-copy">
+        <slot />
+      </div>
+    </div>
+  </main>
+</Layout>
+
+<style>
+  .career-ops-reading {
+    display: grid;
+    gap: 2rem;
+    align-items: start;
+  }
+
+  .career-ops-navigation ul {
+    border-top: 1px solid var(--rule);
+  }
+
+  .career-ops-navigation a {
+    display: flex;
+    min-height: 2.75rem;
+    align-items: center;
+    border-bottom: 1px solid var(--rule);
+    padding-block: 0.75rem;
+    color: var(--muted);
+    font-size: var(--type-action);
+    text-underline-offset: 0.28em;
+  }
+
+  .career-ops-navigation a:hover,
+  .career-ops-navigation a[aria-current="page"] {
+    color: var(--accent);
+    text-decoration: underline;
+  }
+
+  .career-ops-navigation a[aria-current="page"] {
+    font-weight: 570;
+  }
+
+  .career-ops-copy {
+    min-width: 0;
+    max-width: 70ch;
+    overflow-wrap: anywhere;
+  }
+
+  .career-ops-copy :global(section + section) {
+    margin-top: var(--register-space);
+    border-top: 1px solid var(--rule);
+    padding-top: var(--register-space);
+  }
+
+  .career-ops-copy :global(p),
+  .career-ops-copy :global(ul),
+  .career-ops-copy :global(ol) {
+    margin-top: 1rem;
+  }
+
+  .career-ops-copy :global(ul),
+  .career-ops-copy :global(ol) {
+    padding-left: 1.25rem;
+  }
+
+  .career-ops-copy :global(ul) {
+    list-style: disc;
+  }
+
+  .career-ops-copy :global(ol) {
+    list-style: decimal;
+  }
+
+  .career-ops-copy :global(li + li) {
+    margin-top: 0.75rem;
+  }
+
+  .career-ops-copy :global(a) {
+    color: var(--accent);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.2em;
+  }
+
+  .career-ops-copy :global(a:hover) {
+    color: var(--accent-strong);
+  }
+
+  .career-ops-copy :global(code) {
+    font-family: var(--font-mono);
+    font-size: 0.875em;
+  }
+
+  .career-ops-copy :global(.policy-note) {
+    margin-bottom: var(--register-space);
+    border: 1px solid var(--rule);
+    background: var(--paper);
+    padding: 1.25rem;
+  }
+
+  @media (min-width: 64rem) {
+    .career-ops-reading {
+      grid-template-columns: 14rem minmax(0, 1fr);
+      gap: clamp(2rem, 4vw, 3.5rem);
+    }
+
+    .career-ops-navigation {
+      position: sticky;
+      top: 7rem;
+    }
+  }
+</style>

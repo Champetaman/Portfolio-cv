@@ -1,0 +1,55 @@
+---
+import CareerOpsLayout from "@/layouts/CareerOpsLayout.astro";
+
+export const prerender = true;
+---
+
+<CareerOpsLayout
+  title="Terms of Service"
+  description="Permitted personal use, third-party integrations, responsibilities and limitations for Career Ops, Camilo Oviedo's AI-assisted job-search workflow."
+  intro="The scope, responsibilities and limitations of Career Ops as a personal job-search application."
+  page="terms"
+>
+  <section aria-labelledby="personal-title">
+    <h2 id="personal-title" class="group-title">Personal use and scope</h2>
+    <p>Career Ops is a personal-use application operated by Camilo Oviedo for his own job search. It is not a commercial SaaS product, paid service or public account platform. These pages provide information about the project; visiting them does not grant access to the private application or authorise Gmail access.</p>
+    <p>The workflow assists with processing job-alert emails, evaluating opportunities against Camilo's professional profile, and preparing application materials.</p>
+  </section>
+
+  <section aria-labelledby="permitted-title">
+    <h2 id="permitted-title" class="group-title">Permitted use</h2>
+    <p>Use is limited to authorised personal job-search activities. Only connect an account you own or are explicitly authorised to access, and only process information you are entitled to use.</p>
+    <p>Do not use Career Ops for unauthorised mailbox access, spam, impersonation, unlawful collection or disclosure of personal information, or circumvention of a third party's access restrictions. Application materials must accurately represent the applicant's experience and qualifications.</p>
+  </section>
+
+  <section aria-labelledby="integrations-title">
+    <h2 id="integrations-title" class="group-title">Third-party integrations</h2>
+    <p>The workflow integrates Gmail, Hermes AI and OpenAI Codex, processes LinkedIn and SEEK job alerts, and runs on a private DigitalOcean VPS. Selected job-alert information is sent to OpenAI Codex; it is not published publicly by Career Ops.</p>
+    <p>Third-party services remain subject to their own terms, policies, permissions and availability. Career Ops is an independent personal project. Naming an integration does not imply endorsement, sponsorship or approval by Google, OpenAI, DigitalOcean, LinkedIn, SEEK or the maintainers of Hermes AI.</p>
+    <p>The described Gmail permission is read-only. It does not authorise sending email, creating Gmail drafts, or modifying or deleting messages. The exact configured scopes require confirmation. Further integration or permission changes would require an updated description and any applicable consent.</p>
+  </section>
+
+  <section aria-labelledby="responsibilities-title">
+    <h2 id="responsibilities-title" class="group-title">Responsibilities</h2>
+    <p>Camilo is responsible for managing the private workflow and its credentials, choosing appropriate permissions, and checking that actual data handling matches the <a href="/career-ops/privacy">Privacy Policy</a> and applicable service requirements.</p>
+    <p>Anyone using the workflow must review job information and AI-generated materials before relying on them or submitting an application, protect account credentials, respect others' privacy and intellectual property, and follow applicable laws and third-party terms.</p>
+  </section>
+
+  <section aria-labelledby="limitations-title">
+    <h2 id="limitations-title" class="group-title">Limitations and disclaimers</h2>
+    <p>AI assessments and prepared materials can contain errors, omit relevant information, or reflect incomplete or outdated job listings. They are assistance for personal review, not professional career, legal or employment advice.</p>
+    <p>Career Ops does not guarantee suitable opportunities, accurate rankings, successful applications, interviews or employment. No continuous availability, support response time or service-level commitment is offered. The personal workflow may change or stop, and third-party changes can affect its operation.</p>
+    <p>The application is provided as available, without additional promises about fitness for a particular purpose or error-free operation. These terms do not exclude rights or protections that cannot lawfully be excluded under applicable law.</p>
+  </section>
+
+  <section aria-labelledby="privacy-title">
+    <h2 id="privacy-title" class="group-title">Privacy and stopping use</h2>
+    <p>Read the <a href="/career-ops/privacy">Privacy Policy</a> for Gmail access, VPS processing, OpenAI sharing, outstanding operational details, and deletion requests. Retention periods, specific security controls and AI-provider data-handling settings have not yet been confirmed; these terms do not supply those missing guarantees.</p>
+    <p>Gmail access can be revoked through <a href="https://myaccount.google.com/connections">Google Account connections</a>. Revocation does not automatically delete previously processed information. Contact Camilo for deletion requests.</p>
+  </section>
+
+  <section aria-labelledby="contact-title">
+    <h2 id="contact-title" class="group-title">Changes and contact</h2>
+    <p>These terms may be updated to reflect changes in the personal workflow. The last-updated date appears above. For questions, contact Camilo Oviedo at <a href="mailto:oviedocamilo94@gmail.com">oviedocamilo94@gmail.com</a> or return to the <a href="/career-ops">application overview</a>.</p>
+  </section>
+</CareerOpsLayout>

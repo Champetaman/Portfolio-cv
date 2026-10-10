@@ -1,0 +1,70 @@
+---
+import CareerOpsLayout from "@/layouts/CareerOpsLayout.astro";
+
+export const prerender = true;
+---
+
+<CareerOpsLayout
+  title="Privacy Policy"
+  description="How Career Ops accesses Gmail job alerts, processes data on a private DigitalOcean VPS, uses OpenAI Codex, and handles access revocation and deletion requests."
+  intro="How Career Ops handles information used in Camilo Oviedo's personal job-search workflow."
+  page="privacy"
+>
+  <aside class="policy-note" aria-labelledby="confirmation-title">
+    <h2 id="confirmation-title" class="subheading">Operational details pending confirmation</h2>
+    <p>Private VPS access and selected job-alert sharing with OpenAI Codex are confirmed. Retention and deletion rules, specific security controls, exact OAuth scopes, and OpenAI retention and training settings still need confirmation. Those details are identified below; this policy does not claim verified compliance or Google approval.</p>
+  </aside>
+
+  <section aria-labelledby="scope-title">
+    <h2 id="scope-title" class="group-title">Application and operator</h2>
+    <p>Career Ops is operated by Camilo Oviedo for his own job search. It is a personal-use application, not a commercial SaaS product, and does not offer public registration. This policy covers the Career Ops workflow, rather than unrelated content on Camilo's portfolio.</p>
+    <p>Privacy questions and deletion requests can be sent to <a href="mailto:oviedocamilo94@gmail.com">oviedocamilo94@gmail.com</a>.</p>
+  </section>
+
+  <section aria-labelledby="access-title">
+    <h2 id="access-title" class="group-title">Gmail access and information used</h2>
+    <p>Career Ops uses Gmail read-only access to process LinkedIn and SEEK job alerts from Camilo's authorised account. Relevant information can include message subjects, senders, dates, message bodies, job descriptions and opportunity links, along with Camilo's professional-profile information for assessing fit.</p>
+    <p>The described scope is <code>https://www.googleapis.com/auth/gmail.readonly</code>. It permits reading messages and settings across Gmail, not only job-alert emails. It does not permit sending email, creating Gmail drafts, or modifying or deleting messages. The OAuth client's actual scope configuration needs confirmation against this description.</p>
+    <p>See <a href="https://developers.google.com/workspace/gmail/api/auth/scopes">Google's Gmail scope documentation</a> for the permission's capabilities.</p>
+  </section>
+
+  <section aria-labelledby="processing-title">
+    <h2 id="processing-title" class="group-title">Purpose, processing and third parties</h2>
+    <p>The workflow uses job-alert information to identify opportunities, compare them with Camilo's professional profile, and assist with application preparation. Processing takes place on Camilo's private DigitalOcean VPS. Camilo is the only person with access to that private VPS; DigitalOcean supplies the hosting infrastructure.</p>
+    <p>Hermes AI and OpenAI Codex are integrated into the workflow. Selected job-alert information is sent to OpenAI Codex for AI assistance. That is a transfer to an external AI service, even though Career Ops does not publish the information publicly.</p>
+    <p><strong>To confirm:</strong> the exact message fields, excerpts, summaries and profile context sent to OpenAI; whether Codex uses an API connection or a ChatGPT account; the applicable provider retention, human-review and model-training settings; and whether Hermes AI uses any additional external model provider. No promise of zero provider retention or exclusion from model training is made without those details.</p>
+  </section>
+
+  <section aria-labelledby="limited-use-title">
+    <h2 id="limited-use-title" class="group-title">Google API data-use requirements</h2>
+    <p>Career Ops must adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including its Limited Use requirements, and the <a href="https://developers.google.com/workspace/workspace-api-user-data-developer-policy">Google Workspace user data and developer policy</a>.</p>
+    <p>These requirements limit Google user data, including derived information, to the application's disclosed user-facing features. Transfers for those features require the user's consent. They prohibit sale of that data, its use for advertising, and its use to train or improve general-purpose AI models. Human access is restricted to the exceptions specified in those policies.</p>
+    <p><strong>To confirm before OAuth submission:</strong> the actual workflow, AI-provider settings and data transfers must meet those requirements. This statement explains the applicable obligations; it is not a certification that the implementation has been audited or approved.</p>
+  </section>
+
+  <section aria-labelledby="retention-title">
+    <h2 id="retention-title" class="group-title">Data retention</h2>
+    <p>A retention period and deletion schedule have not yet been confirmed for downloaded messages, extracted job information, assessments, prepared materials, operational logs or backups. This policy therefore does not promise a fixed retention period, automatic expiry or immediate removal from backups.</p>
+    <p>OpenAI's handling of information sent to Codex depends on the service and account settings used; those details also need confirmation. Original messages in Gmail remain subject to the account holder's Gmail controls. The read-only grant does not let Career Ops delete those originals.</p>
+  </section>
+
+  <section aria-labelledby="security-title">
+    <h2 id="security-title" class="group-title">Security measures</h2>
+    <p>The confirmed access control is a private DigitalOcean VPS accessible only to Camilo. The workflow's information is not published publicly.</p>
+    <p><strong>To confirm:</strong> protection of OAuth tokens and other credentials; encryption in transit and at rest; firewall and server access configuration; software update practices; log redaction; and backup protection. Private hosting alone does not establish those controls. No security certification, independent audit or guarantee of absolute security is claimed.</p>
+  </section>
+
+  <section aria-labelledby="control-title">
+    <h2 id="control-title" class="group-title">Revoke access or request deletion</h2>
+    <ol>
+      <li>Open your <a href="https://myaccount.google.com/connections">Google Account connections</a>, find Career Ops under apps with access to your Google Account, and remove its access. See <a href="https://support.google.com/accounts/answer/13533235">Google's instructions for managing app connections</a>.</li>
+      <li>To request removal of information retained by Career Ops, email <a href="mailto:oviedocamilo94@gmail.com">oviedocamilo94@gmail.com</a>. Identify the account and records concerned; do not include passwords, access tokens or unnecessary message content.</li>
+    </ol>
+    <p>Revocation prevents further Google Account access under that grant. It does not automatically delete information already processed on the VPS or sent to an AI provider. Camilo is the contact for reviewing deletion requests. The deletion procedure, completion timeframe, handling of backups and any provider-side deletion limits still need confirmation.</p>
+  </section>
+
+  <section aria-labelledby="changes-title">
+    <h2 id="changes-title" class="group-title">Policy updates</h2>
+    <p>This policy will need updating when the pending details are confirmed or the workflow's data practices change. Its last-updated date appears above. For the application's purpose and permitted use, see the <a href="/career-ops">application overview</a> and <a href="/career-ops/terms-of-service">Terms of Service</a>.</p>
+  </section>
+</CareerOpsLayout>
