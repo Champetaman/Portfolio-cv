@@ -23,15 +23,23 @@ export const prerender = true;
 
   <section aria-labelledby="access-title">
     <h2 id="access-title" class="group-title">Gmail access and information used</h2>
-    <p>Career Ops uses Gmail read-only access to process LinkedIn and SEEK job alerts from Camilo's authorised account. Relevant information can include message subjects, senders, dates, message bodies, job descriptions and opportunity links, along with Camilo's professional-profile information for assessing fit.</p>
+    <p>Career Ops accesses Camilo's authorised Gmail account to process LinkedIn and SEEK job-alert emails. The information used by this workflow falls into these categories:</p>
+    <ul>
+      <li><strong>Email information:</strong> message subjects, senders, dates and message bodies needed to understand a job alert. Email content may include personal information supplied by the sender.</li>
+      <li><strong>Opportunity information:</strong> job descriptions and listing links extracted from those alerts, used to identify and assess opportunities.</li>
+      <li><strong>Professional-profile information:</strong> Camilo's experience and qualifications used as context to assess role suitability and prepare application materials. This context is separate from the Gmail permission.</li>
+      <li><strong>Derived information:</strong> assessments and prepared application materials produced from the job information and professional-profile context.</li>
+    </ul>
     <p>The described scope is <code>https://www.googleapis.com/auth/gmail.readonly</code>. It permits reading messages and settings across Gmail, not only job-alert emails. It does not permit sending email, creating Gmail drafts, or modifying or deleting messages. The OAuth client's actual scope configuration needs confirmation against this description.</p>
     <p>See <a href="https://developers.google.com/workspace/gmail/api/auth/scopes">Google's Gmail scope documentation</a> for the permission's capabilities.</p>
   </section>
 
   <section aria-labelledby="processing-title">
     <h2 id="processing-title" class="group-title">Purpose, processing and third parties</h2>
-    <p>The workflow uses job-alert information to identify opportunities, compare them with Camilo's professional profile, and assist with application preparation. Processing takes place on Camilo's private DigitalOcean VPS. Camilo is the only person with access to that private VPS; DigitalOcean supplies the hosting infrastructure.</p>
+    <p>The workflow uses job-alert information to identify opportunities, compare them with Camilo's professional profile, and assist with application preparation. Message content supplies the role requirements; profile context helps assess suitability; the resulting assessments and materials support Camilo's review.</p>
+    <p>Processing takes place on Camilo's private DigitalOcean VPS. Camilo is the only person with access to that private VPS; DigitalOcean supplies the hosting infrastructure.</p>
     <p>Hermes AI and OpenAI Codex are integrated into the workflow. Selected job-alert information is sent to OpenAI Codex for AI assistance. That is a transfer to an external AI service, even though Career Ops does not publish the information publicly.</p>
+    <p>In practical terms, information moves from the authorised Gmail account into the private workflow, and selected job-alert information then reaches OpenAI Codex for assessment and application assistance. The public application homepage and policy pages do not display mailbox content or the resulting private job-search information.</p>
     <p><strong>To confirm:</strong> the exact message fields, excerpts, summaries and profile context sent to OpenAI; whether Codex uses an API connection or a ChatGPT account; the applicable provider retention, human-review and model-training settings; and whether Hermes AI uses any additional external model provider. No promise of zero provider retention or exclusion from model training is made without those details.</p>
   </section>
 
@@ -56,11 +64,13 @@ export const prerender = true;
 
   <section aria-labelledby="control-title">
     <h2 id="control-title" class="group-title">Revoke access or request deletion</h2>
+    <p>Reading this website does not grant Gmail access. Google Account authorisation is a separate permission, and the account holder can withdraw it at any time.</p>
     <ol>
       <li>Open your <a href="https://myaccount.google.com/connections">Google Account connections</a>, find Career Ops under apps with access to your Google Account, and remove its access. See <a href="https://support.google.com/accounts/answer/13533235">Google's instructions for managing app connections</a>.</li>
       <li>To request removal of information retained by Career Ops, email <a href="mailto:oviedocamilo94@gmail.com">oviedocamilo94@gmail.com</a>. Identify the account and records concerned; do not include passwords, access tokens or unnecessary message content.</li>
     </ol>
     <p>Revocation prevents further Google Account access under that grant. It does not automatically delete information already processed on the VPS or sent to an AI provider. Camilo is the contact for reviewing deletion requests. The deletion procedure, completion timeframe, handling of backups and any provider-side deletion limits still need confirmation.</p>
+    <p>Removing data from Career Ops and deleting an original email are separate actions. The described read-only permission cannot delete Gmail messages; the account holder manages original emails directly in Gmail.</p>
   </section>
 
   <section aria-labelledby="changes-title">

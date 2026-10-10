@@ -11,9 +11,11 @@ export const prerender = true;
   page="overview"
 >
   <section aria-labelledby="purpose-title">
-    <h2 id="purpose-title" class="group-title">Purpose and access</h2>
+    <h2 id="purpose-title" class="group-title">What Career Ops does</h2>
     <p>Career Ops helps Camilo Oviedo organise his own job search, evaluate opportunities against his professional profile, and prepare application materials. It integrates Gmail, Hermes AI and OpenAI Codex.</p>
-    <p>The application runs as a private personal workflow. It is not offered to customers, has no public account registration, and is not a commercial SaaS product. These public pages explain the application and its data practices; they do not connect a Gmail account.</p>
+    <p>Job-alert emails contain opportunities that need to be assessed individually. Career Ops brings that information into a personal workflow so Camilo can review role requirements against his experience and prepare relevant application materials with AI assistance.</p>
+    <p>This application homepage, the <a href="/career-ops/privacy">Privacy Policy</a> and the <a href="/career-ops/terms-of-service">Terms of Service</a> are public and require no login or Google Account authorisation to read. Visiting these pages does not connect Gmail or give Career Ops permission to read email.</p>
+    <p>The application itself runs as a private personal workflow. It is not offered to customers, has no public account registration, and is not a commercial SaaS product.</p>
   </section>
 
   <section aria-labelledby="workflow-title">
@@ -28,6 +30,7 @@ export const prerender = true;
   <section aria-labelledby="gmail-title">
     <h2 id="gmail-title" class="group-title">Why Gmail access is required</h2>
     <p>Job alerts arrive by email. Gmail read-only access lets Career Ops read those alerts and extract the job information needed for assessment. Message bodies are needed to understand opportunities, rather than only email headers.</p>
+    <p>For example, a LinkedIn or SEEK alert can contain a role title, employer, job description and listing link. Career Ops uses that job information to help assess suitability and prepare application content. Google authorisation is separate from viewing this website, and access can be removed through <a href="https://myaccount.google.com/connections">Google Account connections</a>.</p>
     <p>The permission described for this workflow is <code>https://www.googleapis.com/auth/gmail.readonly</code>. It allows reading Gmail messages and settings, including messages beyond job alerts; it is not a Google-enforced restriction to LinkedIn or SEEK emails. This permission does not allow sending email, creating Gmail drafts, or changing or deleting messages.</p>
     <p>The exact scopes configured in the OAuth client still need confirmation. See <a href="https://developers.google.com/workspace/gmail/api/auth/scopes">Google's Gmail scope documentation</a>.</p>
   </section>

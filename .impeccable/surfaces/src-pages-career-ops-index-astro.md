@@ -7,7 +7,7 @@ related_targets: ["src/pages/career-ops/privacy.astro", "src/pages/career-ops/te
 
 # Career Ops Surface Brief
 
-- Scope: three public Career Ops information pages; no changes to existing portfolio pages or the shared design system.
+- Scope: three public Career Ops information pages and a small shared-footer description with overview, privacy and terms links; preserve the portfolio content and shared design system.
 - Mode: Read.
 - Audience and task: visitors and Google OAuth reviewers need to understand the personal application's purpose, Gmail permission, data handling and limitations.
 - Direction: inherit the portfolio's typography, palette, light/dark themes, hairline rules, shared header/footer and back-link convention. Use a quiet reading column and a three-link navigation rail that stacks above the text on mobile.
@@ -50,6 +50,12 @@ The three-link navigation is a ruled list with targets at least 2.75rem high and
 The overview explains purpose, workflow, Gmail access, processing locations, and contact. Privacy separates confirmed operations from pending details and explains revocation and deletion requests. Terms state personal-use scope, responsibilities, integrations, and limitations. Public pages neither connect Gmail nor expose the private workflow.
 
 Confirmed operational statements remain limited to Camilo's personal use, private DigitalOcean VPS access only by Camilo, selected job-alert information sent to OpenAI Codex, and no public publication of that information by Career Ops. The sources openly identify unknown retention and deletion rules, actual OAuth scopes, security controls, exact AI payloads and settings, and any additional provider used by Hermes AI. These unknowns are not promoted into promises or system rules.
+
+### Verification remediation
+
+The portfolio footer now provides a short factual Career Ops description and a separate, labelled information navigation with links to all three public pages. It inherits the existing footer's small type, theme colors, underlined links, wrapping behavior and 2.75rem interaction targets. The overview explicitly distinguishes reading the public pages from authorising Gmail and explains how job-alert content supports opportunity assessment and application preparation. Privacy separates email, opportunity, professional-profile and derived information, explains the confirmed data flow, and distinguishes access revocation from deleting stored copies or original Gmail messages.
+
+The OAuth consent screen must use the public application overview at `/career-ops` as its application homepage and `/career-ops/privacy` as its privacy URL on the verified production domain. Footer discovery does not correct a consent-screen URL pointing to a private login. Retention, deletion, security and AI-provider settings still require operator confirmation before the policy can be considered ready for verification; no Google approval is promised.
 
 ### Finish evidence
 
