@@ -1,105 +1,298 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-08-28T13:08:12.2167173Z",
+  "generatedAt": "2026-10-11T09:19:27.272Z",
   "title": "Design System: Camilo Oviedo Portfolio",
   "extensions": {
     "colorMeta": {
       "cobalt-signal": {
         "role": "primary",
         "displayName": "Cobalt Signal",
-        "tonalRamp": ["oklch(15% 0.203 262.4)", "oklch(27% 0.203 262.4)", "oklch(39% 0.203 262.4)", "oklch(51% 0.203 262.4)", "oklch(63% 0.203 262.4)", "oklch(75% 0.203 262.4)", "oklch(87% 0.203 262.4)", "oklch(95% 0.203 262.4)"]
+        "tonalRamp": [
+          "oklch(15% 0.203 262.4)",
+          "oklch(27% 0.203 262.4)",
+          "oklch(39% 0.203 262.4)",
+          "oklch(51% 0.203 262.4)",
+          "oklch(63% 0.203 262.4)",
+          "oklch(75% 0.203 262.4)",
+          "oklch(87% 0.203 262.4)",
+          "oklch(95% 0.203 262.4)"
+        ]
       },
       "cobalt-press": {
         "role": "primary",
         "displayName": "Cobalt Press",
-        "tonalRamp": ["oklch(15% 0.161 262.8)", "oklch(27% 0.161 262.8)", "oklch(39% 0.161 262.8)", "oklch(51% 0.161 262.8)", "oklch(63% 0.161 262.8)", "oklch(75% 0.161 262.8)", "oklch(87% 0.161 262.8)", "oklch(95% 0.161 262.8)"]
+        "tonalRamp": [
+          "oklch(15% 0.161 262.8)",
+          "oklch(27% 0.161 262.8)",
+          "oklch(39% 0.161 262.8)",
+          "oklch(51% 0.161 262.8)",
+          "oklch(63% 0.161 262.8)",
+          "oklch(75% 0.161 262.8)",
+          "oklch(87% 0.161 262.8)",
+          "oklch(95% 0.161 262.8)"
+        ]
       },
       "mineral-canvas": {
         "role": "neutral",
         "displayName": "Mineral Canvas",
-        "tonalRamp": ["oklch(15% 0.004 236.5)", "oklch(27% 0.004 236.5)", "oklch(39% 0.004 236.5)", "oklch(51% 0.004 236.5)", "oklch(63% 0.004 236.5)", "oklch(75% 0.004 236.5)", "oklch(87% 0.004 236.5)", "oklch(95% 0.004 236.5)"]
+        "tonalRamp": [
+          "oklch(15% 0.004 236.5)",
+          "oklch(27% 0.004 236.5)",
+          "oklch(39% 0.004 236.5)",
+          "oklch(51% 0.004 236.5)",
+          "oklch(63% 0.004 236.5)",
+          "oklch(75% 0.004 236.5)",
+          "oklch(87% 0.004 236.5)",
+          "oklch(95% 0.004 236.5)"
+        ]
       },
       "ledger-paper": {
         "role": "neutral",
         "displayName": "Ledger Paper",
-        "tonalRamp": ["oklch(15% 0.002 247.8)", "oklch(27% 0.002 247.8)", "oklch(39% 0.002 247.8)", "oklch(51% 0.002 247.8)", "oklch(63% 0.002 247.8)", "oklch(75% 0.002 247.8)", "oklch(87% 0.002 247.8)", "oklch(95% 0.002 247.8)"]
+        "tonalRamp": [
+          "oklch(15% 0.002 247.8)",
+          "oklch(27% 0.002 247.8)",
+          "oklch(39% 0.002 247.8)",
+          "oklch(51% 0.002 247.8)",
+          "oklch(63% 0.002 247.8)",
+          "oklch(75% 0.002 247.8)",
+          "oklch(87% 0.002 247.8)",
+          "oklch(95% 0.002 247.8)"
+        ]
       },
       "carbon-ink": {
         "role": "neutral",
         "displayName": "Carbon Ink",
-        "tonalRamp": ["oklch(15% 0.020 248.8)", "oklch(27% 0.020 248.8)", "oklch(39% 0.020 248.8)", "oklch(51% 0.020 248.8)", "oklch(63% 0.020 248.8)", "oklch(75% 0.020 248.8)", "oklch(87% 0.020 248.8)", "oklch(95% 0.020 248.8)"]
+        "tonalRamp": [
+          "oklch(15% 0.020 248.8)",
+          "oklch(27% 0.020 248.8)",
+          "oklch(39% 0.020 248.8)",
+          "oklch(51% 0.020 248.8)",
+          "oklch(63% 0.020 248.8)",
+          "oklch(75% 0.020 248.8)",
+          "oklch(87% 0.020 248.8)",
+          "oklch(95% 0.020 248.8)"
+        ]
       },
       "slate-copy": {
         "role": "neutral",
         "displayName": "Slate Copy",
-        "tonalRamp": ["oklch(15% 0.027 246.4)", "oklch(27% 0.027 246.4)", "oklch(39% 0.027 246.4)", "oklch(51% 0.027 246.4)", "oklch(63% 0.027 246.4)", "oklch(75% 0.027 246.4)", "oklch(87% 0.027 246.4)", "oklch(95% 0.027 246.4)"]
+        "tonalRamp": [
+          "oklch(15% 0.027 246.4)",
+          "oklch(27% 0.027 246.4)",
+          "oklch(39% 0.027 246.4)",
+          "oklch(51% 0.027 246.4)",
+          "oklch(63% 0.027 246.4)",
+          "oklch(75% 0.027 246.4)",
+          "oklch(87% 0.027 246.4)",
+          "oklch(95% 0.027 246.4)"
+        ]
       },
       "steel-rule": {
         "role": "neutral",
         "displayName": "Steel Rule",
-        "tonalRamp": ["oklch(15% 0.016 241.8)", "oklch(27% 0.016 241.8)", "oklch(39% 0.016 241.8)", "oklch(51% 0.016 241.8)", "oklch(63% 0.016 241.8)", "oklch(75% 0.016 241.8)", "oklch(87% 0.016 241.8)", "oklch(95% 0.016 241.8)"]
+        "tonalRamp": [
+          "oklch(15% 0.016 241.8)",
+          "oklch(27% 0.016 241.8)",
+          "oklch(39% 0.016 241.8)",
+          "oklch(51% 0.016 241.8)",
+          "oklch(63% 0.016 241.8)",
+          "oklch(75% 0.016 241.8)",
+          "oklch(87% 0.016 241.8)",
+          "oklch(95% 0.016 241.8)"
+        ]
       },
       "white-on-cobalt": {
         "role": "neutral",
         "displayName": "White on Cobalt",
-        "tonalRamp": ["oklch(15% 0 0)", "oklch(27% 0 0)", "oklch(39% 0 0)", "oklch(51% 0 0)", "oklch(63% 0 0)", "oklch(75% 0 0)", "oklch(87% 0 0)", "oklch(95% 0 0)"]
+        "tonalRamp": [
+          "oklch(15% 0 0)",
+          "oklch(27% 0 0)",
+          "oklch(39% 0 0)",
+          "oklch(51% 0 0)",
+          "oklch(63% 0 0)",
+          "oklch(75% 0 0)",
+          "oklch(87% 0 0)",
+          "oklch(95% 0 0)"
+        ]
       },
       "night-canvas": {
         "role": "neutral",
         "displayName": "Night Canvas",
-        "tonalRamp": ["oklch(15% 0.013 248.5)", "oklch(27% 0.013 248.5)", "oklch(39% 0.013 248.5)", "oklch(51% 0.013 248.5)", "oklch(63% 0.013 248.5)", "oklch(75% 0.013 248.5)", "oklch(87% 0.013 248.5)", "oklch(95% 0.013 248.5)"]
+        "tonalRamp": [
+          "oklch(15% 0.013 248.5)",
+          "oklch(27% 0.013 248.5)",
+          "oklch(39% 0.013 248.5)",
+          "oklch(51% 0.013 248.5)",
+          "oklch(63% 0.013 248.5)",
+          "oklch(75% 0.013 248.5)",
+          "oklch(87% 0.013 248.5)",
+          "oklch(95% 0.013 248.5)"
+        ]
       },
       "night-paper": {
         "role": "neutral",
         "displayName": "Night Paper",
-        "tonalRamp": ["oklch(15% 0.017 248.6)", "oklch(27% 0.017 248.6)", "oklch(39% 0.017 248.6)", "oklch(51% 0.017 248.6)", "oklch(63% 0.017 248.6)", "oklch(75% 0.017 248.6)", "oklch(87% 0.017 248.6)", "oklch(95% 0.017 248.6)"]
+        "tonalRamp": [
+          "oklch(15% 0.017 248.6)",
+          "oklch(27% 0.017 248.6)",
+          "oklch(39% 0.017 248.6)",
+          "oklch(51% 0.017 248.6)",
+          "oklch(63% 0.017 248.6)",
+          "oklch(75% 0.017 248.6)",
+          "oklch(87% 0.017 248.6)",
+          "oklch(95% 0.017 248.6)"
+        ]
       },
       "night-ink": {
         "role": "neutral",
         "displayName": "Night Ink",
-        "tonalRamp": ["oklch(15% 0.005 247.9)", "oklch(27% 0.005 247.9)", "oklch(39% 0.005 247.9)", "oklch(51% 0.005 247.9)", "oklch(63% 0.005 247.9)", "oklch(75% 0.005 247.9)", "oklch(87% 0.005 247.9)", "oklch(95% 0.005 247.9)"]
+        "tonalRamp": [
+          "oklch(15% 0.005 247.9)",
+          "oklch(27% 0.005 247.9)",
+          "oklch(39% 0.005 247.9)",
+          "oklch(51% 0.005 247.9)",
+          "oklch(63% 0.005 247.9)",
+          "oklch(75% 0.005 247.9)",
+          "oklch(87% 0.005 247.9)",
+          "oklch(95% 0.005 247.9)"
+        ]
       },
       "night-copy": {
         "role": "neutral",
         "displayName": "Night Copy",
-        "tonalRamp": ["oklch(15% 0.020 248.1)", "oklch(27% 0.020 248.1)", "oklch(39% 0.020 248.1)", "oklch(51% 0.020 248.1)", "oklch(63% 0.020 248.1)", "oklch(75% 0.020 248.1)", "oklch(87% 0.020 248.1)", "oklch(95% 0.020 248.1)"]
+        "tonalRamp": [
+          "oklch(15% 0.020 248.1)",
+          "oklch(27% 0.020 248.1)",
+          "oklch(39% 0.020 248.1)",
+          "oklch(51% 0.020 248.1)",
+          "oklch(63% 0.020 248.1)",
+          "oklch(75% 0.020 248.1)",
+          "oklch(87% 0.020 248.1)",
+          "oklch(95% 0.020 248.1)"
+        ]
       },
       "night-rule": {
         "role": "neutral",
         "displayName": "Night Rule",
-        "tonalRamp": ["oklch(15% 0.026 244.1)", "oklch(27% 0.026 244.1)", "oklch(39% 0.026 244.1)", "oklch(51% 0.026 244.1)", "oklch(63% 0.026 244.1)", "oklch(75% 0.026 244.1)", "oklch(87% 0.026 244.1)", "oklch(95% 0.026 244.1)"]
+        "tonalRamp": [
+          "oklch(15% 0.026 244.1)",
+          "oklch(27% 0.026 244.1)",
+          "oklch(39% 0.026 244.1)",
+          "oklch(51% 0.026 244.1)",
+          "oklch(63% 0.026 244.1)",
+          "oklch(75% 0.026 244.1)",
+          "oklch(87% 0.026 244.1)",
+          "oklch(95% 0.026 244.1)"
+        ]
       },
       "night-signal": {
         "role": "primary",
         "displayName": "Night Signal",
-        "tonalRamp": ["oklch(15% 0.137 264.9)", "oklch(27% 0.137 264.9)", "oklch(39% 0.137 264.9)", "oklch(51% 0.137 264.9)", "oklch(63% 0.137 264.9)", "oklch(75% 0.137 264.9)", "oklch(87% 0.137 264.9)", "oklch(95% 0.137 264.9)"]
+        "tonalRamp": [
+          "oklch(15% 0.137 264.9)",
+          "oklch(27% 0.137 264.9)",
+          "oklch(39% 0.137 264.9)",
+          "oklch(51% 0.137 264.9)",
+          "oklch(63% 0.137 264.9)",
+          "oklch(75% 0.137 264.9)",
+          "oklch(87% 0.137 264.9)",
+          "oklch(95% 0.137 264.9)"
+        ]
       },
       "night-signal-press": {
         "role": "primary",
         "displayName": "Night Signal Press",
-        "tonalRamp": ["oklch(15% 0.085 268.4)", "oklch(27% 0.085 268.4)", "oklch(39% 0.085 268.4)", "oklch(51% 0.085 268.4)", "oklch(63% 0.085 268.4)", "oklch(75% 0.085 268.4)", "oklch(87% 0.085 268.4)", "oklch(95% 0.085 268.4)"]
+        "tonalRamp": [
+          "oklch(15% 0.085 268.4)",
+          "oklch(27% 0.085 268.4)",
+          "oklch(39% 0.085 268.4)",
+          "oklch(51% 0.085 268.4)",
+          "oklch(63% 0.085 268.4)",
+          "oklch(75% 0.085 268.4)",
+          "oklch(87% 0.085 268.4)",
+          "oklch(95% 0.085 268.4)"
+        ]
       },
       "night-focus": {
         "role": "primary",
         "displayName": "Night Focus",
-        "tonalRamp": ["oklch(15% 0.093 268.8)", "oklch(27% 0.093 268.8)", "oklch(39% 0.093 268.8)", "oklch(51% 0.093 268.8)", "oklch(63% 0.093 268.8)", "oklch(75% 0.093 268.8)", "oklch(87% 0.093 268.8)", "oklch(95% 0.093 268.8)"]
+        "tonalRamp": [
+          "oklch(15% 0.093 268.8)",
+          "oklch(27% 0.093 268.8)",
+          "oklch(39% 0.093 268.8)",
+          "oklch(51% 0.093 268.8)",
+          "oklch(63% 0.093 268.8)",
+          "oklch(75% 0.093 268.8)",
+          "oklch(87% 0.093 268.8)",
+          "oklch(95% 0.093 268.8)"
+        ]
       }
     },
     "typographyMeta": {
-      "display": { "displayName": "Display", "purpose": "Hero and project-record titles, capped at roughly 15–18 characters per line." },
-      "headline": { "displayName": "Headline", "purpose": "Major section headings with tight leading and balanced wrapping." },
-      "title": { "displayName": "Title", "purpose": "Project and capability names within evidence registers." },
-      "body": { "displayName": "Body", "purpose": "Narrative and evidence copy at a readable 58–68 character measure." },
-      "intro": { "displayName": "Section Intro", "purpose": "Secondary framing copy immediately below section headlines." },
-      "action": { "displayName": "Action", "purpose": "Compact, confident text for primary and secondary actions." },
-      "label": { "displayName": "Evidence Label", "purpose": "Uppercase metadata for cases, dates, locations, technologies, and captions." },
-      "folio-number": { "displayName": "Folio Number", "purpose": "Tabular two-character register indexes in section rails." }
+      "display": {
+        "displayName": "Display",
+        "purpose": "Project-page titles with balanced wrapping."
+      },
+      "hero": {
+        "displayName": "Hero",
+        "purpose": "Opening analyst thesis, capped at a 27ch measure."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Major section headings."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Project-group and capability headings."
+      },
+      "item": {
+        "displayName": "Item",
+        "purpose": "Individual project titles."
+      },
+      "subheading": {
+        "displayName": "Subheading",
+        "purpose": "Employer and supporting headings."
+      },
+      "navigation": {
+        "displayName": "Navigation",
+        "purpose": "Quiet desktop navigation text."
+      },
+      "error-code": {
+        "displayName": "Error Code",
+        "purpose": "Large route-error codes."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Narrative and evidence copy."
+      },
+      "intro": {
+        "displayName": "Intro",
+        "purpose": "Secondary framing copy below headings."
+      },
+      "action": {
+        "displayName": "Action",
+        "purpose": "Primary and secondary action text."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Uppercase metadata for dates, locations, technologies and captions."
+      },
+      "section-folio": {
+        "displayName": "Section Folio",
+        "purpose": "Tabular section numbers in the numbered rail."
+      }
     },
     "shadows": [
       {
         "name": "mobile-disclosure",
         "value": "0 18px 45px rgba(0, 0, 0, 0.14)",
-        "purpose": "Separates the temporary mobile navigation panel from the flat document beneath it."
+        "purpose": "Separates the open mobile navigation panel from page content."
+      },
+      {
+        "name": "availability-signal",
+        "value": "0 14px 30px -24px var(--accent)",
+        "purpose": "Restrained accent shadow beneath the availability notice."
       }
     ],
     "motion": [
@@ -126,8 +319,16 @@
     ],
     "breakpoints": [
       {
-        "name": "folio-rail",
+        "name": "project-layout",
+        "value": "48rem"
+      },
+      {
+        "name": "section-rail",
         "value": "64rem"
+      },
+      {
+        "name": "desktop-navigation",
+        "value": "80rem"
       }
     ]
   },
@@ -137,8 +338,8 @@
       "kind": "button",
       "refersTo": "action-primary",
       "description": "The filled cobalt action for the next meaningful step.",
-      "html": "<a class=\"ds-action-primary\" href=\"#\">View selected work <span aria-hidden=\"true\">→</span></a>",
-      "css": ".ds-action-primary { display: inline-flex; min-height: 2.75rem; align-items: center; justify-content: center; gap: 0.65rem; border: 1px solid var(--accent, #124fcc); border-radius: 2px; padding: 0.7rem 1rem; background: var(--accent, #124fcc); color: var(--on-accent, #fff); font: 570 1rem/1.2 \"Onest Variable\", \"Segoe UI\", sans-serif; text-decoration: none; transition: background-color 180ms ease, border-color 180ms ease; } .ds-action-primary:hover { background: var(--accent-strong, #0b3694); border-color: var(--accent-strong, #0b3694); } .ds-action-primary:focus-visible { outline: 3px solid var(--focus, #124fcc); outline-offset: 4px; } .ds-action-primary:active { background: var(--accent-strong, #0b3694); }"
+      "html": "<a class=\"ds-action-primary\" href=\"#\">Email Camilo</a>",
+      "css": ".ds-action-primary {font-family: var(--font-sans, \"Onest Variable\", \"Segoe UI\", sans-serif); line-height: 1.55; display: inline-flex; min-height: 2.75rem; align-items: center; justify-content: center; gap: 0.65rem; border: 1px solid var(--accent, #124fcc); border-radius: 2px; padding: 0.6rem 0.875rem; font-size: var(--type-action, 0.875rem); font-weight: 570; line-height: 1.2; text-decoration: none; transition: background-color 180ms ease, color 180ms ease, border-color 180ms ease; background: var(--accent, #124fcc); color: var(--on-accent, #ffffff);} .ds-action-primary:hover {background: var(--accent-strong, #0b3694); border-color: var(--accent-strong, #0b3694);} .ds-action-primary:focus-visible {border-radius: 2px; outline: 3px solid var(--focus, #124fcc); outline-offset: 4px;} @media (prefers-reduced-motion: reduce) {.ds-action-primary {transition-duration: 0.01ms;}}"
     },
     {
       "name": "Secondary Action",
@@ -146,75 +347,82 @@
       "refersTo": "action-secondary",
       "description": "The outlined companion action for résumé and source links.",
       "html": "<a class=\"ds-action-secondary\" href=\"#\">Download résumé</a>",
-      "css": ".ds-action-secondary { display: inline-flex; min-height: 2.75rem; align-items: center; justify-content: center; gap: 0.65rem; border: 1px solid var(--accent, #124fcc); border-radius: 2px; padding: 0.7rem 1rem; background: transparent; color: var(--accent, #124fcc); font: 570 1rem/1.2 \"Onest Variable\", \"Segoe UI\", sans-serif; text-decoration: none; transition: background-color 180ms ease, color 180ms ease, border-color 180ms ease; } .ds-action-secondary:hover { background: color-mix(in srgb, var(--accent, #124fcc) 8%, transparent); } .ds-action-secondary:focus-visible { outline: 3px solid var(--focus, #124fcc); outline-offset: 4px; } .ds-action-secondary:active { color: var(--accent-strong, #0b3694); border-color: var(--accent-strong, #0b3694); }"
+      "css": ".ds-action-secondary {font-family: var(--font-sans, \"Onest Variable\", \"Segoe UI\", sans-serif); line-height: 1.55; display: inline-flex; min-height: 2.75rem; align-items: center; justify-content: center; gap: 0.65rem; border: 1px solid var(--accent, #124fcc); border-radius: 2px; padding: 0.6rem 0.875rem; font-size: var(--type-action, 0.875rem); font-weight: 570; line-height: 1.2; text-decoration: none; transition: background-color 180ms ease, color 180ms ease, border-color 180ms ease; display: inline-flex; min-height: 2.75rem; align-items: center; justify-content: center; gap: 0.65rem; border: 1px solid var(--accent, #124fcc); border-radius: 2px; padding: 0.6rem 0.875rem; font-size: var(--type-action, 0.875rem); font-weight: 570; line-height: 1.2; text-decoration: none; transition: background-color 180ms ease, color 180ms ease, border-color 180ms ease;} .ds-action-secondary:hover {background: color-mix(in srgb, var(--accent, #124fcc) 8%, transparent);} .ds-action-secondary:focus-visible {border-radius: 2px; outline: 3px solid var(--focus, #124fcc); outline-offset: 4px;} @media (prefers-reduced-motion: reduce) {.ds-action-secondary {transition-duration: 0.01ms;}}"
     },
     {
       "name": "Inline Evidence Link",
       "kind": "custom",
       "refersTo": "inline-link",
       "description": "A traceable text action used beside project and supporting evidence.",
-      "html": "<a class=\"ds-inline-link\" href=\"#\">Read project record <span aria-hidden=\"true\">→</span></a>",
-      "css": ".ds-inline-link { display: inline-flex; min-height: 2.75rem; align-items: center; gap: 0.5rem; color: var(--accent, #124fcc); font: 400 1rem/1.65 \"Onest Variable\", \"Segoe UI\", sans-serif; text-decoration-color: color-mix(in srgb, var(--accent, #124fcc) 45%, transparent); text-decoration-line: underline; text-decoration-thickness: 1px; text-underline-offset: 0.28em; transition: color 160ms ease, text-decoration-color 160ms ease; } .ds-inline-link:hover { color: var(--accent-strong, #0b3694); text-decoration-color: currentColor; } .ds-inline-link:focus-visible { border-radius: 2px; outline: 3px solid var(--focus, #124fcc); outline-offset: 4px; } .ds-inline-link:active { color: var(--accent-strong, #0b3694); }"
+      "html": "<a class=\"ds-inline-link\" href=\"#\">Read project record</a>",
+      "css": ".ds-inline-link {font-family: var(--font-sans, \"Onest Variable\", \"Segoe UI\", sans-serif); line-height: 1.55; display: inline-flex; min-height: 2.75rem; align-items: center; color: var(--accent, #124fcc); text-decoration-color: color-mix(in srgb, var(--accent, #124fcc) 45%, transparent); text-decoration-line: underline; text-decoration-thickness: 1px; text-underline-offset: 0.28em; transition: color 160ms ease, text-decoration-color 160ms ease;} .ds-inline-link:hover {color: var(--accent-strong, #0b3694); text-decoration-color: currentColor;} .ds-inline-link:focus-visible {border-radius: 2px; outline: 3px solid var(--focus, #124fcc); outline-offset: 4px;} @media (prefers-reduced-motion: reduce) {.ds-inline-link {transition-duration: 0.01ms;}}"
     },
     {
       "name": "Primary Navigation",
       "kind": "nav",
       "description": "A quiet ruled header with role metadata and plain-text destinations.",
-      "html": "<nav class=\"ds-nav\" aria-label=\"Primary preview\"><a class=\"ds-nav-home\" href=\"#\"><strong>Camilo Oviedo</strong><span>Systems analysis</span></a><div class=\"ds-nav-links\"><a href=\"#\">Work</a><a href=\"#\">Experience</a><a href=\"#\">Capabilities</a><a href=\"#\">Contact</a></div></nav>",
-      "css": ".ds-nav { display: flex; min-height: 4rem; align-items: center; justify-content: space-between; gap: 1.25rem; border-bottom: 1px solid var(--rule, #c6d0d8); background: var(--canvas, #f2f5f7); color: var(--ink, #101820); font-family: \"Onest Variable\", \"Segoe UI\", sans-serif; } .ds-nav-home { display: flex; min-height: 2.75rem; align-items: center; gap: 0.75rem; color: inherit; text-decoration: none; } .ds-nav-home strong { font-weight: 600; letter-spacing: -0.025em; } .ds-nav-home span { color: var(--muted, #52606d); font: 400 0.68rem/1.2 \"Cascadia Code\", \"SFMono-Regular\", Consolas, monospace; letter-spacing: 0.08em; text-transform: uppercase; } .ds-nav-links { display: flex; align-items: center; gap: 1.5rem; } .ds-nav-links a { display: inline-flex; min-height: 2.75rem; align-items: center; color: var(--muted, #52606d); font-size: 0.875rem; text-decoration: none; } .ds-nav-links a:hover, .ds-nav-links a:active { color: var(--ink, #101820); } .ds-nav a:focus-visible { border-radius: 2px; outline: 3px solid var(--focus, #124fcc); outline-offset: 4px; } @media (max-width: 42rem) { .ds-nav-home span { display: none; } .ds-nav-links { gap: 0.75rem; overflow-x: auto; } }"
+      "html": "<nav class=\"ds-nav\" aria-label=\"Primary preview\"><a class=\"ds-nav-home\" href=\"/\"><strong>Camilo Oviedo</strong><span>Systems Engineering &amp; Business Administration</span></a><div class=\"ds-nav-links\"><a href=\"/#experience\">Experience</a><a href=\"/#projects\">Projects</a><a href=\"/#capabilities\">Capabilities</a><a href=\"/#about\">About</a><a href=\"/#contact\">Contact</a></div><details class=\"ds-nav-mobile\"><summary>Navigation</summary><div><a href=\"/#experience\">Experience</a><a href=\"/#projects\">Projects</a><a href=\"/#capabilities\">Capabilities</a><a href=\"/#about\">About</a><a href=\"/#contact\">Contact</a></div></details></nav>",
+      "css": ".ds-nav {font-family: var(--font-sans, \"Onest Variable\", \"Segoe UI\", sans-serif); line-height: 1.55; display:flex;min-height:3.5rem;align-items:center;justify-content:space-between;gap:1rem;border-bottom:1px solid var(--rule, #c6d0d8);background:var(--canvas, #f2f5f7);color:var(--ink, #101820);} .ds-nav-home {display:flex;min-height:2.75rem;align-items:center;gap:0.75rem;color:inherit;text-decoration:none;} .ds-nav-home strong {font-size:0.875rem;font-weight:600;letter-spacing:-0.025em;} .ds-nav-home span {display:none;color:var(--muted, #52606d);font:400 0.7rem/1.55 var(--font-mono, \"Cascadia Code\", \"SFMono-Regular\", Consolas, monospace);letter-spacing:0.06em;text-transform:uppercase;} .ds-nav-links {display:none;align-items:center;gap:1rem;} .ds-nav-links a {display:inline-flex;min-height:2.75rem;align-items:center;color:var(--muted, #52606d);font-size:0.8125rem;text-decoration:none;} .ds-nav-links a:hover {color:var(--ink, #101820);} .ds-nav-mobile {position:relative;} .ds-nav-mobile summary {display:grid;width:2.75rem;height:2.75rem;place-items:center;cursor:pointer;color:var(--muted, #52606d);} .ds-nav-mobile div {position:absolute;right:0;top:3.25rem;width:min(19rem,calc(100vw - 2rem));border:1px solid var(--rule, #c6d0d8);background:var(--paper, #fafbfc);padding:0.5rem;box-shadow:0 18px 45px rgba(0,0,0,0.14);} .ds-nav-mobile a {display:flex;min-height:3rem;align-items:center;border-bottom:1px solid var(--rule, #c6d0d8);padding-inline:0.75rem;color:var(--ink, #101820);font-size:0.875rem;text-decoration:none;} .ds-nav-mobile a:last-child {border-bottom:0;} .ds-nav a:focus-visible {border-radius: 2px; outline: 3px solid var(--focus, #124fcc); outline-offset: 4px;} .ds-nav summary:focus-visible {border-radius: 2px; outline: 3px solid var(--focus, #124fcc); outline-offset: 4px;} @media(min-width:48rem){.ds-nav-home span {display:inline;}} @media(min-width:80rem){.ds-nav-links {display:flex;}.ds-nav-mobile{display:none;}}"
     },
     {
-      "name": "Section Folio",
+      "name": "Section Rail",
       "kind": "custom",
       "description": "The numbered rail marker that turns sections into a continuous evidence register.",
-      "html": "<div class=\"ds-folio\"><strong>01</strong><span>Selected work</span></div>",
-      "css": ".ds-folio { display: flex; align-items: baseline; gap: 0.75rem; padding-block: 1rem; color: var(--muted, #52606d); font: 400 0.72rem/1.2 \"Cascadia Code\", \"SFMono-Regular\", Consolas, monospace; letter-spacing: 0.06em; text-transform: uppercase; } .ds-folio strong { color: var(--accent, #124fcc); font: 520 1.5rem/1 \"Onest Variable\", \"Segoe UI\", sans-serif; font-variant-numeric: tabular-nums; letter-spacing: -0.03em; } .ds-folio:hover strong { color: var(--accent-strong, #0b3694); } .ds-folio:focus-within { outline: 3px solid var(--focus, #124fcc); outline-offset: 4px; } @media (min-width: 64rem) { .ds-folio { width: 6.5rem; min-height: 9rem; align-items: flex-start; border-right: 1px solid var(--rule, #c6d0d8); flex-direction: column; padding: 1.3rem 1rem 0 0; } }"
+      "html": "<div class=\"ds-folio\"><strong>01</strong><span>Experience</span></div>",
+      "css": ".ds-folio {font-family: var(--font-sans, \"Onest Variable\", \"Segoe UI\", sans-serif); line-height: 1.55; display: flex; align-items: center; gap: 0.75rem; padding-top: 1.5rem; color: var(--muted, #52606d); font-family: var(--font-mono, \"Cascadia Code\", \"SFMono-Regular\", Consolas, monospace); font-size: 0.68rem; letter-spacing: 0.06em; text-transform: uppercase;} .ds-folio strong {color: var(--accent, #124fcc); font-family: var(--font-sans, \"Onest Variable\", \"Segoe UI\", sans-serif); font-size: 1.25rem; font-variant-numeric: tabular-nums; font-weight: 560; letter-spacing: -0.035em; line-height: 1;} @media (min-width:64rem) {.ds-folio {width:6.5rem; align-items:flex-start; gap:0.8rem; border-right:1px solid var(--rule, #c6d0d8); flex-direction:column; padding:1.35rem 1rem 0 0;}}"
     },
     {
-      "name": "Work Exhibit",
+      "name": "Project Exhibit",
       "kind": "custom",
       "refersTo": "exhibit-frame",
-      "description": "An artifact frame, provenance caption, and adjacent case analysis without card styling.",
-      "html": "<article class=\"ds-exhibit\"><figure class=\"ds-exhibit-figure\"><div class=\"ds-exhibit-frame\"><div class=\"ds-exhibit-artifact\" role=\"img\" aria-label=\"Repository artifact preview\"><span>Repository artifact</span></div></div><figcaption>Platform screenshot · system context</figcaption></figure><div class=\"ds-exhibit-copy\"><p class=\"ds-exhibit-label\">Case 01 · Systems modernisation</p><h3>Central Securities Depository</h3><p>Critical platform work documented through context, contribution, and supported outcomes.</p><dl><div><dt>Contribution</dt><dd>Requirements analysis across business and technical delivery.</dd></div><div><dt>Supported outcome</dt><dd>Recorded operational and reliability improvements.</dd></div></dl></div></article>",
-      "css": ".ds-exhibit { display: grid; gap: 2rem; color: var(--ink, #101820); font-family: \"Onest Variable\", \"Segoe UI\", sans-serif; } .ds-exhibit-frame { border: 1px solid var(--rule, #c6d0d8); background: var(--paper, #fafbfc); padding: 0.5rem; } .ds-exhibit-artifact { display: grid; min-height: 12rem; place-items: center; background: var(--canvas, #f2f5f7); color: var(--muted, #52606d); font: 400 0.7rem/1.2 \"Cascadia Code\", \"SFMono-Regular\", Consolas, monospace; letter-spacing: 0.07em; text-transform: uppercase; } .ds-exhibit-figure { margin: 0; } .ds-exhibit-figure figcaption, .ds-exhibit-label, .ds-exhibit-copy dt { margin-top: 0.75rem; color: var(--muted, #52606d); font: 400 0.68rem/1.5 \"Cascadia Code\", \"SFMono-Regular\", Consolas, monospace; letter-spacing: 0.06em; text-transform: uppercase; } .ds-exhibit-copy h3 { margin: 1rem 0 0; font-size: 2rem; font-weight: 500; letter-spacing: -0.03em; line-height: 1.05; } .ds-exhibit-copy > p:not(.ds-exhibit-label) { color: var(--muted, #52606d); } .ds-exhibit-copy dl { border-block: 1px solid var(--rule, #c6d0d8); } .ds-exhibit-copy dl div { padding-block: 1rem; } .ds-exhibit-copy dl div + div { border-top: 1px solid var(--rule, #c6d0d8); } .ds-exhibit-copy dt { margin-top: 0; } .ds-exhibit-copy dd { margin: 0.5rem 0 0; line-height: 1.65; } .ds-exhibit:hover .ds-exhibit-frame { border-color: var(--accent, #124fcc); } .ds-exhibit:focus-within { outline: 3px solid var(--focus, #124fcc); outline-offset: 4px; } @media (min-width: 48rem) { .ds-exhibit { grid-template-columns: 1.22fr 0.78fr; align-items: start; gap: 3.5rem; } }"
+      "description": "A ruled 4:3 artifact frame beside a concise project snippet.",
+      "html": "<article class=\"ds-exhibit\"><figure class=\"ds-exhibit-figure\"><a class=\"ds-exhibit-frame\" href=\"/projects/ai-dietary-recipe\"><div class=\"ds-exhibit-artifact\" role=\"img\" aria-label=\"Project screenshot placeholder\">Project screenshot</div></a><figcaption>AI Dietary Recipe · Project interface</figcaption></figure><div class=\"ds-exhibit-copy\"><p class=\"ds-exhibit-label\">Personal projects</p><h3>AI Dietary Recipe</h3><p>An AI-assisted recipe application that adapts suggestions to available time, cuisine and dietary requirements.</p></div></article>",
+      "css": ".ds-exhibit {font-family: var(--font-sans, \"Onest Variable\", \"Segoe UI\", sans-serif); line-height: 1.55; display: grid; gap: 1.5rem; align-items: start; color:var(--ink, #101820);} .ds-exhibit-figure {margin:0;} .ds-exhibit-frame {display:block;border:1px solid var(--rule, #c6d0d8);background:var(--paper, #fafbfc);padding:clamp(0.35rem,1vw,0.65rem);text-decoration:none;} .ds-exhibit-frame:hover {border-color: var(--accent, #124fcc); background: color-mix(in srgb, var(--accent, #124fcc) 6%, var(--paper, #fafbfc));} .ds-exhibit-artifact {display:grid;aspect-ratio:4 / 3;place-items:center;background:var(--canvas, #f2f5f7);color:var(--muted, #52606d);} .ds-exhibit-figure figcaption {margin-top:0.75rem;color:var(--muted, #52606d);font:400 0.68rem/1.55 var(--font-mono, \"Cascadia Code\", \"SFMono-Regular\", Consolas, monospace);letter-spacing:0.06em;text-transform:uppercase;} .ds-exhibit-label {color: var(--muted, #52606d); font-family: var(--font-mono, \"Cascadia Code\", \"SFMono-Regular\", Consolas, monospace); font-size: 0.7rem; letter-spacing: 0.07em; text-transform: uppercase; margin:0;} .ds-exhibit-copy h3 {margin:0.5rem 0 0;font-size:var(--type-item, clamp(1.125rem, 1.6vw, 1.375rem));font-weight:560;letter-spacing:-0.03em;line-height:1.12;} .ds-exhibit-copy>p:last-child {margin-top:1rem;font-size:var(--type-lead, clamp(1rem, 1.2vw, 1.0625rem));line-height:1.55;} .ds-exhibit-frame:focus-visible {border-radius: 2px; outline: 3px solid var(--focus, #124fcc); outline-offset: 4px;} @media(min-width:48rem){.ds-exhibit {grid-template-columns:minmax(0,0.92fr) minmax(0,1.08fr);gap:clamp(1.5rem,3vw,2.5rem);}}"
     },
     {
       "name": "Experience Register Row",
       "kind": "custom",
       "description": "A ruled employer, role, date, and evidence row that compresses chronology.",
-      "html": "<article class=\"ds-experience-row\"><div class=\"ds-experience-employer\"><h3>Central Bank</h3><p>Bogotá, Colombia</p></div><div class=\"ds-experience-role\"><div><h4>Systems Analyst</h4><time>2018–2020</time></div><ul><li>Translated operational needs into system requirements.</li><li>Supported critical financial-platform continuity.</li></ul></div></article>",
-      "css": ".ds-experience-row { display: grid; gap: 1.5rem; border-block: 1px solid var(--rule, #c6d0d8); padding-block: 2rem; color: var(--ink, #101820); font-family: \"Onest Variable\", \"Segoe UI\", sans-serif; } .ds-experience-employer h3, .ds-experience-role h4 { margin: 0; font-size: 1.25rem; font-weight: 500; letter-spacing: -0.02em; } .ds-experience-employer p, .ds-experience-role time { display: block; margin-top: 0.5rem; color: var(--muted, #52606d); font: 400 0.75rem/1.4 \"Cascadia Code\", \"SFMono-Regular\", Consolas, monospace; letter-spacing: 0.05em; text-transform: uppercase; } .ds-experience-role { display: grid; gap: 1.25rem; } .ds-experience-role ul { margin: 0; padding-left: 1.25rem; color: var(--muted, #52606d); line-height: 1.65; } .ds-experience-role li + li { margin-top: 0.75rem; } .ds-experience-row:hover { border-color: var(--accent, #124fcc); } .ds-experience-row:focus-within { outline: 3px solid var(--focus, #124fcc); outline-offset: 4px; } @media (min-width: 48rem) { .ds-experience-row { grid-template-columns: 14rem 1fr; } .ds-experience-role { grid-template-columns: minmax(12rem, 0.7fr) minmax(0, 1.3fr); } }"
+      "html": "<article class=\"ds-experience-row\"><div class=\"ds-experience-employer\"><h3>Bountiful Grace Pty Ltd</h3><p>Melbourne, Australia</p></div><div class=\"ds-experience-role\"><div><h4>Operations &amp; Systems Automation Analyst</h4><time>April 2025 – Present</time></div><ul><li>Engineered and maintained end-to-end order management workflows by integrating platforms (e.g., Faire, Fieldfolio) via Zapier and APIs, reducing manual processing time from ~40 minutes to ~2 minutes per order (~95% efficiency gain).</li><li>Designed and implemented inventory control solutions using NETO by Maropost API, generating automated stocktake reports that enabled weekly audits and eliminated stock discrepancies and lost sales due to out-of stock issues.</li></ul></div></article>",
+      "css": ".ds-experience-row {font-family: var(--font-sans, \"Onest Variable\", \"Segoe UI\", sans-serif); line-height: 1.55;display:grid;gap:1.25rem;border-block:1px solid var(--rule, #c6d0d8);padding-block:1.5rem;color:var(--ink, #101820);} .ds-experience-employer h3 {font-size: var(--type-subheading, 1.125rem); font-weight: 560; letter-spacing: -0.02em; line-height: 1.3;margin:0;} .ds-experience-role h4 {margin:0;font-size:1rem;font-weight:500;} .ds-experience-employer p,.ds-experience-role time {display:block;margin-top:0.5rem;color:var(--muted, #52606d);font:400 0.75rem/1.55 var(--font-mono, \"Cascadia Code\", \"SFMono-Regular\", Consolas, monospace);} .ds-experience-employer p {letter-spacing:0.05em;text-transform:uppercase;} .ds-experience-role {display:grid;gap:1rem;padding-block:0.25rem;} .ds-experience-role ul {margin:0;padding:0;list-style:none;color:var(--muted, #52606d);} .ds-experience-role li+li {margin-top:0.5rem;} @media(min-width:48rem){.ds-experience-role {grid-template-columns:minmax(10rem,0.65fr) minmax(0,1.35fr);}} @media(min-width:64rem){.ds-experience-row {grid-template-columns:13rem minmax(0,1fr);}}"
     },
     {
       "name": "Capability Register",
       "kind": "custom",
       "description": "Plain-language capability groups divided by rules instead of badges or tiles.",
       "html": "<div class=\"ds-capabilities\"><article><h3>Business and systems analysis</h3><p>Requirements gathering, process analysis, stakeholder alignment, use cases, and data flows.</p></article><article><h3>Applications and automation</h3><p>API integrations, workflow automation, operational administration, controls, and reporting.</p></article></div>",
-      "css": ".ds-capabilities { display: grid; border-block: 1px solid var(--rule, #c6d0d8); color: var(--ink, #101820); font-family: \"Onest Variable\", \"Segoe UI\", sans-serif; } .ds-capabilities article { padding-block: 1.75rem; } .ds-capabilities article + article { border-top: 1px solid var(--rule, #c6d0d8); } .ds-capabilities h3 { margin: 0; font-size: 1.5rem; font-weight: 500; letter-spacing: -0.025em; } .ds-capabilities p { max-width: 58ch; margin: 1rem 0 0; color: var(--muted, #52606d); line-height: 1.65; } .ds-capabilities article:hover h3 { color: var(--accent, #124fcc); } .ds-capabilities article:focus-within { outline: 3px solid var(--focus, #124fcc); outline-offset: 4px; } @media (min-width: 48rem) { .ds-capabilities { grid-template-columns: 1fr 1fr; } .ds-capabilities article:first-child { border-right: 1px solid var(--rule, #c6d0d8); padding-right: 2rem; } .ds-capabilities article + article { border-top: 0; padding-left: 2rem; } }"
+      "css": ".ds-capabilities {font-family: var(--font-sans, \"Onest Variable\", \"Segoe UI\", sans-serif); line-height: 1.55; display:grid;border-block:1px solid var(--rule, #c6d0d8);color:var(--ink, #101820);} .ds-capabilities article {padding-block:1.25rem;} .ds-capabilities article+article {border-top:1px solid var(--rule, #c6d0d8);} .ds-capabilities h3 {font-size: var(--type-group, clamp(1.25rem, 1.8vw, 1.5rem));margin:0;font-weight:560;letter-spacing:-0.03em;line-height:1.12;} .ds-capabilities p {max-width:58ch;margin:0.75rem 0 0;color:var(--muted, #52606d);} @media(min-width:48rem){.ds-capabilities {grid-template-columns:repeat(2,minmax(0,1fr));}.ds-capabilities article:first-child {border-right:1px solid var(--rule, #c6d0d8);padding-right:1.5rem;}.ds-capabilities article+article {border-top:0;padding-left:1.5rem;}}"
     },
     {
       "name": "Outcome Register",
       "kind": "custom",
       "description": "A compact three-part register for supported outcomes in the opening evidence trail.",
-      "html": "<dl class=\"ds-outcomes\"><div><dt>Operations automation</dt><dd>~40 min → ~2 min</dd></div><div><dt>Systems modernisation</dt><dd>30% efficiency recorded</dd></div><div><dt>Technical continuity</dt><dd>35% less downtime</dd></div></dl>",
-      "css": ".ds-outcomes { display: grid; margin: 0; border-top: 1px solid var(--rule, #c6d0d8); color: var(--ink, #101820); font-family: \"Onest Variable\", \"Segoe UI\", sans-serif; } .ds-outcomes div { border-bottom: 1px solid var(--rule, #c6d0d8); padding-block: 1.25rem; } .ds-outcomes dt { color: var(--muted, #52606d); font: 400 0.7rem/1.4 \"Cascadia Code\", \"SFMono-Regular\", Consolas, monospace; letter-spacing: 0.07em; text-transform: uppercase; } .ds-outcomes dd { margin: 0.5rem 0 0; font-size: 1.125rem; font-weight: 500; line-height: 1.4; } .ds-outcomes div:hover dd { color: var(--accent, #124fcc); } .ds-outcomes div:focus-within { outline: 3px solid var(--focus, #124fcc); outline-offset: 4px; } @media (min-width: 48rem) { .ds-outcomes { grid-template-columns: repeat(3, 1fr); } .ds-outcomes div { border-bottom: 0; padding-inline: 1.5rem; } .ds-outcomes div:first-child { padding-left: 0; } .ds-outcomes div + div { border-left: 1px solid var(--rule, #c6d0d8); } }"
+      "html": "<dl class=\"ds-outcomes\"><div><dt>Operations automation</dt><dd>Order processing reduced from ~40 minutes to ~2 minutes.</dd></div><div><dt>Systems modernisation</dt><dd>30% operational-efficiency and 25% reliability improvements recorded.</dd></div><div><dt>Technical continuity</dt><dd>35% reduction in system downtime recorded at the Central Bank.</dd></div></dl>",
+      "css": ".ds-outcomes {font-family: var(--font-sans, \"Onest Variable\", \"Segoe UI\", sans-serif); line-height: 1.55;display:grid;margin:0;border-block:1px solid var(--rule, #c6d0d8);color:var(--ink, #101820);} .ds-outcomes div {border-bottom:1px solid var(--rule, #c6d0d8);padding-block:1rem;} .ds-outcomes div:last-child {border-bottom:0;} .ds-outcomes dt {color: var(--muted, #52606d); font-family: var(--font-mono, \"Cascadia Code\", \"SFMono-Regular\", Consolas, monospace); font-size: 0.7rem; letter-spacing: 0.07em; text-transform: uppercase;} .ds-outcomes dd {margin:0.5rem 0 0;font-size:1rem;font-weight:500;} @media(min-width:48rem){.ds-outcomes {grid-template-columns:repeat(3,minmax(0,1fr));}.ds-outcomes div {border-bottom:0;}.ds-outcomes div:first-child {border-right:1px solid var(--rule, #c6d0d8);padding-right:1.25rem;}.ds-outcomes div:nth-child(2) {border-right:1px solid var(--rule, #c6d0d8);padding-inline:1.25rem;}.ds-outcomes div:last-child {padding-left:1.25rem;}}"
+    },
+    {
+      "name": "Availability Signal",
+      "kind": "custom",
+      "description": "A compact employment-availability notice using the existing accent icon, tint and shallow shadow.",
+      "html": "<div class=\"ds-availability\" role=\"note\" aria-label=\"Employment availability\"><span class=\"ds-availability-icon\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" stroke-width=\"1.5\" stroke=\"currentColor\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M3 7m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v9a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z\"/><path d=\"M8 7v-2a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v2\"/><path d=\"M12 12l0 .01\"/><path d=\"M3 13a20 20 0 0 0 18 0\"/></svg></span><span>Open to analyst and application-focused opportunities.</span></div>",
+      "css": ".ds-availability {font-family: var(--font-sans, \"Onest Variable\", \"Segoe UI\", sans-serif); line-height: 1.55; display: flex; width: fit-content; max-width: 100%; align-items: center; gap: 0.8rem; margin-top: 1.25rem; border: 1px solid color-mix(in srgb, var(--accent, #124fcc) 72%, var(--rule, #c6d0d8)); background: color-mix(in srgb, var(--accent, #124fcc) 10%, var(--paper, #fafbfc)); box-shadow: 0 14px 30px -24px var(--accent, #124fcc); color: var(--ink, #101820); font-size: var(--type-action, 0.875rem); font-weight: 600; padding: 0.65rem 0.875rem;} .ds-availability-icon {display: grid; width: 2rem; height: 2rem; flex: 0 0 auto; place-items: center; background: var(--accent, #124fcc); color: var(--on-accent, #ffffff);}"
     }
   ],
   "narrative": {
     "northStar": "Systems Evidence Ledger",
-    "overview": "The systems evidence ledger treats the portfolio as an authored record of business problems, technical contribution, and supported outcomes. It borrows the discipline of requirements traceability, operational change records, and engineering case files without imitating a dashboard.\n\nThe interface is precise, quiet, and human. Cool mineral surfaces, carbon text, cobalt annotations, numbered folios, and hairline rules establish a continuous reading system; asymmetrical evidence layouts and authentic artifacts keep the work itself in command.",
+    "overview": "**Creative North Star: \"Systems Evidence Ledger\"**\n\nThe systems evidence ledger treats the portfolio as an authored record of business problems, technical contribution, and supported outcomes. It borrows the discipline of requirements traceability, operational change records, and engineering case files without imitating a dashboard.\n\nThe interface is precise, quiet, and human. Cool mineral surfaces, carbon text, cobalt section markers, and hairline rules establish a continuous reading system; asymmetrical evidence layouts and authentic artifacts keep the work itself in command.\n\n**Key Characteristics:**\n\n- Evidence-led rather than chronology-led.\n- Flat mineral surfaces divided by precise rules.\n- One cobalt annotation color across actions and section markers.\n- Onest narrative type paired with sparse monospace metadata.\n- Numbered section rails that keep the long-form page easy to scan.\n- Authentic portraits and repository artifacts presented as documented exhibits.",
     "keyCharacteristics": [
       "Evidence-led rather than chronology-led.",
       "Flat mineral surfaces divided by precise rules.",
-      "One cobalt annotation color across actions and evidence markers.",
+      "One cobalt annotation color across actions and section markers.",
       "Onest narrative type paired with sparse monospace metadata.",
-      "Desktop folio rails that collapse into the mobile reading flow.",
+      "Numbered section rails that keep the long-form page easy to scan.",
       "Authentic portraits and repository artifacts presented as documented exhibits."
     ],
     "rules": [
       {
         "name": "The Cobalt Annotation Rule",
-        "body": "Cobalt marks actions, folios, links, and small evidence signals; it never becomes a broad decorative field.",
+        "body": "Cobalt marks actions, section markers, links, and small evidence signals; it never becomes a broad decorative field.",
         "section": "colors"
       },
       {
@@ -228,8 +436,8 @@
         "section": "typography"
       },
       {
-        "name": "The Rail-to-Flow Rule",
-        "body": "The folio rail appears only when the viewport can sustain it; below 64rem it becomes an inline section header without changing reading order.",
+        "name": "The Section-Rail Rule",
+        "body": "Homepage sections use one stable reading sequence: `01 Experience`, `02 Projects`, `03 Capabilities`, `04 About`, `05 Contact`. On wide screens each label occupies a narrow ruled rail; on small screens it becomes a compact horizontal marker above the section body.",
         "section": "layout"
       },
       {
@@ -239,7 +447,7 @@
       },
       {
         "name": "The Flat Evidence Rule",
-        "body": "Major content surfaces stay flat at rest; shadow is reserved for a temporary layer that physically overlaps the document.",
+        "body": "Major content surfaces stay flat at rest; shadow is reserved for the temporary mobile navigation layer and the availability notice.",
         "section": "elevation"
       },
       {
@@ -249,7 +457,7 @@
       }
     ],
     "dos": [
-      "Do use evidence labels, folios, captions, and rules to make contribution and context easy to trace.",
+      "Do use numbered section rails, evidence labels, captions, and rules to make contribution and context easy to trace.",
       "Do keep Cobalt Signal rare enough that every appearance reads as action or annotation.",
       "Do present repository screenshots and portraits as flat exhibits with honest captions.",
       "Do vary evidence-layout proportions while preserving a clear semantic reading order.",
@@ -260,7 +468,7 @@
       "Don't turn evidence into repeated rounded cards, bento tiles, chips, or skill-logo walls.",
       "Don't imitate a dashboard, add fake case-study artifacts, or imply unsupported authorship.",
       "Don't use large radii, decorative pills, or shadows on persistent content surfaces.",
-      "Don't give every project, role, or capability equal visual emphasis."
+      "Don't hide projects behind a curated shortlist; use category rhythm, compact image scale and concise copy to keep every project visible without making the page noisy."
     ]
   }
 }

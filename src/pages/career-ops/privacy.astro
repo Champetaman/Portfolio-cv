@@ -5,76 +5,79 @@ export const prerender = true;
 ---
 
 <CareerOpsLayout
-  title="Privacy Policy"
-  description="How Career Ops accesses Gmail job alerts, processes data on a private DigitalOcean VPS, uses OpenAI Codex, and handles access revocation and deletion requests."
-  intro="How Career Ops handles information used in Camilo Oviedo's personal job-search workflow."
+  title="Privacy Policy — Hermes Career Ops"
+  description="How Hermes Career Ops accesses Gmail job alerts, stores private records on a Sydney DigitalOcean VPS, uses OpenAI Codex, and handles retention, revocation and deletion."
+  intro="How Hermes Career Ops handles information used in Camilo Oviedo's personal job-search workflow."
   page="privacy"
 >
-  <aside class="policy-note" aria-labelledby="confirmation-title">
-    <h2 id="confirmation-title" class="subheading">Operational details pending confirmation</h2>
-    <p>Private VPS access and selected job-alert sharing with OpenAI Codex are confirmed. Retention and deletion rules, specific security controls, exact OAuth scopes, and OpenAI retention and training settings still need confirmation. Those details are identified below; this policy does not claim verified compliance or Google approval.</p>
+  <aside class="policy-note" aria-labelledby="privacy-summary-title">
+    <h2 id="privacy-summary-title" class="subheading">Privacy at a glance</h2>
+    <p>Hermes Career Ops reads authorised Gmail job alerts, stores extracted job information and assessments privately, and sends selected job and professional-profile information to OpenAI Codex. Persistent records have no automatic expiry in the Hermes workflow. Removing Google access and deleting stored records are separate actions.</p>
   </aside>
 
   <section aria-labelledby="scope-title">
     <h2 id="scope-title" class="group-title">Application and operator</h2>
-    <p>Career Ops is operated by Camilo Oviedo for his own job search. It is a personal-use application, not a commercial SaaS product, and does not offer public registration. This policy covers the Career Ops workflow, rather than unrelated content on Camilo's portfolio.</p>
-    <p>Privacy questions and deletion requests can be sent to <a href="mailto:oviedocamilo94@gmail.com">oviedocamilo94@gmail.com</a>.</p>
+    <p>Hermes Career Ops is operated by Camilo Oviedo for his own job search. It is a personal-use application, not a commercial SaaS product, and does not offer public registration. This policy covers the Hermes Career Ops workflow, rather than unrelated content on Camilo's portfolio. Reading these public pages does not grant access to Gmail.</p>
+    <p>For privacy questions and deletion requests, <a href="mailto:oviedocamilo94@gmail.com">email Camilo Oviedo</a>. Contact address: oviedocamilo94 [at] gmail [dot] com.</p>
   </section>
 
   <section aria-labelledby="access-title">
     <h2 id="access-title" class="group-title">Gmail access and information used</h2>
-    <p>Career Ops accesses Camilo's authorised Gmail account to process LinkedIn and SEEK job-alert emails. The information used by this workflow falls into these categories:</p>
+    <p>Hermes Career Ops accesses Camilo's Gmail account using Google OAuth 2.0 authorisation to process LinkedIn and SEEK job-alert emails. The information used by this workflow falls into these categories:</p>
     <ul>
       <li><strong>Email information:</strong> message subjects, senders, dates and message bodies needed to understand a job alert. Email content may include personal information supplied by the sender.</li>
       <li><strong>Opportunity information:</strong> job descriptions and listing links extracted from those alerts, used to identify and assess opportunities.</li>
       <li><strong>Professional-profile information:</strong> Camilo's experience and qualifications used as context to assess role suitability and prepare application materials. This context is separate from the Gmail permission.</li>
       <li><strong>Derived information:</strong> assessments and prepared application materials produced from the job information and professional-profile context.</li>
+      <li><strong>Operational information:</strong> processed-message identifiers or hashes, mailbox progress, queued opportunities, evaluation state and private run records used to avoid duplicate work and resume processing.</li>
+      <li><strong>Credentials:</strong> OAuth credentials used to access the authorised account and separate Codex credentials used for AI processing. Credentials are not part of the job-evaluation prompt.</li>
     </ul>
-    <p>The described scope is <code>https://www.googleapis.com/auth/gmail.readonly</code>. It permits reading messages and settings across Gmail, not only job-alert emails. It does not permit sending email, creating Gmail drafts, or modifying or deleting messages. The OAuth client's actual scope configuration needs confirmation against this description.</p>
+    <p>The configured scope is <code>https://www.googleapis.com/auth/gmail.readonly</code>. It permits reading messages and settings across Gmail, not only job-alert emails. It does not permit sending email, creating Gmail drafts, or modifying or deleting messages.</p>
     <p>See <a href="https://developers.google.com/workspace/gmail/api/auth/scopes">Google's Gmail scope documentation</a> for the permission's capabilities.</p>
   </section>
 
   <section aria-labelledby="processing-title">
     <h2 id="processing-title" class="group-title">Purpose, processing and third parties</h2>
     <p>The workflow uses job-alert information to identify opportunities, compare them with Camilo's professional profile, and assist with application preparation. Message content supplies the role requirements; profile context helps assess suitability; the resulting assessments and materials support Camilo's review.</p>
-    <p>Processing takes place on Camilo's private DigitalOcean VPS. Camilo is the only person with access to that private VPS; DigitalOcean supplies the hosting infrastructure.</p>
-    <p>Hermes AI and OpenAI Codex are integrated into the workflow. Selected job-alert information is sent to OpenAI Codex for AI assistance. That is a transfer to an external AI service, even though Career Ops does not publish the information publicly.</p>
-    <p>In practical terms, information moves from the authorised Gmail account into the private workflow, and selected job-alert information then reaches OpenAI Codex for assessment and application assistance. The public application homepage and policy pages do not display mailbox content or the resulting private job-search information.</p>
-    <p><strong>To confirm:</strong> the exact message fields, excerpts, summaries and profile context sent to OpenAI; whether Codex uses an API connection or a ChatGPT account; the applicable provider retention, human-review and model-training settings; and whether Hermes AI uses any additional external model provider. No promise of zero provider retention or exclusion from model training is made without those details.</p>
+    <p>Processing takes place on Camilo's private DigitalOcean VPS in Sydney, Australia. DigitalOcean supplies the hosting infrastructure. Google supplies Gmail and the account authorisation service.</p>
+    <p>Hermes coordinates the workflow. Its dedicated OpenAI Codex CLI, isolated under the Hermes camilo profile, sends the job's company, title, location, listing URL and retrieved job description, together with professional-profile source text and evaluation instructions, to OpenAI for AI-assisted suitability assessment. Profile context can include CV text, role preferences and supporting professional evidence. The evaluator does not include a raw mailbox message or OAuth credentials in its constructed prompt.</p>
+    <p>Information therefore moves from Gmail into the private workflow; selected extracted job information and professional context then reach OpenAI. Retrieved listings are also checked with job-board or employer services. These public pages do not display mailbox content or private job-search records.</p>
+    <p>The dedicated Codex configuration disables web search, connectors, plugins and agent tools for evaluation. That configuration restricts the evaluator's actions; it does not determine OpenAI's server-side retention, human-review or model-training settings. No zero-retention or no-training account setting is asserted here. Questions about the provider account and its data controls should be directed to Camilo before authorising processing.</p>
   </section>
 
   <section aria-labelledby="limited-use-title">
     <h2 id="limited-use-title" class="group-title">Google API data-use requirements</h2>
-    <p>Career Ops must adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including its Limited Use requirements, and the <a href="https://developers.google.com/workspace/workspace-api-user-data-developer-policy">Google Workspace user data and developer policy</a>.</p>
+    <p>Hermes Career Ops' use and transfer of information received from Google APIs will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements, and the <a href="https://developers.google.com/workspace/workspace-api-user-data-developer-policy">Google Workspace user data and developer policy</a>.</p>
     <p>These requirements limit Google user data, including derived information, to the application's disclosed user-facing features. Transfers for those features require the user's consent. They prohibit sale of that data, its use for advertising, and its use to train or improve general-purpose AI models. Human access is restricted to the exceptions specified in those policies.</p>
-    <p><strong>To confirm before OAuth submission:</strong> the actual workflow, AI-provider settings and data transfers must meet those requirements. This statement explains the applicable obligations; it is not a certification that the implementation has been audited or approved.</p>
+    <p>Camilo is responsible for ensuring that provider account settings and transfers meet these restrictions. This commitment does not represent Google approval, a security certification or independent verification of an AI provider's account settings.</p>
   </section>
 
   <section aria-labelledby="retention-title">
     <h2 id="retention-title" class="group-title">Data retention</h2>
-    <p>A retention period and deletion schedule have not yet been confirmed for downloaded messages, extracted job information, assessments, prepared materials, operational logs or backups. This policy therefore does not promise a fixed retention period, automatic expiry or immediate removal from backups.</p>
-    <p>OpenAI's handling of information sent to Codex depends on the service and account settings used; those details also need confirmation. Original messages in Gmail remain subject to the account holder's Gmail controls. The read-only grant does not let Career Ops delete those originals.</p>
+    <p>The Hermes alert adapter processes message bodies to extract opportunities; its persistent alert state contains extracted job metadata, processed-message hashes and mailbox progress, rather than raw message bodies. The separate Gmail API plugin stores processed-message identifiers. The Hermes cycle stores queued opportunities, assessment results, retrieved job descriptions and private run records. Assessment evidence can contain quotes from professional-profile sources.</p>
+    <p>Those persistent records have no built-in time-based expiry or scheduled deletion in the inspected Hermes workflow. They remain in private storage until removed by the operator; this policy does not promise a fixed number of days. Temporary Codex evaluation files are removed when the cycle exits through its cleanup handler. An abrupt server or process failure can prevent that cleanup.</p>
+    <p>Application cleanup does not delete hosting backups, external logs or information already processed by OpenAI. Their retention is governed separately by the hosting configuration and provider account controls; this policy does not promise immediate backup deletion or zero provider retention. Original Gmail messages remain under the account holder's Gmail controls.</p>
   </section>
 
   <section aria-labelledby="security-title">
     <h2 id="security-title" class="group-title">Security measures</h2>
-    <p>The confirmed access control is a private DigitalOcean VPS accessible only to Camilo. The workflow's information is not published publicly.</p>
-    <p><strong>To confirm:</strong> protection of OAuth tokens and other credentials; encryption in transit and at rest; firewall and server access configuration; software update practices; log redaction; and backup protection. Private hosting alone does not establish those controls. No security certification, independent audit or guarantee of absolute security is claimed.</p>
+    <p>The deployment uses private credentials, restricted filesystem access and sandboxed Codex execution. The Hermes workflow enforces a private data directory outside the source repository and rejects paths that escape it. The evaluator uses a dedicated credential profile, a read-only sandbox, disabled tools and a restricted inherited environment that excludes mailbox credentials. Email and job-listing text are treated as untrusted data, and evaluation results are checked against a structured schema and supplied source evidence.</p>
+    <p>The Gmail API plugin uses HTTPS for Google's token and message endpoints. The supplied Hermes launcher requests owner-only filesystem permissions for newly created files; evaluation directories and files also request restricted permissions. These application controls do not establish disk or backup encryption, deployed firewall rules, or provider-side security settings. No encryption-at-rest guarantee, compliance certification or absolute-security guarantee is made.</p>
   </section>
 
   <section aria-labelledby="control-title">
     <h2 id="control-title" class="group-title">Revoke access or request deletion</h2>
     <p>Reading this website does not grant Gmail access. Google Account authorisation is a separate permission, and the account holder can withdraw it at any time.</p>
     <ol>
-      <li>Open your <a href="https://myaccount.google.com/connections">Google Account connections</a>, find Career Ops under apps with access to your Google Account, and remove its access. See <a href="https://support.google.com/accounts/answer/13533235">Google's instructions for managing app connections</a>.</li>
-      <li>To request removal of information retained by Career Ops, email <a href="mailto:oviedocamilo94@gmail.com">oviedocamilo94@gmail.com</a>. Identify the account and records concerned; do not include passwords, access tokens or unnecessary message content.</li>
+      <li>Open your <a href="https://myaccount.google.com/connections">Google Account connections</a>, find Hermes Career Ops under apps with access to your Google Account, and remove its access. See <a href="https://support.google.com/accounts/answer/13533235">Google's instructions for managing app connections</a>.</li>
+      <li>To request removal of retained information, <a href="mailto:oviedocamilo94@gmail.com">email Camilo Oviedo</a> at oviedocamilo94 [at] gmail [dot] com. Identify the account and records concerned; do not include passwords, access tokens or unnecessary message content.</li>
     </ol>
-    <p>Revocation prevents further Google Account access under that grant. It does not automatically delete information already processed on the VPS or sent to an AI provider. Camilo is the contact for reviewing deletion requests. The deletion procedure, completion timeframe, handling of backups and any provider-side deletion limits still need confirmation.</p>
-    <p>Removing data from Career Ops and deleting an original email are separate actions. The described read-only permission cannot delete Gmail messages; the account holder manages original emails directly in Gmail.</p>
+    <p>Revocation prevents further Google Account access under that grant. It does not automatically delete information already processed on the VPS or sent to OpenAI. The Hermes adapter has no account-wide deletion endpoint: removal of retained alert state, job records, assessments and run records requires operator action. Deleting a tracker row alone does not erase the associated reports or all other stored records.</p>
+    <p>Camilo handles deletion requests. A request must also account for credentials, temporary files left after interrupted runs, any hosting backups and provider-side copies. No fixed completion deadline or automatic deletion of third-party copies is promised. Removing data from Hermes Career Ops and deleting an original email are separate actions; the read-only permission cannot delete Gmail messages.</p>
   </section>
 
   <section aria-labelledby="changes-title">
     <h2 id="changes-title" class="group-title">Policy updates</h2>
-    <p>This policy will need updating when the pending details are confirmed or the workflow's data practices change. Its last-updated date appears above. For the application's purpose and permitted use, see the <a href="/career-ops">application overview</a> and <a href="/career-ops/terms-of-service">Terms of Service</a>.</p>
+    <p>This policy will be updated when the workflow's data practices change. Its last-updated date appears above. For the application's purpose and permitted use, see the <a href="/career-ops">application overview</a> and <a href="/career-ops/terms-of-service">Terms of Service</a>.</p>
   </section>
 </CareerOpsLayout>

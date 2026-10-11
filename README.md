@@ -18,7 +18,7 @@ Professional portfolio for Camilo Oviedo, focused on Technical Business Analyst,
 - Tailwind CSS 4 through its Vite plugin
 - Vercel adapter, Web Analytics, and Speed Insights
 - Cloudflare R2 resume delivery through `RESUME_PDF_URL`
-- pnpm 12.9.1 (single version pin in `package.json#packageManager`)
+- pnpm 12.10.1 (single version pin in `package.json#packageManager`)
 
 ## Local development
 
@@ -41,11 +41,16 @@ RESUME_PDF_URL=https://your-resume-url.example/resume.pdf
 
 ```sh
 pnpm check
+pnpm typecheck
+pnpm lint
 pnpm build
+pnpm audit
 pnpm audit --prod
 ```
 
 Project uses Astro server output and `@astrojs/vercel`. Unknown routes use `src/pages/404.astro`; on-demand server failures use `src/pages/500.astro`.
+
+`pnpm lint` runs the repository's Impeccable frontend detector. `pnpm build` also tests the packaged Vercel function in isolation and checks all three prerendered Hermes Career Ops pages. The Vercel adapter remains pinned to 11.0.12 because 11.0.13 has an unresolved serverless startup regression ([Astro issue #18328](https://github.com/withastro/astro/issues/18328)). TypeScript remains on 6.x; its deprecated `baseUrl` setting has been replaced by an explicit relative alias.
 
 ## Deployment
 

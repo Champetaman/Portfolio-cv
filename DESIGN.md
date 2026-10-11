@@ -84,8 +84,9 @@ typography:
   section-folio:
     fontFamily: '"Onest Variable", "Segoe UI", sans-serif'
     fontSize: "1.25rem"
-    fontWeight: 520
-    letterSpacing: "-0.03em"
+    fontWeight: 560
+    lineHeight: 1
+    letterSpacing: "-0.035em"
 rounded:
   micro: "2px"
 spacing:
@@ -120,7 +121,7 @@ components:
     typography: "{typography.body}"
   exhibit-frame:
     backgroundColor: "{colors.ledger-paper}"
-    padding: "{spacing.xs}"
+    padding: "clamp(0.35rem, 1vw, 0.65rem)"
 ---
 
 # Design System: Camilo Oviedo Portfolio
@@ -203,13 +204,14 @@ Evidence layouts vary their proportions instead of repeating an equal card grid.
 
 ## Elevation & Depth
 
-The system is flat by default. Canvas and paper tones, 1px rules, authentic imagery, and asymmetric scale carry depth without shadows. The only implemented lifted surface is the mobile navigation disclosure, which uses a broad ambient shadow (`0 18px 45px rgba(0, 0, 0, 0.14)`) so it remains distinct from page content.
+The system is flat by default. Canvas and paper tones, 1px rules, authentic imagery, and asymmetric scale carry depth. The mobile navigation disclosure uses a broad ambient shadow (`0 18px 45px rgba(0, 0, 0, 0.14)`) so it remains distinct from page content. The availability signal uses a restrained accent shadow (`0 14px 30px -24px var(--accent)`) beneath its ruled, lightly tinted surface.
 
 ### Shadow Vocabulary
 
 - **Mobile Disclosure:** A broad, low-opacity shadow used only beneath the open mobile navigation panel.
+- **Availability Signal:** A shallow accent shadow used only beneath the availability notice.
 
-**The Flat Evidence Rule.** Major content surfaces stay flat at rest; shadow is reserved for a temporary layer that physically overlaps the document.
+**The Flat Evidence Rule.** Major content surfaces stay flat at rest; shadow is reserved for the temporary mobile navigation layer and the availability notice.
 
 ## Shapes
 
@@ -246,6 +248,10 @@ Every personal, open-source and professional project receives an authentic 4:3 i
 ### Evidence Register
 
 Experience, capability, and outcome groups are flat lists separated by rules. Employer, role, date, contribution, and outcome occupy explicit columns at wider breakpoints and collapse into a single semantic sequence on smaller screens.
+
+### Availability Signal
+
+The availability notice is a compact ruled signal with an accent icon, 10% accent wash over the paper surface, 0.65rem by 0.875rem padding, and the shallow accent shadow described above. It inherits theme colors and uses action-sized text at weight 600.
 
 ### Motion and State
 

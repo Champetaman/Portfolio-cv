@@ -8,6 +8,8 @@
     "start": "astro dev",
     "build": "astro build && pnpm check:runtime",
     "check": "astro check",
+    "typecheck": "tsc --noEmit",
+    "lint": "node .agents/skills/impeccable/scripts/detect.mjs --json src",
     "check:runtime": "node scripts/check-vercel-runtime.mjs",
     "preview": "astro preview",
     "astro": "astro"
