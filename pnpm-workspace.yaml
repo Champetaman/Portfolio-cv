@@ -1,6 +1,9 @@
 allowBuilds:
   esbuild: true
 
+minimumReleaseAgeExclude:
+  - "@astrojs/vercel@11.0.14"
+
 overrides:
   path-to-regexp: 6.3.0
   "@astrojs/vercel>esbuild": 0.28.2
