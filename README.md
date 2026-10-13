@@ -50,7 +50,7 @@ pnpm audit --prod
 
 Project uses Astro server output and `@astrojs/vercel`. Unknown routes use `src/pages/404.astro`; on-demand server failures use `src/pages/500.astro`.
 
-`pnpm lint` runs the repository's Impeccable frontend detector. `pnpm build` also tests the packaged Vercel function in isolation and checks all three prerendered Hermes Career Ops pages. The Vercel adapter remains pinned to 11.0.12 because 11.0.13 has an unresolved serverless startup regression ([Astro issue #18328](https://github.com/withastro/astro/issues/18328)). TypeScript remains on 6.x; its deprecated `baseUrl` setting has been replaced by an explicit relative alias.
+`pnpm lint` runs the repository's Impeccable frontend detector. `pnpm build` also tests the packaged Vercel function in isolation. The Vercel adapter remains pinned to 11.0.12 because 11.0.13 has an unresolved serverless startup regression ([Astro issue #18328](https://github.com/withastro/astro/issues/18328)). TypeScript remains on 6.x; its deprecated `baseUrl` setting has been replaced by an explicit relative alias.
 
 ## Deployment
 

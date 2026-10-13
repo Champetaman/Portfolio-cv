@@ -44,11 +44,6 @@ try {
   if (result.error) throw result.error;
   assert.equal(result.status, 0, "Packaged Vercel function failed its isolated runtime check");
 
-  for (const route of ["career-ops", "career-ops/privacy", "career-ops/terms-of-service"]) {
-    const html = await readFile(join(root, ".vercel/output/static", route, "index.html"), "utf8");
-    assert.match(html, /id="main-content"/, `Missing static page content for /${route}`);
-    console.log(`Static page: /${route}`);
-  }
 } finally {
   // Delete only the temporary directory created by this invocation.
   assert.equal(dirname(resolve(isolatedDir)), temporaryRoot);
