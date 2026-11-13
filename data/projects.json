@@ -231,31 +231,6 @@
         ]
       },
       {
-        "title": "Grace Park Hawthorn Club Website",
-        "date": "July 2026 - Present",
-        "description": "A website update for a Melbourne sports and fitness club, covering its core membership, facilities, activities and community journeys.",
-        "summary": "A complete Wix website update for a Melbourne sports and fitness club, built around membership and activity journeys.",
-        "contribution": "Restructured and redesigned the club website in Wix Editor, improving information hierarchy, page consistency, search visibility and the path from discovery to membership, bookings and enquiries.",
-        "highlights": [
-          "Reworked the site architecture and navigation around real member and visitor tasks.",
-          "Redesigned key tennis, squash, pickleball, About and supporting club pages.",
-          "Refined copy and metadata for clearer scanning, stronger SEO and more consistent calls to action."
-        ],
-        "link": "https://www.gphc.com.au/",
-        "github": "",
-        "visibility": "Redesign in progress; linked site may still show the previous version",
-        "image": "/professional/GPHC_Website.webp",
-        "imagehd": "/professional/GPHC_Website.png",
-        "altImage": "Grace Park Hawthorn Club website redesign shown in a browser frame",
-        "slug": "grace-park-hawthorn-club-website",
-        "technologies": [
-          { "name": "Wix Editor", "icon": "WWWIcon" },
-          { "name": "Information Architecture", "icon": "SettingsCodeIcon" },
-          { "name": "SEO", "icon": "WWWIcon" },
-          { "name": "UX and Content Design", "icon": "CodeIcon" }
-        ]
-      },
-      {
         "title": "Central Securities Depository",
         "summary": "Modernisation of a critical securities platform focused on efficiency, security, operational risk and response time.",
         "description": "The CSD modernization aims to enhance efficiency and security while supporting the Colombian market's operation. Its benefits included improving user experience, reducing operational risks, and optimizing response time, aligned with international standards and best practices.",

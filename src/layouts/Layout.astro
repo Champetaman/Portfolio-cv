@@ -5,16 +5,75 @@ import "@/styles/global.css";
 import Header from "@/components/layout/Header.astro";
 import Footer from "@/components/layout/Footer.astro";
 import SpeedInsights from "@vercel/speed-insights/astro";
+import portrait from "@/img/profile_image.webp";
 
 interface Props {
   title: string;
   description: string;
   image?: string;
+  imageAlt?: string;
+  mainEntityId?: string;
+  structuredData?: Record<string, unknown>[];
 }
 
-const { description, title, image = "/professional/DCV.webp" } = Astro.props;
-const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const {
+  description,
+  title,
+  image = portrait.src,
+  imageAlt = "Portrait of Camilo Oviedo",
+  mainEntityId,
+  structuredData = [],
+} = Astro.props;
+const canonicalURL = new URL(Astro.url.pathname.replace(/\/+$/, "") || "/", Astro.site);
 const socialImage = new URL(image, Astro.site);
+const homeURL = new URL("/", Astro.site);
+const personId = `${homeURL}#person`;
+const websiteId = `${homeURL}#website`;
+const isHomepage = canonicalURL.pathname === "/";
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": personId,
+      name: "Camilo Oviedo",
+      url: homeURL.href,
+      image: new URL(portrait.src, Astro.site).href,
+      jobTitle: "Technical Business Analyst",
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Melbourne",
+        addressCountry: "AU",
+      },
+      sameAs: [
+        "https://www.linkedin.com/in/oviedocamilo/",
+        "https://github.com/Champetaman",
+      ],
+    },
+    {
+      "@type": "WebSite",
+      "@id": websiteId,
+      url: homeURL.href,
+      name: "Camilo Oviedo",
+      publisher: { "@id": personId },
+      inLanguage: "en-AU",
+    },
+    {
+      "@type": isHomepage ? "ProfilePage" : "WebPage",
+      "@id": `${canonicalURL}#webpage`,
+      url: canonicalURL.href,
+      name: title,
+      description,
+      isPartOf: { "@id": websiteId },
+      about: { "@id": personId },
+      mainEntity: { "@id": mainEntityId ?? personId },
+      inLanguage: "en-AU",
+    },
+    ...structuredData,
+  ],
+};
+// Escape HTML-significant characters so content cannot terminate the JSON-LD script.
+const serializedSchema = JSON.stringify(schema).replace(/</g, "\\u003c");
 ---
 
 <!doctype html>
@@ -24,18 +83,27 @@ const socialImage = new URL(image, Astro.site);
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
     <meta name="author" content="Camilo Oviedo" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
     <meta name="generator" content={Astro.generator} />
     <meta name="theme-color" content="#F2F5F7" media="(prefers-color-scheme: light)" />
     <meta name="theme-color" content="#0E1318" media="(prefers-color-scheme: dark)" />
     <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Camilo Oviedo" />
+    <meta property="og:locale" content="en_AU" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonicalURL} />
     <meta property="og:image" content={socialImage} />
+    <meta property="og:image:alt" content={imageAlt} />
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={socialImage} />
+    <meta name="twitter:image:alt" content={imageAlt} />
     <link rel="canonical" href={canonicalURL} />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <title>{title}</title>
+    <script type="application/ld+json" is:inline set:html={serializedSchema} />
     <script is:inline>
       (() => {
         const stored = localStorage.getItem("theme");

@@ -3,8 +3,21 @@ allowBuilds:
 
 minimumReleaseAgeExclude:
   - "@astrojs/vercel@11.0.14"
+  - "@astrojs/markdown-satteri@0.4.9"
+  - "@astrojs/runtime@0.1.1"
+  - "@astrojs/vite-plugin-astro@0.1.2"
+  - astro@7.4.11
+  - glob@14.0.5
+
+# Match the Astro checker's runtime peer to its @emnapi/core 1.11.3 dependency.
+packageExtensions:
+  "@astrojs/astro2tsx@0.1.2":
+    dependencies:
+      "@emnapi/runtime": 1.11.3
 
 overrides:
   path-to-regexp: 6.3.0
   "@astrojs/vercel>esbuild": 0.28.2
   "@sveltejs/vite-plugin-svelte": 7.3.0
+  # Fix GHSA-3g3m-2fjr-6pw4 and GHSA-g3hv-75wg-m249 in Vercel's file tracer.
+  "@vercel/nft@1.11.1>glob": 14.0.5
