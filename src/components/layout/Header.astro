@@ -12,7 +12,7 @@ const navHref = (url: string) =>
 
 <header class="sticky top-0 z-40 border-b border-[var(--rule)] bg-[var(--canvas)]">
   <div class="shell flex min-h-14 items-center justify-between gap-4">
-    <a href="/" class="flex min-h-11 items-center gap-3 no-underline" aria-label="Camilo Oviedo, home">
+    <a href="/" class="flex min-h-11 items-center gap-3 no-underline">
       <span class="text-sm font-semibold tracking-[-0.025em]">Camilo Oviedo</span>
       <span class="hidden font-mono text-[0.7rem] uppercase tracking-[0.06em] text-[var(--muted)] md:inline">Systems Engineering &amp; Business Administration</span>
     </a>
@@ -53,3 +53,8 @@ const navHref = (url: string) =>
     </div>
   </div>
 </header>
+
+<script>
+  import "@/scripts/theme-toggle.js";
+  import "@/scripts/mobile-menu.js";
+</script>

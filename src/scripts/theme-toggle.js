@@ -1,5 +1,6 @@
 const getPreferredTheme = () => {
-  const storedTheme = localStorage.getItem("theme");
+  let storedTheme;
+  try { storedTheme = localStorage.getItem("theme"); } catch {}
   if (storedTheme === "light" || storedTheme === "dark") return storedTheme;
   return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
 };
@@ -23,7 +24,7 @@ const initializeTheme = () => {
     button.dataset.themeReady = "true";
     button.addEventListener("click", () => {
       const nextTheme = document.documentElement.classList.contains("dark") ? "light" : "dark";
-      localStorage.setItem("theme", nextTheme);
+      try { localStorage.setItem("theme", nextTheme); } catch {}
       renderTheme(nextTheme);
     });
   });

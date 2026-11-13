@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets";
 import heroImage from "@/img/profile_image.webp";
 import DownloadIcon from "@/icons/common/Download.astro";
 import ChevronRightIcon from "@/icons/common/ChevronRight.astro";
@@ -85,13 +86,17 @@ const ResumePDF = import.meta.env.RESUME_PDF_URL;
         class="document-enter document-enter-delay w-full max-w-[13rem] sm:max-w-[15rem] lg:max-w-[16rem] lg:justify-self-end lg:pt-6"
       >
         <div class="relative border border-[var(--rule)] bg-[var(--paper)] p-2">
-          <img
-            src={heroImage.src}
-            width={heroImage.width}
-            height={heroImage.height}
+          <Image
+            src={heroImage}
+            width={480}
+            height={600}
+            fit="cover"
+            position="top"
+            widths={[192, 240, 384, 480, 640]}
+            sizes="(min-width: 1024px) 238px, (min-width: 640px) 222px, 190px"
+            format="webp"
             alt="Portrait of Camilo Oviedo"
-            loading="eager"
-            decoding="async"
+            priority
             class="aspect-[4/5] w-full object-cover object-top grayscale-[12%]"
           />
           <span

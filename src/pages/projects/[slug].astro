@@ -1,10 +1,12 @@
 ---
+import type { GetStaticPaths } from "astro";
 import Layout from "@/layouts/Layout.astro";
 import Technologies from "@/components/technologies/Technologies.astro";
 import ChevronLeftIcon from "@/icons/common/ChevronLeft.astro";
 import WWWIcon from "@/icons/common/WWW.astro";
 import GithubRepoIcon from "@/icons/social/GithubRepo.astro";
 import projectsData from "@/../data/projects.json";
+import ProjectImage from "@/components/projects/ProjectImage.astro";
 
 interface Technology {
   name: string;
@@ -34,17 +36,21 @@ interface ProjectGroup {
   professional?: ProjectRecord[];
 }
 
-const { slug } = Astro.params;
-const allProjects = (projectsData as ProjectGroup[]).flatMap((category) => [
-  ...(category.personal ?? []),
-  ...(category.contribution ?? []),
-  ...(category.professional ?? []),
-]);
-const project = allProjects.find((item) => item.slug === slug);
+export const prerender = true;
 
-if (!project) {
-  return Astro.rewrite("/404");
-}
+export const getStaticPaths = (() => {
+  const projects = (projectsData as ProjectGroup[]).flatMap((category) => [
+    ...(category.personal ?? []),
+    ...(category.contribution ?? []),
+    ...(category.professional ?? []),
+  ]);
+  return projects.map((project) => ({
+    params: { slug: project.slug },
+    props: { project },
+  }));
+}) satisfies GetStaticPaths;
+
+const { project } = Astro.props as { project: ProjectRecord };
 
 const projectURL = new URL(`/projects/${encodeURIComponent(project.slug)}`, Astro.site);
 const projectId = `${projectURL}#project`;
@@ -97,7 +103,7 @@ const structuredData = [
     <section class="page-section" aria-labelledby="artifact-title">
       <h2 id="artifact-title" class="section-title">Project interface.</h2>
       <figure class="project-detail-exhibit">
-        <img src={project.image} alt={project.altImage} loading="eager" decoding="async" />
+        <ProjectImage src={project.image} alt={project.altImage} detail />
         <figcaption>{project.title} · Interface view supplied for this portfolio</figcaption>
       </figure>
       {project.imagehd && project.imagehd !== project.image && <a class="inline-link mt-4" href={project.imagehd} target="_blank" rel="noopener noreferrer">Open full-resolution image</a>}

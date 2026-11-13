@@ -1,0 +1,38 @@
+---
+import { Image } from "astro:assets";
+import type { ImageMetadata } from "astro";
+
+interface Props {
+  src: string;
+  alt: string;
+  detail?: boolean;
+}
+
+const { src, alt, detail = false } = Astro.props;
+// Keep the original public URLs available; optimize local copies at build time.
+const images = import.meta.glob<ImageMetadata>("/src/img/projects/*.webp", {
+  eager: true,
+  import: "default",
+});
+const image = images[`/src/img/projects/${src.split("/").pop()}`];
+if (!image) throw new Error(`Missing project image source: ${src}`);
+const width = detail ? 1280 : 640;
+const height = detail ? Math.round(width * image.height / image.width) : 480;
+---
+
+<Image
+  src={image}
+  alt={alt}
+  width={width}
+  height={height}
+  widths={detail ? [640, 960, 1280, 1920] : [320, 480, 512, 640, 768, 960]}
+  sizes={detail
+    ? "(min-width: 1280px) 1226px, calc(100vw - 54px)"
+    : "(min-width: 1280px) 482px, (min-width: 1024px) 40vw, (min-width: 768px) 45vw, calc(100vw - 46px)"}
+  format="webp"
+  fit="cover"
+  position="top"
+  priority={detail}
+  loading={detail ? "eager" : "lazy"}
+  decoding="async"
+/>

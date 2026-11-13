@@ -1,5 +1,6 @@
 ---
 import projectsData from "@/../data/projects.json";
+import ProjectImage from "./ProjectImage.astro";
 import Technologies from "@/components/technologies/Technologies.astro";
 import ChevronRightIcon from "@/icons/common/ChevronRight.astro";
 import WWWIcon from "@/icons/common/WWW.astro";
@@ -83,7 +84,7 @@ const totalProjects = projectGroups.reduce((total, group) => total + group.proje
               <div class="project-record-layout">
                 <figure class="project-exhibit">
                   <a href={`/projects/${project.slug}`} aria-label={`Open details for ${project.title}`}>
-                    <img src={project.image} alt={project.altImage} loading="lazy" decoding="async" width="1200" height="900" />
+                    <ProjectImage src={project.image} alt={project.altImage} />
                   </a>
                   <figcaption>{project.title} · Project interface</figcaption>
                 </figure>

@@ -23,6 +23,38 @@ assert.ok(allProjects.length, "Runtime check requires recorded project routes");
 const indexablePaths = ["/", ...allProjects.map((project) => `/projects/${encodeURIComponent(project.slug)}`)];
 const site = "https://www.camilooviedo.com";
 const staticDir = join(root, ".vercel/output/static");
+
+function verifyPage(html, path, status) {
+  assert.match(html, /<main\b/, path + " did not render page content");
+  const robots = html.match(/<meta name="robots" content="([^"]+)"/i)?.[1];
+  if (status !== 200) {
+    assert.ok(robots?.includes("noindex"), path + " error page must not be indexed");
+    return;
+  }
+  assert.ok(robots && !robots.includes("noindex"), path + " must be indexable");
+  const canonical = html.match(/<link rel="canonical" href="([^"]+)"/i)?.[1];
+  const canonicalPath = new URL(site + path).pathname.replace(/\/+$/, "") || "/";
+  assert.equal(canonical, site + canonicalPath, path + " has an incorrect canonical URL");
+  assert.ok(html.match(/<title>([^<]+)<\/title>/)?.[1], path + " needs a title");
+  assert.ok(html.match(/<meta name="description" content="([^"]+)"/)?.[1], path + " needs a description");
+  const json = html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)?.[1];
+  assert.ok(json, path + " needs structured data");
+  const schema = JSON.parse(json);
+  const page = schema["@graph"].find((node) => node["@id"] === canonical + "#webpage");
+  assert.ok(page, path + " needs a matching page entity");
+  assert.ok(schema["@graph"].some((node) => node["@id"] === page.mainEntity["@id"]), path + " has a dangling main entity");
+  if (canonicalPath !== "/") {
+    assert.ok(schema["@graph"].some((node) => node["@type"] === "BreadcrumbList"), path + " needs project breadcrumbs");
+  }
+}
+
+// Portfolio content is served from the CDN; a function is needed only for errors.
+for (const path of indexablePaths) {
+  const html = await readFile(join(staticDir, path.slice(1), "index.html"), "utf8");
+  verifyPage(html, path, 200);
+  if (path !== "/") verifyPage(html, `${path}/?utm_source=seo-check`, 200);
+  console.log(`Prerendered page: 200 ${path}`);
+}
 const robots = await readFile(join(staticDir, "robots.txt"), "utf8");
 const sitemapURL = robots.match(/^Sitemap:\s*(\S+)/m)?.[1];
 assert.equal(sitemapURL, `${site}/sitemap.xml`, "robots.txt must advertise the built sitemap");
@@ -33,8 +65,6 @@ assert.deepEqual(sitemapURLs.sort(), indexablePaths.map((path) => site + path).s
 console.log(`Static SEO: robots.txt and sitemap cover ${indexablePaths.length} pages`);
 
 const routes = [
-  ...indexablePaths.map((path) => [path, 200]),
-  [`${indexablePaths[1]}/?utm_source=seo-check`, 200],
   ["/__runtime-check-missing-page__", 404],
   ["/projects/__runtime-check-missing-project__", 404],
 ];
@@ -47,32 +77,14 @@ try {
   const handler = pathToFileURL(join(isolatedDir, config.handler)).href;
   const probe = String.raw`
     import assert from 'node:assert/strict';
+    const site = ${JSON.stringify(site)};
+    ${verifyPage.toString()}
     const app = (await import(${JSON.stringify(handler)})).default;
     for (const [path, status] of ${JSON.stringify(routes)}) {
       const response = await app.fetch(new Request('https://www.camilooviedo.com' + path));
       assert.equal(response.status, status, path + ' returned an unexpected status');
       const html = await response.text();
-      assert.match(html, /<main\b/, path + ' did not render page content');
-      const robots = html.match(/<meta name="robots" content="([^"]+)"/i)?.[1];
-      if (status === 200) {
-        assert.ok(robots && !robots.includes('noindex'), path + ' must be indexable');
-        const canonical = html.match(/<link rel="canonical" href="([^"]+)"/i)?.[1];
-        const canonicalPath = new URL('https://www.camilooviedo.com' + path).pathname.replace(/\/+$/, '') || '/';
-        assert.equal(canonical, 'https://www.camilooviedo.com' + canonicalPath, path + ' has an incorrect canonical URL');
-        assert.ok(html.match(/<title>([^<]+)<\/title>/)?.[1], path + ' needs a title');
-        assert.ok(html.match(/<meta name="description" content="([^"]+)"/)?.[1], path + ' needs a description');
-        const json = html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)?.[1];
-        assert.ok(json, path + ' needs structured data');
-        const schema = JSON.parse(json);
-        const page = schema['@graph'].find((node) => node['@id'] === canonical + '#webpage');
-        assert.ok(page, path + ' needs a matching page entity');
-        assert.ok(schema['@graph'].some((node) => node['@id'] === page.mainEntity['@id']), path + ' has a dangling main entity');
-        if (canonicalPath !== '/') {
-          assert.ok(schema['@graph'].some((node) => node['@type'] === 'BreadcrumbList'), path + ' needs project breadcrumbs');
-        }
-      } else {
-        assert.ok(robots?.includes('noindex'), path + ' error page must not be indexed');
-      }
+      verifyPage(html, path, status);
       console.log('Packaged function: ' + status + ' ' + path);
     }
   `;
